@@ -1,0 +1,58 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+    <div>
+        <h1 class="center-align"> Engage {{ recurrenceSetting }} Updates</h1>
+        <h1 class="center-align">{{ fromDate }} - {{ today }}</h1>
+        <hr/>
+        <div>
+            <div class="category-container">
+                {% for category, count in categoryCounts.items %}
+                    <div class="category-item">
+                        <div style="width: min-content; text-align: center; ">
+                            <h1>{{ count }}</h1>
+                            <h1>{{ category }}</h1>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <br/>
+        <br/>
+        Dear {{ user.first_name }} {{ user.last_name }},
+        <div style="display: {{ notificationVisibility }}">
+            <h3>Notifications</h3>
+            <p> {{ lastLogin }} and you have a total of {{ totalCount }} pending notifications.</p>
+            {% if notifications %}
+                {% spaceless %}
+                    <p>Last {% if totalCount < 5 %} {{  totalCount }} {% else %} {{ 5 }} {% endif %} notifications.</p>
+                    {% for notification in notifications|slice:":5" %}
+                        <div style="padding-left: 20px; margin-bottom: 10px;">- {{ notification.content }}</div>
+                    {% endfor %}
+                {% endspaceless %}
+                <p style="display:flex; justify-content: right">...{{ totalCount }} total notifications</p>
+            {% endif %}
+        </div>
+        {% if not hasNotifications %}
+            <div>
+                <h3>Notifications</h3>
+                <p> You are all covered up. There are no new updates.</p>
+            </div>
+        {% endif %}
+
+
+        <div style="display: {{ overdueVisibility }}">
+            <h3 style="">Overdue Tasks</h3>
+            <p>There are a total of {{ overdueTaskCount }} overdue tasks.</p>
+            {% spaceless %}
+                {% for title in overdueTaskTitles %}
+                    <div style="padding-left: 20px; margin-bottom: 10px;">- {{ title }}</div>
+                {% endfor %}
+            {% endspaceless %}
+        </div>
+        <div>
+            <a href=https://engage.thirst2know.com/>Click here to log in and continue working on Engage.</a>
+        </div>
+
+    </div>
+{% endblock %}

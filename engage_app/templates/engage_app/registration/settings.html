@@ -1,0 +1,152 @@
+<template id="{{ template_form_id }}" data-form-section-name="Basic Settings" data-form-section-description=""
+          style="display: none"
+>
+
+    <div class="form-group injected-form-group column" data-order-number="4" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.user_location.label }}</label>
+        {{ profile_form.user_location }}
+        <ul class="form-group-errors">
+            {{ profile_form.user_location.errors }}
+        </ul>
+    </div>
+
+    <div class="form-group injected-form-group column" data-order-number="4" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.icu_location.label }}</label>
+        {{ profile_form.icu_location }}
+        <ul class="form-group-errors">
+            {{ profile_form.icu_location.errors }}
+        </ul>
+    </div>
+
+    {# Research Related fields #}
+    <p><strong>Engage Settings</strong></p>
+    <div class="form-group injected-form-group column" data-order-number="1" data-section-code="{{ template_form_id }}"
+         data-user-answer="{{ current_user_profile.role }}"
+    >
+        <label for="">{{ profile_form.role.label }}</label>
+        {{ profile_form.role }}
+        <ul class="form-group-errors">
+            {{ profile_form.role.errors }}
+        </ul>
+    </div>
+    <div class="form-group column" data-order-number="2" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.research_interests.label }}</label>
+        {{ profile_form.research_interests }}
+        <ul class="form-group-errors">
+            {{ profile_form.research_interests.errors }}
+        </ul>
+        <div class="progress-badge incomplete"></div>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="3" data-section-code="{{ template_form_id }}">
+        <label for="id_experience">{{ profile_form.experience.label }}</label>
+        {{ profile_form.experience }}
+        <ul class="form-group-errors">
+            {{ profile_form.experience.errors }}
+        </ul>
+    </div>
+
+    {# EDI Form Fields #}
+    <p><strong>Equity, Diversity & Inclusion Settings</strong></p>
+    <div class="form-group injected-form-group column" data-order-number="4" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.gender.label }}</label>
+        {{ profile_form.gender }}
+        <ul class="form-group-errors">
+            {{ profile_form.gender.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="5" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.sexual_orientation.label }}</label>
+        {{ profile_form.sexual_orientation }}
+        <ul class="form-group-errors">
+            {{ profile_form.sexual_orientation.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="6" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.is_identified_native.label }}</label>
+        {{ profile_form.is_identified_native }}
+        <ul class="form-group-errors">
+            {{ profile_form.is_identified_native.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="7" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.is_visible_minority.label }}</label>
+        {{ profile_form.is_visible_minority }}
+        <ul class="form-group-errors">
+            {{ profile_form.is_visible_minority.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="8" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.population_group.label }}</label>
+        {{ profile_form.population_group }}
+        <ul class="form-group-errors">
+            {{ profile_form.population_group.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="9" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.has_disability.label }}</label>
+        {{ profile_form.has_disability }}
+        <ul class="form-group-errors">
+            {{ profile_form.has_disability.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="10" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.first_language.label }}</label>
+        {{ profile_form.first_language }}
+        <ul class="form-group-errors">
+            {{ profile_form.first_language.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="11" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.most_used_language.label }}</label>
+        {{ profile_form.most_used_language }}
+        <ul class="form-group-errors">
+            {{ profile_form.most_used_language.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="11" data-section-code="{{ template_form_id }}">
+        <label for="">{{ profile_form.edi_answers_public.label }}</label>
+        <div>{{ profile_form.edi_answers_public }}</div>
+        <ul class="form-group-errors">
+            {{ profile_form.edi_answers_public.errors }}
+        </ul>
+    </div>
+
+    {# Social Media Links #}
+    <p><strong>Social Media Links</strong></p>
+    <div class="form-group injected-form-group column" data-order-number="12" data-section-code="{{ template_form_id }}">
+        <label for="id_research_gate_link">{{ profile_form.research_gate_link.label }}</label>
+        {{ profile_form.research_gate_link }}
+        <ul class="form-group-errors">
+            {{ profile_form.research_gate_link.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="13" data-section-code="{{ template_form_id }}">
+        <label for="id_linkedin_link">{{ profile_form.linkedin_link.label }}</label>
+        {{ profile_form.linkedin_link }}
+        <ul class="form-group-errors">
+            {{ profile_form.linkedin_link.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="14" data-section-code="{{ template_form_id }}">
+        <label for="id_facebook_link">{{ profile_form.facebook_link.label }}</label>
+        {{ profile_form.facebook_link }}
+        <ul class="form-group-errors">
+            {{ profile_form.facebook_link.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="15" data-section-code="{{ template_form_id }}">
+        <label for="id_twitter_link">{{ profile_form.twitter_link.label }}</label>
+        {{ profile_form.twitter_link }}
+        <ul class="form-group-errors">
+            {{ profile_form.twitter_link.errors }}
+        </ul>
+    </div>
+    <div class="form-group injected-form-group column" data-order-number="16" data-section-code="{{ template_form_id }}">
+        <label for="id_instagram_link">{{ profile_form.instagram_link.label }}</label>
+        {{ profile_form.instagram_link }}
+        <ul class="form-group-errors">
+            {{ profile_form.instagram_link.errors }}
+        </ul>
+    </div>
+    <button type="submit">Submit</button>
+</template>

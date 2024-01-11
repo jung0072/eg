@@ -1,0 +1,24 @@
+.action-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button-icon {
+    color: #EB6B85;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.3s ease-in;
+}
+
+.action-button-icon:hover {
+    transform: scale(1.1);
+}
+
+.popover-container .ant-popover-inner {
+    border-radius: 12px !important;
+    min-width: 250px;
+}

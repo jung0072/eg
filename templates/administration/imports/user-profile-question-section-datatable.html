@@ -1,0 +1,82 @@
+<div class="page-content hidden" id="user_profile_forms">
+    <h1>User Profile Forms</h1>
+
+    {# The button to open the modal that will  add a question or section #}
+    <button type="button" data-trigger="customize-user-profile-form-modal" class="modal-trigger-button secondary-green"
+            id="add-user-profile-model-button"
+    >
+        Add
+    </button>
+
+    {# A radio select group to change the current viewed user profile model #}
+    <div class="form-group" id="user-profile-model-selector">
+        <h4 class="inline-header">Select User Model:</h4>
+        <div class="user-role-radio-group">
+            <input id="question-model-switch" type="radio" name="current-user-model" value="QUESTION" checked>
+            <label for="question-model-switch">Question</label>
+        </div>
+
+        <div class="user-role-radio-group">
+            <input id="section-model-switch" type="radio" name="current-user-model" value="SECTION">
+            <label for="section-model-switch">Section</label>
+        </div>
+    </div>
+    {# A radio select group to change the currently viewed user role #}
+    <div class="form-group" id="current-user-role-switcher">
+        <h4 class="inline-header" style="margin-left: 20px;">Select User Role:</h4>
+        <div class="user-role-radio-group">
+            <input id="patient-role-switch" type="radio" name="current-user-role" value="PATIENT" checked>
+            <label for="patient-role-switch">Patient</label>
+        </div>
+
+        <div class="user-role-radio-group">
+            <input id="caretaker-role-switch" type="radio" name="current-user-role" value="CARETAKER">
+            <label for="caretaker-role-switch">Caretaker</label>
+        </div>
+
+        <div class="user-role-radio-group">
+            <input id="family-role-switch" type="radio" name="current-user-role" value="FAMILY_OF_PATIENT">
+            <label for="family-role-switch">Family</label>
+        </div>
+
+        <div class="user-role-radio-group">
+            <input id="researcher-role-switch" type="radio" name="current-user-role" value="RESEARCHER">
+            <label for="researcher-role-switch">Researcher</label>
+        </div>
+    </div>
+
+    {# The User Profile Questions Table #}
+    <div id="customize-user-profile-questions-table"></div>
+
+    {# Modal for adding/ editing a user profile question #}
+    <div class="modal" role="dialog" id="customize-user-profile-form-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <ul class="modal-header-tab-list" data-modal="customize-user-profile-form-modal">
+                    <li class="modal-tab-list-item active" data-tab="user-profile-question-tab">
+                        User Profile Question
+                    </li>
+                    <li class="modal-tab-list-item" data-tab="user-profile-section-tab">
+                        User Profile Section
+                    </li>
+                    <li class="modal-tab-list-item modal-exit-button">
+                        &times;
+                    </li>
+                </ul>
+                <div class="modal-body">
+                    <div class="modal-tab-content" id="user-profile-section-tab">
+                        {% include 'administration/forms/user_profile_section.html' %}
+                    </div>
+                    <div class="modal-tab-content" id="user-profile-question-tab">
+                        {% include 'administration/forms/user_profile_question.html' %}
+                    </div>
+                </div>
+                {#                    <div class="modal-footer">#}
+                {#                        <button type="button">Cancel</button>#}
+                {#                        <button type="button">Submit</button>#}
+                {#                    </div>#}
+            </div>
+        </div>
+
+    </div>
+</div>

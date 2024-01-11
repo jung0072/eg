@@ -1,0 +1,16 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+
+<div>
+    <p class="user-name">Dear {{ admin.first_name }} {{ admin.last_name }},</p>
+    <p class="user-name">
+        {{ researcher.get_full_name }} has recently submitted his profile for approval as a Researcher.
+    </p>
+    <p>To review and approve the new researcher, simply click on the link below to access the admin panel.</p>
+    <p><a target="_blank" href="{{ link }}">{{ researcher.get_full_name }}</a></p>
+    <p>Thanks & Regards,</p>
+    <p>Engage</p>
+</div>
+
+{% endblock %}

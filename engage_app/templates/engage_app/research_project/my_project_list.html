@@ -1,0 +1,32 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+{% load auth_filters %}
+
+{% block title %}
+    <title>Engage | My Projects</title>
+{% endblock %}
+
+{# TODO: This is test content for the navigation main page, should be replaced with actual home page html  #}
+{% block content %}
+    <div class="section">
+        <p class="header">Active Projects ({{ project_list|length }})</p>
+        <ul class="content-list">
+            {% for project in project_list %}
+                {% include 'engage_app/research_project/research_project_card.html' with project=project show_project_status=True %}
+            {% empty %}
+                <li><p>You are currently not apart of any projects</p></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <p class="header">Completed Projects ({{ completed_project_list|length }})</p>
+        <ul class="content-list">
+            {% for project in completed_project_list %}
+                {% include 'engage_app/research_project/research_project_card.html' with project=project show_project_status=True %}
+            {% empty %}
+                <li><p>There are no completed projects</p></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

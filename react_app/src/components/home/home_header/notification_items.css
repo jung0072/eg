@@ -1,0 +1,16 @@
+.engage-application-header .notification-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.1px;
+    white-space: initial;
+}
+
+.engage-application-header .menu-items {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    background-color: var(--secondary-color-1) !important;
+    color: var(--tertiary-color-3);
+}

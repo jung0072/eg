@@ -1,0 +1,41 @@
+{% extends 'user-directory/patient_researcher_toggle.html' %}
+{% load static %}
+
+{# TODO: This is test content for the researchers/patient page, change variables to the actual ones, once connecting to DB. #}
+
+{% block card %}
+    <div class="researchers-list">
+        {% for researcher in data %}
+            <div class="researcher-card content-card">
+                <img class="card-picture patient" alt="profile avatar" src="{% url 'engage_app:get_public_profile_picture' username=researcher.user__username %}" >
+                <div class="card-information">
+                <div class="card-header">
+                    <p class="researcher-title"> {{ researcher.user__first_name }}  {{ researcher.user__last_name }}. </p>
+                    <p class="researcher-role"> {{ researcher.role }} - {{ researcher.location }} </p>
+                </div>
+                <div class="card-content">
+                    <p class="researcher-interests-title" >Research Interests: </p>
+                    <div class="researcher-interests">
+                        {% for interest in researcher.research_interests %}
+                            <div class="interest-chips">
+                                <p>{{ interest }}</p>
+                            </div>
+                        {% endfor %}
+                        <p>More...</p>
+                    </div>
+                </div>
+                <div class="card-footer buttons-container">
+                        <button class="action main researcher-card-button1">Send Message</button>
+                        <a href="/app/profile/{{ researcher.user.id }}/">
+                            <button class="action main researcher-card-button2">View Profile</button>
+                        </a>
+                    </div>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block side_content %}
+    {% include "user-directory/filter_panel.html" %}
+{% endblock %}

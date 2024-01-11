@@ -1,0 +1,64 @@
+.filters-container {
+    width: 20vw;
+    padding: 2rem;
+    background-color: var(--bg-accent);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters-container i {
+    color: var(--brand-colour);
+}
+
+.filters-container select {
+    width: 100%;
+    height: 33px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-family: unset;
+    padding-left: 5px;
+}
+
+.filters-container .filter-div {
+    margin-bottom: 0.8rem;
+}
+
+.filters-container .search-div {
+    margin-bottom: 1.5rem;
+}
+
+.filters-container .filter-label {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.filters-container #apply-filters-div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#apply-filters-btn {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: unset;
+    color: var(--bg-secondary-colour);
+    background-color: var(--brand-colour);
+    padding: 0;
+}
+
+.filters-container .search-bar {
+    margin: 0;
+}
+
+.filters-container .search-bar i {
+    width: 8%;
+}
+
+.filters-container .search-bar .search-value {
+    border: none;
+    width: 93%;
+}

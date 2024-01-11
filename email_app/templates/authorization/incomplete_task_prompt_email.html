@@ -1,0 +1,16 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+    <div>
+        Dear {{ user }},<br/><br/><br/><br/>
+        This is a reminder from {{ taskOwner }} that you have not yet completed the task "{{ taskTitle }}" on the
+        project
+        <br/><br/>Title: "{{ projectTitle }}"
+        {% if dueDateAvailable %}
+            <br/>Due Date: {{ dueDate }}
+        {% endif %}
+        <br/><br/><br/><br/>
+
+        Please <a href="https://engage.thirst2know.com/">click here</a> to view and complete this task.
+    </div>
+{% endblock %}

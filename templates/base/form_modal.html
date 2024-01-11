@@ -1,0 +1,41 @@
+<div class="modal" role="dialog" id="customize-{{ form_name }}-modal">
+    <div class="modal-dialog" role="document">
+        <form action="{{ form_action }}" method="post" data-form-name="{{ verbose_form_name }}">
+            {% csrf_token %}
+            {% if form.media %}
+                {{ form.media }}
+            {% endif %}
+            <div class="modal-content">
+                <ul class="modal-header-tab-list" data-modal="customize-{{ form_name }}-modal">
+                    <li class="modal-tab-list-item" data-tab="{{ form_name }}-section-tab">
+                        {{ verbose_form_name }}
+                    </li>
+                    <li class="modal-tab-list-item modal-exit-button">
+                        &times;
+                    </li>
+                </ul>
+                <div class="modal-body">
+                    <div class="modal-tab-content" id="{{ form_name }}-section-tab">
+                        {% for field in form.visible_fields %}
+                            <div class="form-group column" id="${{ field.auto_id }}-container">
+                                <label for="${{ field.id_for_label }}">{{ field.label }}</label>
+                                {{ field }}
+                                <div class="form-group-errors">
+                                    {{ field.errors }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% for field in form.hidden_fields %}
+                            <div class="hidden">{{ field }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button">Cancel</button>
+                    <button type="button" name="submit-form-modal-button">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

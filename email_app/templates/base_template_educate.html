@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+        <meta name="viewport" content="width=600,initial-scale = 2.3,user-scalable=no">
+        <title>Educate</title>
+        <style>
+        p {
+            font-style: normal;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            color: #25282B;
+        }
+
+        main {
+            border: 1px solid #002E6D33;
+            box-shadow: 0 0 15px 0;
+        }
+
+        .educate-button {
+            min-width: 200px;
+            height: 48px;
+            background-color: #3398FF;
+            border-radius: 28px;
+            color: #FFF;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            border: solid #3398FF;
+        }
+
+        .email-header {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            color: #1890FF;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        #educate-logo {
+            width: 183px;
+            height: auto;
+        }
+
+        .email-body {
+            padding: 1em;
+            width: 95%;
+            margin: 0 auto;
+            text-indent: 1em;
+        }
+
+        .educate-footer {
+            background-color: #3398FF;
+            border: 1px solid #3398FF;
+        }
+
+        .educate-footer-content {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box; /* Opera/IE 8+ */
+        }
+
+        .educate-footer-content p, .educate-footer-content a {
+            color: #FAFAFA;
+        }
+
+        .user-name {
+            text-transform: capitalize;
+        }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="email-header">
+                <h1>Educate</h1>
+            </div>
+            <div class="email-body">
+                {% block content %}
+                {% endblock content %}
+            </div>
+            <div class="educate-footer">
+                <div class="educate-footer-content">
+                    <p>
+                        Educate @ Rights Reserved |<a href="#">Terms of Service</a>
+                    </p>
+                    <p>
+                        Do not reply to this email.
+                        <a href="#">Click here to contact us</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

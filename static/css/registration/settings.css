@@ -1,0 +1,22 @@
+.mobile {
+    display: none;
+}
+.desktop {
+    display: block;
+    padding: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+    .mobile {
+        font-size: 10px;
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}
+
+.profile-picture{
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,44 @@
+{% extends "base/navigation.html" %}
+{% load static %}
+
+{% block imports %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/discussion_board/chat_room.css' %}">
+{% endblock %}
+
+{% block title %}
+    <title>Chat Room</title>
+{% endblock %}
+
+{% block content %}
+    <div class="section discussion-board">
+        <div class="chat-room">
+            <h3 id="chat-room-title" data-username="{{ user.username }}" data-room-code="{{ room_name }}">
+                {{ discussion_board.description }}
+                by: {{ discussion_board.board_creator.get_full_name|title }}
+            </h3>
+            <div class="chat-window">
+                <div id="chat-log"></div>
+                <p class="chat-log-notification">
+                    <span id="chat-log-notification-output" data-sender="" data-content="..."></span>
+                </p>
+            </div>
+            <div class="chat-message-input">
+                <label for="message-content"></label>
+                <input type="text" name="" id="message-content">
+            </div>
+            <div class="chat-room-controls">
+                {#            <button data-formatting-mode="bold" id="bold-text"><strong>B</strong></button>#}
+                {#            <button data-formatting-mode="italic" id="italic-text"><em>I</em></button>#}
+                {#            <button data-formatting-mode="underline" id="underline-text"><u>U</u></button>#}
+                {#            <button data-formatting-mode="strikethrough" id="strikethrough-text"><s>S</s></button>#}
+                {#            <button id="emoji-picker">&#128516</button>#}
+                <button type="button" id="send-message-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/discussion_board/chat_room.js' %}"></script>
+{% endblock %}

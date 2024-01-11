@@ -1,0 +1,42 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+
+    <div>
+        <p class="user-name">Dear {% firstof user.get_full_name user.email %},</p>
+        <p>
+            You have been requested to join the research project: {{ project.title }} by {{ inviter.get_full_name }} on
+            the Engage platform.
+        </p>
+
+        <p><strong>Project Title:</strong> {{ project.title }}</p>
+        <p><strong>Reference Name:</strong> {{ project.reference_name }}</p>
+        <p><strong>Project Creator:</strong> {{ project.creator.get_full_name }}</p>
+        <p><strong>Project Summary:</strong></p>
+        <p>{{ project.description }}</p>
+
+        {% if stage == 'Awaiting Registration' %}
+            <p>
+                Please check your emails to find your Engage account information or contact the admin
+                (engage@insightscope.ca) if you are having any issues
+            </p>
+        {% elif stage == 'Pending Profile Completion' %}
+            <p>
+                Please log into your Engage account and complete your profile to join your Team Members on this project
+            </p>
+        {% elif stage == 'Invited to Project' %}
+            <p>
+                To join this project, please log into your Engage account and click on the 'Pending Invitations' tab on
+                the home page to view and then join this research project
+            </p>
+        {% endif %}
+
+        <p>Click on the link below which will redirect to login page for Engage:</p>
+
+        <p><a target="_blank" href="{{ link }}">{{ project.title }}</a></p>
+
+        <p>Thanks & Regards,</p>
+        <p>Engage</p>
+    </div>
+
+{% endblock %}

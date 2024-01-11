@@ -1,0 +1,7 @@
+.full-table {
+    width: 100%;
+}
+
+.table-link, .table-link a {
+    color: var(--text-primary);
+}

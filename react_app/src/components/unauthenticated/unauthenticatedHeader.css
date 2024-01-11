@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002E6D;
+  padding: 10px;
+  height: 60px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-right a {
+  margin-left: 10px;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+}

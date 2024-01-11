@@ -1,0 +1,57 @@
+.notification-title {
+    margin-top: 0;
+}
+
+.notification-card:hover {
+    background-color: var(--bg-accent-secondary);
+}
+
+.notifications-icon {
+    position: relative;
+}
+
+.notifications-badge {
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    background-color: red;
+    position: absolute;
+    top: 40px;
+    right: 55px;
+
+    /* Center the content inside of the badge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-badge-content {
+    /* Typography settings for the notification number*/
+    color: var(--bg-accent-solid);
+    font-size: 0.6em;
+    padding: .2em;
+}
+
+.notifications-tooltip {
+    position: absolute;
+    top: 105px;
+    right: 40px;
+    border-radius: 3px;
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-family: Montserrat, sans-serif;
+    padding: 3px;
+    display: none;
+}
+
+.notifications-tooltip:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 20px;
+    width: 0;
+    border-bottom: 10px solid red;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}

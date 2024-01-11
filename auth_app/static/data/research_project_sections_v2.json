@@ -1,0 +1,59 @@
+{
+  "sections": [
+    {
+      "name": "EDI (Equity, Diversity, Inclusivity)",
+      "description": "Please specify any criteria by which you wish to filter potential partners according to their role. If you leave questions blank within each section, potential partners will not be filtered according to that field.",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 1
+    },
+    {
+      "name": "Research Experience",
+      "description": "",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 2
+    },
+    {
+      "name": "Researcher/Clinician Demographics",
+      "description": "",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 3
+    },
+    {
+      "name": "Patient/Family Non-Medical Demographics",
+      "description": "",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 4
+    },
+    {
+      "name": "Patient/Family Medical Demographics",
+      "description": "",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 5
+    }
+  ]
+}

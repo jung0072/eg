@@ -1,0 +1,16 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+    <div>
+        <p class="user-name">Dear {{ to_users.first_name }} {{ to_users.last_name }},</p>
+        <p>Your project {{ project.title }} was created successfully on Engage and submitted for approval.</p>
+        <p>
+            To review and/or update the project, simply click on the link below or login to
+            <a href="{{ link }}" target="_blank">Engage</a>
+        </p>
+        <p><a href="{{ link }}" target="_blank">{{ project.title }}</a></p>
+
+        <p>Thank you,</p>
+        <p>The Engage Team</p>
+    </div>
+{% endblock %}

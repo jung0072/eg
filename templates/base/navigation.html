@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+{% load auth_filters %}
+{% load get_item %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- content security policy, should be updated with any api's and frameworks that we connect to -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' https://*.fontawesome.com/ https://source.unsplash.com ;
+            style-src 'self' 'unsafe-inline' https://*.fontawesome.com/ code.jquery.com cdnjs.cloudflare.com;
+            script-src 'self' 'unsafe-inline' https://kit.fontawesome.com/dadda85c0c.js code.jquery.com ajax.googleapis.com cdnjs.cloudflare.com;
+            font-src 'self' data: https://ka-f.fontawesome.com ;
+            media-src 'self' https://insightscope.ca/ ;
+            connect-src 'self' https://ka-f.fontawesome.com/ ;
+            img-src 'self' https://source.unsplash.com https://insightscope.ca/ https://images.unsplash.com code.jquery.com data: ;"
+    />
+    {# Navigation specfic CSS imports#}
+    <link rel="stylesheet" href="{% static 'css/base/variables.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/animation.css' %}">
+    {% comment %} Commented out the imports that are not required {% endcomment %}
+    {# DataTables Import #}
+    {% comment %} <link rel="stylesheet" type="text/css" href="/static/lib/DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="/static/lib/DataTables/datatables.min.js"></script> {% endcomment %}
+
+    {# Moment.js #}
+    {% comment %} <script type="text/javascript" src="{% static "js/moment.js" %}"></script> {% endcomment %}
+
+    {# Page specific css imports, can override any styles set after variables #}
+    <link rel="stylesheet" href="{% static 'css/base/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/notifications.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nginx_500.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app_switch.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/controls.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/fontawesome_all.css' %}">
+    {% block imports %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toasts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/overrides.css' %}">
+
+    {# Imports for our Web Icons #}
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="/static/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    {# Bootstrap 5 CSS Import: Commented out until required for development.#}
+    {#    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"#}
+    {#          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"#}
+    {#    >#}
+    <title>Engage</title>
+</head>
+<body class="solar-theme">
+<table id="content-grid">
+    <tr id="content-header">
+        <th style="">
+            <a href="/home/">
+                <img class="engage-logo" src="{% static '/img/engage-condensed-logo.svg' %}"
+                     alt="The logo for the Engage Platform."
+                >
+            </a>
+        </th>
+        <th class="fill-width">{% include "base/header.html" %}</th>
+        <th class="right-header-row">
+            <div class="right-header-container">
+
+                {% comment %} commented out the app switcher for finalizing demo to the client {% endcomment %}
+                {% comment %} <div class="app-switcher">
+                    <div  class="switch-app-container">
+                        <button onclick="switchDropdown()" class="wrap-switch-icon"></button>
+                        <img src="../../static/img/icons/grid-3x3-gap-fill-svgrepo-com.svg" class="switch-badge"></img>
+                    </div>
+
+                    <div id="switchItems" class="switch-content">
+                        <div class="tooltip-triangle"></div>
+                        <a id="shifter-id" class="shifters" href="http://127.0.0.1:8000/dashboard" target="_blank">
+                            <img alt="Inisght Scope logo" src="../../static/img/icons/colour-logo.png" />
+                            <p class="shifter-title">insightScope</p>
+                        </a>
+
+                        <a class="shifters" href="http://127.0.0.2:8000/">
+                            <img alt="engage logo" src="../../static/img/engage-ic4u-small-logo.svg" />
+                            <p class="shifter-title">Engage IC4U</p>
+                        </a>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+        </th>
+    </tr>
+    <tr class="fill-height">
+        <td class="fill-width">
+            <main>{% block content %}{% endblock %}</main>
+        </td>
+    </tr>
+</table>
+<script>
+    {#  TODO: Refactor this to avoid security issues, use Redux or another state management container to contain this information #}
+    const globalValues = {
+        userIdentifier: {{ request.user.id }},
+        projectIdentifier: {{ research_project.id|default:0 }},
+        CSRF_TOKEN: '{{ csrf_token }}',
+        currentUserRole: '{{ request.user.id|get_user_role }}'
+    };
+</script>
+<script src="{% static 'js/constants.js' %}"></script>
+<script src="{% static 'js/base/navigation.js' %}"></script>
+{% comment %} <script src="{% static 'js/modal.js' %}"></script> {% endcomment %}
+{% comment %} <script src="{% static 'js/requests.js' %}"></script> {% endcomment %}
+{% comment %} <script src="{% static 'js/toasts.js' %}"></script> {% endcomment %}
+{% comment %} <script src="{% static 'js/form_modal.js' %}"></script> {% endcomment %}
+{% comment %} <script src="{% static "js/notifications.js" %}"></script> {% endcomment %}
+{% comment %} commented out, probably we don't need a switcher {% endcomment %}
+{% comment %} {# Page specific scripts#}
+<script>
+    function switchDropdown() {
+        document.getElementById("switchItems").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.wrap-switch-icon')) {
+            const dropdowns = document.getElementsByClassName("switch-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    };
+</script> {% endcomment %}
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

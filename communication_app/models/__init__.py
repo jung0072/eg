@@ -1,0 +1,5 @@
+from communication_app.models.discussion_board import DiscussionBoard
+from communication_app.models.message import Message
+from communication_app.models.notification import Notification
+from communication_app.models.user_message_tag import UserMessageTag
+from communication_app.models.system_message import SystemMessage

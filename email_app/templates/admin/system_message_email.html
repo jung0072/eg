@@ -1,0 +1,12 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+
+    <div>
+        <p class="user-name">Dear {{ user.get_full_name }},
+        <p>{{ content }}</p>
+        <p>Thank you,</p>
+        <p>Engage</p>
+    </div>
+
+{% endblock %}

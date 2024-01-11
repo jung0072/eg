@@ -1,0 +1,280 @@
+.researchers-list {
+    display: grid;
+}
+
+.researcher-patient-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.researcher-select,
+.patient-select {
+    text-decoration: none;
+    color: var(--brand-colour);
+    padding: 1.4rem;
+    font-weight: bold;
+}
+
+.researcher-select.active,
+.patient-select.active {
+    color: var(--bg-secondary-colour);
+    background-color: var(--brand-colour);
+    border: none;
+    border-radius: var(--border-radius)
+}
+
+.researcher-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-accent);
+}
+
+.card-information {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 240px;
+    width: 70%;
+    margin: 0 2.5rem 0 2rem;
+}
+
+.interest-chips {
+    border: 2px solid var(--brand-colour);
+    border-radius: 2rem;
+    padding: 0.1rem;
+    /*margin: 0.1rem;*/
+}
+
+.interest-chips > p {
+    font-size: 0.8rem;
+    color: var(--brand-colour);
+    margin: 0.3rem;
+}
+
+.researcher-title {
+    font-size: 1.8rem;
+    color: var(--brand-colour);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.researcher-role {
+    margin-top: 0.2rem;
+}
+
+.card-picture {
+    width: 130px;
+    height: 130px;
+    padding: 0;
+}
+
+.card-picture.patient {
+    border: var(--brand-colour) solid 4px;
+}
+
+.researcher-interests {
+    box-sizing: border-box;
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.researcher-interests-title {
+    margin-top: 0.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.researcher-interests > p:last-child {
+    color: var(--text-accent);
+    font-size: 0.8rem;
+    margin-left: 0.6rem;
+}
+
+.buttons-container {
+    align-items: normal;
+    gap: 1rem;
+    max-width: 200px;
+    flex-direction: column;
+    margin-top: 0.8rem;
+    justify-content: normal;
+}
+
+.researchers-page-button {
+    border: 1px solid var(--text-accent);
+    border-radius: var(--border-radius);
+    padding: 0.7em;
+}
+
+.researcher-card-button1,
+.researcher-card-button2 {
+    font-size: 1rem;
+}
+
+.researcher-card-button1 {
+    flex-grow: 1;
+}
+
+.researcher-card-button2 {
+    flex-grow: 2;
+}
+
+/* Styles related to patient/researcher details page */
+
+.details-card {
+    display: flex;
+    min-width: 40vw;
+    margin-top: calc(var(--header-full-height) + 2rem);
+    width: 80vw;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-accent);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.share-profile-button {
+    all: unset;
+    color: var(--brand-colour);
+}
+
+.share-profile-button:active {
+    color: var(--cheo-primary-blue);
+}
+
+.share-profile-button:hover {
+    color: var(--cheo-primary-blue);
+}
+
+.details-card-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.details-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-details-picture {
+    border: var(--brand-colour) solid 4px;
+    height: 180px;
+    width: 180px;
+}
+
+.researcher-name-role-location {
+    margin-bottom: 1rem;
+}
+
+.share-profile-button {
+    margin-left: 1rem;
+}
+
+
+/* Media Query for medium-sized screens */
+@media only screen and (min-width: 550px) {
+    .researcher-patient-buttons {
+        justify-content: flex-start;
+    }
+
+    .patient-select {
+        margin-left: 1.2rem;
+    }
+
+    .researcher-card {
+        text-align: start;
+        flex-direction: row;
+        min-width: 500px;
+        max-width: 600px;
+        height: 240px;
+    }
+
+    .buttons-container {
+        flex-direction: row;
+        max-width: 300px;
+        justify-content: stretch;
+    }
+
+    .researcher-interests {
+        justify-content: normal;
+        width: 300px;
+    }
+
+    .card-information {
+        align-items: flex-start;
+    }
+
+
+}
+
+/* Styles for the details page */
+@media only screen and (min-width: 600px) {
+    .details-card {
+        height: 500px;
+        padding: 2rem;
+        margin-top: 0;
+        width: 80%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: start;
+    }
+
+    .details-card-header {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .details-buttons {
+        flex-direction: column;
+        margin-top: 1rem;
+        align-items: center;
+        align-self: flex-start;
+    }
+
+    .share-profile-button {
+        margin: 1rem 0 0 0;
+        align-items: center;
+    }
+
+    .send-message-button {
+        width: 100vw;
+        max-width: 180px;
+    }
+
+    .details-card-footer {
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .researcher-interests.details {
+        flex-wrap: nowrap;
+    }
+
+    .interest-chips.details{
+        white-space: nowrap;
+    }
+
+    .researcher-name-role-location {
+        flex-grow: 3;
+        padding: 2rem;
+        align-self: flex-start;
+    }
+
+    .card-details-picture {
+        align-self: flex-start;
+    }
+}

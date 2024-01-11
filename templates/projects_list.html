@@ -1,0 +1,42 @@
+{% load static %}
+{% load get_profile_picture %}
+
+<link rel="stylesheet" href="{% static 'css/project_list.css' %}">
+
+<div class="projects-list">
+    <ul class="content-list">
+        {% for project in projects %}
+            <li class="content-list-item">
+                <div class="content-card">
+                    <div class="card-header">
+                        <p class="card-subtitle">{{ project.title }}</p>
+                        <p class="card-title">{{ project.reference_name }}</p>
+                    </div>
+                    <div class="card-content">
+                        {{ project.description }}
+                    </div>
+                    <div class="card-footer">
+                        <div class="user-profile-avatar small">
+                            <div class="profile-picture-container">
+                                <img class="profile-picture circle" alt="Profile Avatar"
+                                     src="{% url 'engage_app:get_public_profile_picture' username=project.creator.username %}"
+                                >
+                            </div>
+                            <p class="username">{{ project.creator.first_name }} {{ project.creator.last_name }}</p>
+                            <p class="title">Information</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="{% url 'engage_app:research_project_info' research_project_id=project.id %}">
+                                <button class="action main" type="button">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {% empty %}
+            <li>No projects found</li>
+        {% endfor %}
+    </ul>
+</div>

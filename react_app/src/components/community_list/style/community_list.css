@@ -1,0 +1,23 @@
+.community-list-screen .container {
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    border: rgba(200, 200, 200, 0.23) 1px solid;
+    background-color: #F5F5F5;
+    padding: 30px;
+    gap: 1.4rem;
+}
+
+.community-list-screen .container > .image {
+    display: flex;
+    flex-direction: column;
+}
+
+.community-list-screen .list {
+    display: flex;
+}
+
+.community-list-screen .item {
+    font-weight: bold;
+}

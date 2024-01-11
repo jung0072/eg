@@ -1,0 +1,16 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+
+<div>
+  <p class="user-name">Dear {{ to_users.first_name }} {{ to_users.last_name }},</p>
+  <p>You can download chat log from the link down</p>
+  <p>Project Title: {{ project_title }}</p>
+  <p>Creator: {{ creator }}</p>
+  <p><a target="_blank" href="{{ link }}">Download</a></p>
+
+  <p>Thank you,</p>
+  <p>Engage</p>
+</div>
+
+{% endblock %}

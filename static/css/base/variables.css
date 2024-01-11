@@ -1,0 +1,86 @@
+:root {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+
+    /* CSS Colour Variables */
+    --darkest-shade: 12, 12, 12;
+    --dark-shade: 37, 40, 43;
+    --dark-accent: 38, 40, 42;
+    --light-shade: 244, 245, 248;
+    --light-accent: 255, 255, 255;
+    --light-accent-alt: 160, 164, 168;
+    --header-primary-colour: rgb(var(--dark-accent));
+    --text-primary-colour: rgb(var(--dark-shade));
+    --text-secondary-colour: rgb(var(--light-accent-alt));
+    --bg-primary-colour: rgb(var(--light-shade));
+    --bg-secondary-colour: rgb(var(--light-accent));
+    --border-color: rgb(232 232 232);
+
+    /* CHEO Color definitions */
+    --primary-green: 2, 98, 92;
+    --primary-blue: 0, 46, 109;
+    --primary-purple: 123, 40, 129;
+    --secondary-green: 162, 214, 131;
+    --secondary-blue: 101, 203, 201;
+    --secondary-purple: 170, 100, 169;
+    --secondary-yellow: 255, 200, 67;
+    --secondary-pink: 253, 146, 163;
+
+    /* C.H.E.O. Colours as RGB */
+    --cheo-primary-green: rgb(var(--primary-green));
+    --cheo-primary-blue: rgb(var(--primary-blue));
+    --cheo-primary-purple: rgb(var(--primary-purple));
+    --cheo-secondary-green: rgb(var(--secondary-green));
+    --cheo-secondary-blue: rgb(var(--secondary-blue));
+    --cheo-secondary-purple: rgb(var(--secondary-purple));
+    --cheo-secondary-yellow: rgb(var(--secondary-yellow));
+    --cheo-secondary-pink: rgb(var(--secondary-pink));
+
+    /* Sizing specific variables */
+    --navigation-collapsed-width: 4rem;
+    --navigation-full-width: 15rem;
+    --header-full-height: 80px;
+
+    /* Animation specific variables */
+    --navigation-animation-delay: 150ms;
+    --theme-animation-delay: 350ms;
+
+    /* CSS Utility Variables */
+    --border-radius: 10px;
+    --maximum-z-index: 2147483647;
+
+    /* CSS Theme Variables */
+    --toast-notification-animation-duration: 3s;
+}
+
+/* Css Theme Specific Styles for Light & Dark mode */
+.solar-theme {
+    --bg-primary: var(--bg-primary-colour);
+    --bg-accent: var(--bg-secondary-colour);
+    --bg-accent-solid: var(--bg-secondary-colour);
+    --bg-accent-secondary: rgba(var(--dark-accent), 0.16);
+    --bg-accent-tertiary: rgba(var(--dark-accent), 0.12);
+    --toast-notification-content-bg: var(--bg-secondary-colour);
+    --brand-colour: var(--cheo-secondary-blue);
+    --brand-overlay-24: rgba(var(--secondary-blue), 0.5);
+    --text-primary: var(--header-primary-colour);
+    --text-accent: var(--text-secondary-colour);
+}
+
+.lunar-theme {
+    /*--bg-primary: linear-gradient(to right, var(--text-secondary-colour), var(--text-primary-colour));*/
+    --bg-primary: rgb(var(--darkest-shade));
+    --bg-accent: rgba(var(--light-shade), 0.08);
+    --bg-accent-solid: rgb(49, 49, 49);
+    --bg-accent-secondary: rgba(var(--light-shade), 0.16);
+    --bg-accent-tertiary: #313131;
+    --toast-notification-content-bg: rgb(var(--dark-shade));
+    --brand-colour: var(--cheo-secondary-purple);
+    --brand-overlay-24: rgba(var(--secondary-purple), 0.5);
+    --text-primary: var(--bg-primary-colour);
+    --text-accent: var(--bg-secondary-colour);
+}
+
+.theme-color {
+    color: var(--text-primary);
+}

@@ -1,0 +1,164 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/researchers.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registration/profile.css' %}">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static "js/user_profile.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <ul class="content-list">
+        <li class="content-list-item">
+            <div class="content-card">
+                <div class="card-header">
+                    <div id="user-identity-container">
+                        <form id="userphoto" class='form' method="POST" name="user_profile_photo"
+                              action="{% url 'engage_app:upload_user_photo' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="avatar-upload">
+                                {% if request.user.id == user_profile.user.id %}
+                                    <div class="avatar-edit">
+                                        <input type='file' id="file1" name='file1' accept=".png, .jpg, .jpeg"/>
+                                        <label for="file1"></label>
+                                    </div>
+                                {% endif %}
+                                <div class="avatar-preview">
+                                    <div id="imagePreview"
+                                         style="background-image: url('data:;base64,{{ user_profile.get_profile_image }}')">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="user-info">
+                            <p class="card-title full-name">{{ user_profile.user.get_full_name }}</p>
+                            <p class="role" class="card-subtitle">{{ user_profile.get_role_label }}</p>
+                            {% if user_profile.get_city_name %}
+                                <p class="" class="card-subtitle">
+                                    <i class="fas fa-map-marker-alt"></i>&nbsp;{{ user_profile.get_city_name }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if request.user.id == user_profile.user.id %}
+                        <a href="{% url 'engage_app:edit_user_profile' %}" class="user-settings-button">
+                            <button class="button action shadowed">
+                                <i class="fas fa-cog"></i> Edit
+                            </button>
+                        </a>
+                    {% endif %}
+                </div>
+
+                <div class="card-content">
+                    {% if user_profile.experience %}
+                        <div id="experience-container">
+                            <p><strong>About their experience</strong></p>
+                            {{ user_profile.experience }}
+                        </div>
+                    {% endif %}
+
+                    <div id="researcher-interests-container">
+                        <p id="research-interests-title"><strong>
+                            Research Interests
+                        </strong></p>
+                        <div id="researcher-interests">
+                            {% for interest in user_profile.research_interests.all %}
+                                <div class="interest-chips">
+                                    <p>{{ interest }}</p>
+                                </div>
+                            {% empty %}
+                                No interests
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    {# User's Project List #}
+    <ul class="content-list">
+        <li class="content-list-item">
+            <div class="content-card">
+                <div class="card-header">
+                    <h3><u>Active projects</u></h3>
+                </div>
+                <div class="card-content">
+                    {% include 'projects_list.html' with projects=user_profile.get_active_projects %}
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    {% if user_profile.user_id == request.user.id %}
+        <ul class="content-list">
+            <li class="content-list-item">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3><u>Personal User Demographics (Private)</u></h3>
+                    </div>
+                    <div class="card-content">
+                        <div id="additional-user-info-container">
+
+                            {% if user_profile.linkedin_link %}
+                                <div class="question-container">
+                                    <h3 class="question">LinkedIn</h3>
+                                    <a href="{{ user_profile.linkedin_link }}">{{ user_profile.linkedin_link }}</a>
+                                </div>
+                            {% endif %}
+
+                            {% if user_profile.twitter_link %}
+                                <div class="question-container">
+                                    <h3 class="question">Twitter</h3>
+                                    <a href="{{ user_profile.twitter_link }}">{{ user_profile.twitter_link }}</a>
+                                </div>
+                            {% endif %}
+
+                            {% if user_profile.facebook_link %}
+                                <div class="question-container">
+                                    <h3 class="question">Facebook</h3>
+                                    <a href="{{ user_profile.facebook_link }}">{{ user_profile.facebook_link }}</a>
+                                </div>
+                            {% endif %}
+
+                            {% if user_profile.instagram_link %}
+                                <div class="question-container">
+                                    <h3 class="question">Instagram</h3>
+                                    <a href="{{ user_profile.instagram_link }}">{{ user_profile.instagram_link }}</a>
+                                </div>
+                            {% endif %}
+
+                            {% if user_profile.research_gate_link %}
+                                <div class="question-container">
+                                    <h3 class="question">Research Gate</h3>
+                                    <a href="{{ user_profile.research_gate_link }}">{{ user_profile.research_gate_link }}</a>
+                                </div>
+                            {% endif %}
+
+                            {% if user_profile.household_salary %}
+                                <div class="question-container">
+                                    <h3 class="question">Household salary</h3>
+                                    {{ user_profile.household_salary }}
+                                </div>
+                            {% endif %}
+
+
+                            {% for response in user_profile.get_custom_answers %}
+                                {% if response.selected_options %}
+                                    <div class="question-container">
+                                        <h3 class="question">{{ response.question_text }}</h3>
+                                        {{ response.selected_options }}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    {% endif %}
+{% endblock %}

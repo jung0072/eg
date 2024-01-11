@@ -1,0 +1,18 @@
+.register-user-screen .register-main {
+    height: 90vh;
+}
+
+.register-user-screen .ant-select-selector, .basic-user-settings-form .ant-select-selector{
+    height: 40px !important;
+    border: 1px solid #AFAFAF;
+    background-color: #F5F5F5 !important;
+}
+
+.register-user-screen .ant-form-item-explain-error, .basic-user-settings-form .ant-form-item-explain-error {
+    margin-bottom: 1em;
+}
+
+.register-user-screen #password.ant-input, .register-user-screen #password2.ant-input,
+.basic-user-settings-form .register-user-screen #password.ant-input, .basic-user-settings-form #password2.ant-input {
+    background-color: #F5F5F5 !important;
+}

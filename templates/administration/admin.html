@@ -1,0 +1,148 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/administration/user_profile_form.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <ul class="content-list">
+            <li class="content-list-item">
+                <div class="content-card">
+                    <div class="page-content" id="pending_projects">
+                        <h1>Pending Projects</h1>
+                        <div id="pending-projects-data-table">
+                            loading...
+                        </div>
+                    </div>
+                    <div class="page-content hidden" id="pending_researchers">
+                        <h1>Pending Researchers</h1>
+                        <div id="pending-researchers-data-table"></div>
+                    </div>
+                    <div class="page-content hidden" id="project_management">
+                        <h1>Project Management</h1>
+                        <div id="research-projects-data-table"></div>
+                    </div>
+                    <div class="page-content hidden" id="user_management">
+                        <h1>User Management</h1>
+                        <div id="system-user-profile-data-table"></div>
+                    </div>
+                    <div class="page-content hidden" id="system_messages">
+                        {% include 'administration/pages/system_messages.html' %}
+                    </div>
+                    {% include 'administration/imports/user-profile-question-section-datatable.html' %}
+                    <div class="page-content hidden" id="research_project_forms"><h1>Research Project Forms</h1></div>
+                    <div class="page-content hidden" id="research_interests_forms">
+                        <h1>Research Interests Forms</h1>
+                        {# TODO: Choose different colors for the research interests nav section#}
+                        <div id="research-interests-data-table"></div>
+                    </div>
+                    <div class="page-content hidden" id="system_settings"><h1>System Settings</h1></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block side_content %}
+    <div data-selector="pending_projects" class="side-button secondary-green">
+        <div class="side-button-status">
+            <p>{{ pending_project_count }}</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">Pending Projects</p>
+            <p class="side-button-subtitle">Approve / Deny Projects</p>
+        </div>
+    </div>
+
+    <div data-selector="pending_researchers" class="side-button secondary-purple">
+        <div class="side-button-status">
+            <p>{{ pending_researcher_count }}</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">Pending Researchers</p>
+            <p class="side-button-subtitle">Approve / Deny Researchers</p>
+        </div>
+    </div>
+
+    <div data-selector="project_management" class="side-button secondary-blue">
+        <div class="side-button-status">
+            <p>{{ active_project_count }}</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">Project Management</p>
+            <p class="side-button-subtitle">Manage active projects</p>
+        </div>
+    </div>
+
+    <div data-selector="user_management" class="side-button secondary-pink">
+        <div class="side-button-status">
+            <p>{{ user_count }}</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">User Management</p>
+            <p class="side-button-subtitle">Manage active users</p>
+        </div>
+    </div>
+
+    <div data-selector="system_messages" class="side-button secondary-yellow">
+        <div class="side-button-status">
+            <p>{{ system_messages.count }}</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">System Messages</p>
+            <p class="side-button-subtitle">Alert the users of the system</p>
+        </div>
+    </div>
+
+    <div data-selector="user_profile_forms" class="side-button primary-blue">
+        <div class="side-button-status">
+            <p>GO</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">Customize User Profile Forms</p>
+            <p class="side-button-subtitle">Create & Edit User Profile Questions</p>
+        </div>
+    </div>
+
+    <div data-selector="research_project_forms" class="side-button primary-purple">
+        <div class="side-button-status">
+            <p>GO</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">Customize Research Project Forms</p>
+            <p class="side-button-subtitle">Create & Edit Research Project Questions</p>
+        </div>
+    </div>
+
+    <div data-selector="research_interests_forms" class="side-button primary-purple">
+        <div class="side-button-status">
+            <p>GO</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">Customize Research Interests Forms</p>
+            <p class="side-button-subtitle">Create & Edit Research Interests</p>
+        </div>
+    </div>
+
+    <div data-selector="system_settings" class="side-button primary-green">
+        <div class="side-button-status">
+            <p>GO</p>
+        </div>
+        <div class="side-button-content">
+            <p class="side-button-title">System Settings</p>
+            <p class="side-button-subtitle">Edit global system settings</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/administration/user_management.js' %}"></script>
+    <script src="{% static 'js/administration/pending_researchers.js' %}"></script>
+    <script src="{% static 'js/administration/pending_projects.js' %}"></script>
+    <script src="{% static 'js/administration/project_management.js' %}"></script>
+    <script src="{% static 'js/administration/research_interests_management.js' %}"></script>
+    <script src="{% static 'js/administration/user_profile_form_management.js' %}"></script>
+    <script src="{% static 'js/administration/admin.js' %}"></script>
+{% endblock %}

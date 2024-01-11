@@ -1,0 +1,100 @@
+/* Card Specific Styles*/
+
+.content-card {
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.content-card-small {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.full-page.card-title {
+    width: 100%;
+    height: 30%;
+}
+
+.content-card.centre {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Notification header styles */
+.card-notification {
+    font-size: 0.6rem;
+}
+
+.card-notification.active {
+    color: var(--cheo-secondary-green);
+}
+
+.card-notification.inactive {
+    color: var(--cheo-secondary-pink);
+}
+
+.card-notification.info {
+    color: var(--cheo-secondary-yellow);
+}
+
+.card-notification.update {
+    color: var(--cheo-secondary-blue);
+}
+
+.card-notification:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    margin: 0.3rem 0.2rem;
+}
+
+.card-notification.active:before, .card-notification.inactive:before, .card-notification.info:before {
+    content: '\f111';
+}
+
+.card-notification.update:before {
+    content: '\f064';
+    /* Flip the icon on the vertical axis */
+    transform: scaleY(-1);
+}
+
+/* Card typography styles */
+.large.card-subtitle {
+    font-size: 1.2rem;
+}
+
+.large.card-title {
+    font-size: 1.4rem;
+}
+
+.card-subtitle {
+    color: var(--text-accent);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.card-title {
+    color: var(--brand-colour);
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.card-content {
+    color: var(--text-primary);
+}
+
+/* Card Footer Styles */
+.card-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0 0 0;
+    width: 100%;
+}
+
+.card-actions {
+    margin-left: auto;
+}

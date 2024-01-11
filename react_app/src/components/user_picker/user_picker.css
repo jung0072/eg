@@ -1,0 +1,22 @@
+.ant-modal-footer .ant-btn {
+    border-radius: 16px !important;
+}
+
+.ant-modal-footer .ant-btn-primary {
+    background: var(--primary-color-1) !important;
+    border-color: transparent;
+}
+
+.ant-modal-header{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ant-modal-content {
+    border-radius: 10px;
+    border: 1px solid #D6D6D6;
+}
+
+.ant-collapse{
+    border-radius: 8px;
+}

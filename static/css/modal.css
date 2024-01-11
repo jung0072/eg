@@ -1,0 +1,79 @@
+/* Main Modal zone selectors */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: var(--maximum-z-index);
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: visible; /*make content scrollable*/
+    background-color: rgba(var(--dark-shade), 0.30);
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-dialog {
+    margin: 10% auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+/* Modal Tab Selectors */
+
+.modal-header-tab-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.modal-tab-list-item {
+    background-color: var(--bg-primary);
+    padding: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+    margin-right: 1em;
+}
+
+.modal-tab-list-item.active {
+    background-color: var(--brand-colour);
+}
+
+.modal-body, .modal-footer {
+    background-color: var(--bg-primary);
+    padding: 20px;
+}
+
+/* Selectors for the modal tabs */
+.modal-tab-content {
+    display: none;
+}
+
+.modal-tab-content.active {
+    display: block;
+}
+
+.modal-exit-button {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.scrollable-content {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.modal-footer.align-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}

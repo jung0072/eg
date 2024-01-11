@@ -1,0 +1,116 @@
+.engage-admin-node .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.engage-admin-node .card{
+    display: flex;
+    flex-basis: 30%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 190px;
+    min-width: 273px;
+    border-radius: 15px;
+    transition: all 1.3s ease;
+    border: 2px solid #555;
+    cursor: pointer;
+}
+
+.engage-admin-node .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.engage-admin-node .card-value {
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.engage-admin-node .card-title {
+    margin-top: 6px;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+}
+
+.engage-admin-node .card-description {
+    margin-top: 6px;
+    text-align: center;
+}
+
+.engage-admin-node .card.active > .card-content {
+    display: none;
+}
+
+.engage-admin-node .card.move {
+    transform: translateX(100px);
+}
+
+.engage-admin-node .card.circle {
+    min-height: 50px !important;
+    min-width: 50px !important;
+    transform: translateX(1%);
+    border-radius: 5px;
+}
+
+.engage-admin-node .active-card-container {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 600px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    z-index: 1;
+    overflow: scroll;
+    scrollbar-width: thin; /* firefox and edge */
+    scrollbar-color: #888 #f1f1f1; /* firefox and edge */
+    margin-top: 1em;
+}
+
+/* customize scrollbar */
+
+.engage-admin-node .active-card-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.engage-admin-node .active-card-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.engage-admin-node .active-card-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.engage-admin-node .active-card-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.engage-admin-node .seperate-container {
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+@media screen and (max-width: 1238px) {
+    
+    .engage-admin-node .card-title {
+        margin-top: 3px;
+        font-size: 16px;
+    }
+    .engage-admin-node .card-description {
+        margin-top: 3px;
+        font-size: 14px;
+    }
+    
+}

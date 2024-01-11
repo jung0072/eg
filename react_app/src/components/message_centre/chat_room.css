@@ -1,0 +1,151 @@
+/* ant-design overrides */
+.chat-room .ant-card-body {
+    padding: 0.2em;
+}
+
+.chat-room .col-antd.chat-room {
+    width: 100%
+}
+
+/* Alignment styles for the chat room */
+.chat-room-message-node.right-aligned, .right-aligned .chat-room-message-card,
+.right-aligned .chat-room-message-button-container {
+    margin-left: auto;
+}
+
+.chat-room-message-node.left-aligned {
+    margin-right: 4em;
+}
+
+.right-aligned .chat-room-message-card {
+    background-color: #ECF4FF;
+    margin-right: 3em;
+}
+
+.left-aligned .chat-room-message-card {
+    background-color: #FFFFFF;
+    margin-left: 3em;
+}
+
+.right-aligned .chat-room-user-group p {
+    margin-left: auto;
+    margin-right: 1em
+}
+
+.left-aligned .chat-room-user-group p {
+    margin-right: auto;
+    margin-left: 1em;
+}
+
+.right-aligned .chat-room-message-button-container, .right-aligned .chat-room-user-group {
+    margin-right: 3em;
+}
+
+.left-aligned .chat-room-message-button-container, .left-aligned .chat-room-user-group {
+    margin-left: 3em;
+}
+
+.chat-room-message-node.left-aligned .chat-room-user-group {
+    text-align: left !important;
+}
+
+.chat-room-message-node.right-aligned .chat-room-user-group {
+    text-align: right !important;
+}
+
+.chat-room .ant-upload {
+    position: relative;
+}
+
+.chat-room .ant-upload-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*
+Show the picture and name in a reverse order for messages from other users, by default messages for your self
+will have implied flex-flow: row nowrap
+ */
+.left-aligned .chat-room-user-group {
+    flex-flow: row-reverse nowrap;
+}
+
+/* UX Interaction Styles for the Chat Application in React */
+.chat-room-message-group .chat-room-message-action {
+    display: none;
+}
+
+.hovered-show-actions {
+    display: block !important;
+}
+
+.chat-room-message-group:hover .chat-room-message-action {
+    display: block;
+}
+
+.chat-room-message-row.is-pinned {
+    background-color: #FCD1161A;
+}
+
+.chat-room-message-action {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.chat-room-message-action:hover {
+    background-color: #0000003C;
+    color: #4988ECFF;
+}
+
+.hidden {
+    display: none;
+}
+
+.chat-room-message-chip.hidden {
+    display: none;
+}
+
+.chat-room-message-chip {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.chat-room-message-delete-button, .chat-room-message-like-button, .chat-room-message-reply-button, .chat-room-message-pin-button, .chat-room-message-report-button {
+    cursor: pointer;
+}
+
+.chat-room-message-delete-button:hover:after, 
+.chat-room-message-like-button:hover:after,
+.chat-room-message-report-button::after,
+.chat-room-message-reply-button:hover:after,
+.chat-room-message-pin-button:hover:after {
+    position: relative;
+    z-index: 999;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 2px;
+    font-size: medium;
+}
+
+.chat-room-message-like-button:hover:after {
+    content: "like";
+}
+
+.chat-room-message-pin-button:hover:after {
+    content: "pin";
+}
+
+.chat-room-message-reply-button:hover:after {
+    content: "reply";
+}
+
+.chat-room-message-delete-button:hover:after {
+    content: "delete";
+}
+
+.chat-room-message-reply-button, .chat-room-message-like-button, .chat-room-message-pin-button, .chat-room-message-delete-button, .chat-room-message-report-button {
+    transition: 0.3s;
+}

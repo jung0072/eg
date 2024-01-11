@@ -1,0 +1,95 @@
+Alberta
+  Athabasca University
+  Concordia University
+  MacEwan University
+  Mount Royal University
+  The King's University
+  University of Alberta
+  University of Calgary
+  University of Lethbridge
+British Columbia
+  Capilano University
+  Royal Roads University
+  Simon Fraser University
+  University of British Columbia
+  Thompson Rivers University
+  Trinity Western University
+  University of Northern British Columbia
+  University of the Fraser Valley
+  University of Victoria
+  Vancouver Island University
+Manitoba
+  Brandon University
+  Canadian Mennonite University
+  St Paul's College
+  University of Winnipeg
+  Univerite de Saint-Boniface
+  University of Manitoba
+New Brunswick
+  Mount Allison University
+  St Thomas University
+  Universite de Moncton
+  University of New Brunswick
+Newfoundland and Labrador
+  Memorial University of Newfoundland
+Nova Scotia
+  Acadia University
+  Cape Breton University
+  Dalhousie University
+  Mount Saint Vincent University
+  NSCAD University
+  Saint Mary's University
+  St Francis Xavier University
+  Universite Sainte-Anne
+  University of King's College
+Ontario
+  Algoma University
+  Brescia University College
+  Brock University
+  Carleton University
+  Huron University College
+  King's University College
+  Lakehead University
+  Laurentian University
+  McMaster University
+  Nipissing University
+  Northern Ontario School of Medicine
+  OCAD University
+  Queen's University
+  Redeemer University
+  Royal Military College of Canada
+  St Jerome's University
+  Toronto Metropolitan University
+  Trent University
+  University of Guelph
+  University of Ottawa
+  University of St Michael's College
+  University of Sudbury
+  University of Toronto
+  University of Trinity College
+  University of Waterloo
+  University of Windsor
+  Victoria University
+  Western University
+  Wilfrid Laurier University
+  York University
+Prince Edward Island
+  University of Prince Edward Island
+Quebec
+  Bishop's University
+  Concordia University
+  HEC Montreal
+  Institut national de la recherche scientifique
+  McGill University
+  Universite de Montreal
+  Universite de Sherbooke
+  Universite du Quebec
+  Universite Laval
+  Universite TELUQ
+Saskatchewan
+  Campion College
+  First Nations University of Canada
+  Luther College
+  St Thomas More College
+  University of Regina
+  University of Saskatchewan

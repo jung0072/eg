@@ -1,0 +1,21 @@
+.recently-tags {
+    display: flex;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.recent-tags-card {
+    border-radius: 15px;
+    margin: 0 10px;
+    padding: 10px 0;
+}
+
+.recent-project-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    padding-top: 10px;
+}

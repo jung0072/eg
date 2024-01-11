@@ -1,0 +1,30 @@
+/* This is where all of the rules for overriding styles for any libraries in usage on the platform */
+
+/* Single Select Overrides */
+.ss-main .ss-multi-selected {
+    background-color: transparent !important;
+}
+
+/* DataTables Overrides */
+table.dataTable tr:hover {
+    filter: brightness(84%);
+}
+
+table.dataTable tr.odd {
+    background-color: var(--bg-primary);
+}
+
+table.dataTable tr.even {
+    background-color: var(--bg-accent);
+}
+
+/* Overrides for the AJAX Selects Pkg*/
+.results_on_deck .ui-icon-trash {
+    filter: invert(.6) sepia(.5) hue-rotate(270deg);
+}
+
+/* Overrides for the DjangoAutoCompleteField when inside a modal */
+.ui-autocomplete {
+    /* To make sure autocomplete results are on the same level as the modal, set to max z-index only if the parent is a modal */
+    z-index: var(--maximum-z-index) !important;
+}

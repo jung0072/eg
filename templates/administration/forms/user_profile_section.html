@@ -1,0 +1,42 @@
+<form method="POST" id="user-profile-section-form"
+      action="{% url "auth_app:admin" %}"
+      class="user-profile-form" data-instance-id="" data-form-type="SECTION"
+>
+    {% csrf_token %}
+    <div class="form-group column">
+        <label for="id_name">{{ profile_section_form.name.label }}</label>
+        {{ profile_section_form.name }}
+    </div>
+    <div class="form-group column">
+        <label for="id_order_number">{{ profile_section_form.order_number.label }}</label>
+        {{ profile_section_form.order_number }}
+    </div>
+    <div class="form-group row">
+        {{ profile_section_form.is_valid_patient }}
+        <label for="id_is_valid_patient">{{ profile_section_form.is_valid_patient.label }}</label>
+    </div>
+    <div class="form-group row">
+        {{ profile_section_form.is_valid_researcher }}
+        <label for="id_is_valid_researcher">{{ profile_section_form.is_valid_researcher.label }}</label>
+    </div>
+    <div class="form-group row">
+        {{ profile_section_form.is_valid_family_of_patient }}
+        <label for="id_is_valid_family_of_patient">{{ profile_section_form.is_valid_family_of_patient.label }}</label>
+    </div>
+    <div class="form-group row">
+        {{ profile_section_form.is_valid_caretaker_of_patient }}
+        <label for="id_is_valid_caretaker_of_patient">{{ profile_section_form.is_valid_caretaker_of_patient.label }}</label>
+    </div>
+    <div class="form-group row">
+        {{ profile_section_form.is_valid_passive }}
+        <label for="id_is_valid_passive">{{ profile_section_form.is_valid_passive.label }}</label>
+    </div>
+    <div class="form-group column">
+        <label for="id_description">{{ profile_section_form.description.label }}</label>
+        {{ profile_section_form.description }}
+    </div>
+    <div class="button-container">
+        <button type="button">Cancel</button>
+        <button type="submit">Submit</button>
+    </div>
+</form>

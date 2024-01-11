@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn Daemon
+After=network.target
+
+[Service]
+User=ubuntu
+# path where the code is clone
+WorkingDirectory=/home/ubuntu/engage
+# Path where gunicorn is installed (usually in virtual env or conda)
+ExecStart=/home/ubuntu/miniconda3/envs/engage/bin/gunicorn --preload --workers 4 -b 0.0.0.0:8081 config.wsgi:application --timeout 300
+
+
+[Install]
+WantedBy=multi-user.target

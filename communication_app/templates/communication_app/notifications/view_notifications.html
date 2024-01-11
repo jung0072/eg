@@ -1,0 +1,27 @@
+{% extends "base/navigation.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Notifications</title>
+{% endblock %}
+
+{% block content %}
+    <p class="header">Unread notifications</p>
+    <ul class="content-list" id="unread-notifications">
+        {% if unread_notifications %}
+            {% for notification in unread_notifications %}
+                {% include "communication_app/notifications/notification.html" %}
+            {% endfor %}
+        {% else %}
+            <p>No unread notifications!</p>
+        {% endif %}
+    </ul>
+
+    <p class="header" id="other-notifications-header">Older Notifications</p>
+    <ul class="content-list" id="other-notifications">
+    </ul>
+{% endblock %}
+
+{% block side_content %}
+    {% include "communication_app/notifications/filter_panel.html" %}
+{% endblock %}

@@ -1,0 +1,75 @@
+<form method="POST" id="user-profile-question-form"
+      action="{% url "auth_app:admin" %}"
+      class="user-profile-form" data-instance-id="" data-form-type="QUESTION"
+>
+    {% csrf_token %}
+    {# TODO: Add switch to show and hide required fields #}
+    <div class="form-group row">
+        {{ profile_question_form.is_required_patient }}
+        <label for="id_is_required_patient">{{ profile_question_form.is_required_patient.label }}</label>
+    </div>
+    <div class="form-group row">
+        {{ profile_question_form.is_required_researcher }}
+        <label for="id_is_required_researcher">{{ profile_question_form.is_required_researcher.label }}</label>
+    </div>
+    <div class="form-group row">
+        {{ profile_question_form.is_required_family_of_patient }}
+        <label for="id_is_required_family_of_patient">{{ profile_question_form.is_required_family_of_patient.label }}</label>
+    </div>
+    <div class="form-group row">
+        {{ profile_question_form.is_required_passive }}
+        <label for="id_is_required_passive">{{ profile_question_form.is_required_passive.label }}</label>
+    </div>
+    {# TODO: Add switch to show and hide text for fields #}
+    <div class="form-group column">
+        <label for="id_text_for_patient">{{ profile_question_form.text_for_patient.label }}</label>
+        {{ profile_question_form.text_for_patient }}
+    </div>
+    <div class="form-group column">
+        <label for="id_text_for_researcher">{{ profile_question_form.text_for_researcher.label }}</label>
+        {{ profile_question_form.text_for_researcher }}
+    </div>
+    <div class="form-group column">
+        <label for="id_text_for_family_of_patient">{{ profile_question_form.text_for_family_of_patient.label }}</label>
+        {{ profile_question_form.text_for_family_of_patient }}
+    </div>
+    <div class="form-group column">
+        <label for="id_text_for_caretaker_of_patient">{{ profile_question_form.text_for_caretaker_of_patient.label }}</label>
+        {{ profile_question_form.text_for_caretaker_of_patient }}
+    </div>
+    <div class="form-group column">
+        <label for="id_text_for_passive">{{ profile_question_form.text_for_passive.label }}</label>
+        {{ profile_question_form.text_for_passive }}
+    </div>
+
+    <div class="form-group column">
+        <label for="id_order_number">{{ profile_question_form.order_number.label }}</label>
+        {{ profile_question_form.order_number }}
+    </div>
+
+    <div class="form-group column">
+        <label for="id_section">{{ profile_question_form.section.label }}</label>
+        {{ profile_question_form.section }}
+    </div>
+
+    <div class="form-group column">
+        <label for="id_type">{{ profile_question_form.type.label }}</label>
+        {{ profile_question_form.type }}
+    </div>
+    <div class="form-group column hidden">
+        <label for="id_options_list">
+            Options List <small><em>(separate each option with a semicolon ';')</em></small>
+        </label>
+        <textarea id="id_options_list" rows="4"></textarea>
+    </div>
+    <div class="form-group column">
+        <label for="id_dev_code">{{ profile_question_form.dev_code.label }}</label>
+        {{ profile_question_form.dev_code }}
+    </div>
+
+    {# TODO: Add question option form #}
+    <div class="button-container">
+        <button type="button">Cancel</button>
+        <button type="submit">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,189 @@
+Blood transfusion
+Cardiac arrest and/or CPR
+Central line
+CSF diversion or monitoring
+CVVH or peritoneal dialysis
+Delirium or withdrawal
+Heart condition
+Infection not related to breathing
+Mechanical ventilation
+Mental health
+Non-cardiac surgery
+Oncology (cancer)
+Organ Donation
+Overdose
+Physiotherapy or in-bed cycling
+Post-operative care
+Significant pain
+Vasoactive-inotropic support
+Assessment scales/tools
+  Illness severity
+  Functional status
+  health related quality of life
+Burns
+  electrical
+  chemical
+  fire
+Cardiovascular
+  Cardiac dysrhythmias
+  Cardiac output and cardiac failure
+  Congenital heart defects
+  Cardiac surgery
+  ECMO
+  Defibrillation
+  Cardiopulmonary Resuscitation / CPR
+  Heart-lung interactions
+  Pulmonary hypertension
+Clinician/Hospital-centric
+  Clinical and Research Ethics
+  Consent, conflicts of interest, resource allocation
+  Critical incidents and adverse events
+  Electronic medical record
+  In-hospital mortality
+  Medical education
+  Medical emergency/rapid response teams
+  Patient safety
+  Principles of team dynamics
+  Quality assurance
+  Quality improvement, evidence based practice, best practice guidelines
+  Risk assessment/decision-making
+  Simulation
+  Stress/Mental Health, Burnout
+  Telemedicine
+Drugs and Medication
+  Antibiotics
+  Intoxicants/poisons
+  Sedation/Anesthesia
+  Steroids
+End-of-life issues
+  Ethical principles
+  Organ donation
+  Pain and symptom management
+  Prognostication, communication and shared decision-making
+  Withholding and/or withdrawing life sustaining therapies
+Gastrointestinal and hepatobiliary
+  Acute abdomen
+  Acute and chronic hepatobiliary dysfunction, fulminant hepatic failure
+  Complications of abdominal surgery
+  Congenital malformations
+  Intrabdominal pressure
+  Severe acute pancreatitis
+  Upper and lower gastrointestinal bleeding
+Hematologic disorders
+  Anemia
+  Pathophysiology and treatment of disorders of red cells, white cells, and platelets
+  Thrombosis/coagulopathy
+  Transfusion Medicine
+Infectious disease/Epidemiology
+Inflammation
+  Biomarkers
+  MIS-C
+Machine learning
+Medical devices and patient assessment
+  Catheters
+  Cardiopulmonary bypass
+  Central venous lines, central/peripheral arterial lines
+  Cerebral doppler
+  Cricothyrotomy
+  Diagnostic imaging
+  Dialysis/Peritoneal dialysis/RRT
+  ECMO, VAD
+  Electrocardiogram (ECG)
+  Electroencephalogram (EEG)
+  Fiberoptic bronchoscopy
+  Focused abdominal sonography in trauma (FAST)
+  Intracranial pressure (ICP)
+  Intraosseous vascular access
+  Pericardiocentesis
+  Temporary cardiac pacing
+  Thoracentesis
+  Thoracostomy tube
+  Tracheostomy
+  Vascular access
+Metabolic and endocrine
+  Acid-base disorders
+  Endocrine emergencies
+  Fluid and/or electrolyte disturbances
+  Hyperthermia, hypothermia
+  Inborn errors of metabolism
+Neonatology
+  Necrotizing enterocolitis
+Neurological
+  Brain death
+  Coma
+  Delirium and altered consciousness
+  Neurologic/neurodevelopmental outcomes
+  Seizures/epilepsy
+  Traumatic brain injury
+Neuromuscular
+  Acute neuromuscular disease, myopathy and polyneuropathy of the criticall ill
+  Neuromuscular blockade
+Nosocomial infection [also in resp, oncology]
+Nutrition
+  Feeding
+  Nutritional/fluid status, requirements, and response
+  Vitamin deficiency/supplementation
+Oncologic emergencies
+  Acute complications of chemotherapy and radiation therapy
+  Neoplastic spinal cord compression
+  Superior vena cava syndrome
+  Tumour lysis syndrome
+Patient and Family Engagement
+Pharmacotherapy
+  Indications for and use of vasoactive agents
+  Management of sedation, analgesia, and neuromuscular blockade
+  Principles of pharmacokinetics and pharmacodynamics
+Post-PICU
+  Chronic critical illness
+  Multiple organ dysfunction syndrome [also in sepsis]
+  New morbidity
+  Post-operative outcomes
+  Psychological outcomes
+  Quality of life
+  Rehabilitation
+Renal
+  Acute kidney injury
+  Hemodialysis, Peritoneal dialysis, Continuous renal replacement therapy
+Respiratory
+  Acute Respiratory Distress Syndrome
+  Asthma
+  Infectious Disease
+    Bronchiolitis
+    COVID-19
+    Nosocomial infection
+    Pneumonia
+    Respiratory syncytial virus
+  Pulmonary hypertension and heart-lung interactions [also in cardio]
+  Respiratory failure
+  Ventilation
+    Advanced ventilation strategies
+    Difficult and failed airway
+    Intubation
+    Invasive mechanical ventilation
+    Non-invasive mechanical ventilation
+    Prolonged mechanical ventilation
+    Ventilator-associated pneumonia
+    Extubation/weaning
+Septic illness
+  Epidemiology
+  MIS-C
+  Multiple organ dysfunction syndrome [also post-picu]
+  Pathogenesis and diagnostic criteria sepsis, SIRS, MODS
+  Septic shock
+Shock and Hemodynamics
+  Fluid balance/resuscitation
+  Hemodynamic instability
+  Hormones and regulatory cytokines
+  Invasive/non-invasive monitoring
+  Pathophysiology and treatment
+Social determinants of health
+Transplantation
+  Immunosuppression and organ rejection
+  Opportunistic and nosocomial infectious risk and disease
+  Solid organ and bone marrow transplantation
+Transport
+Trauma
+  Advanced Trauma Life Support (ATLS)
+  Special needs of the physically and/or sexually abused child
+  Triage
+No/None

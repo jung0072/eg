@@ -1,0 +1,42 @@
+{% load auth_filters %}
+<li class="content-list-item">
+    <div class="content-card">
+        <div class="card-header">
+            {% if show_project_status %}
+                <p class="card-notification active">
+                    {% if not project.permissions.is_active and project.permissions.is_approved %}
+                        Invited to Join this Project
+                    {% elif project.permissions.is_active %}
+                        On Study Team
+                    {% elif not project.permissions.is_active and not project.permissions.is_approved %}
+                        You Requested to Join this Project
+                    {% endif %}
+                </p>
+            {% endif %}
+            <p class="card-subtitle">{{ project.research_project.title }}</p>
+            <p class="card-title">{{ project.research_project.reference_name }}</p>
+        </div>
+        <div class="card-content">
+            {{ project.research_project.description }}
+        </div>
+        <div class="card-footer">
+            <div class="user-profile-avatar small">
+                <div class="profile-picture-container">
+                    <img class="profile-picture" alt="profile avatar"
+                         src="{{ project.research_project.creator_profile_pic_url }}"
+                    >
+                </div>
+                <p class="username">{{ project.research_project.creator }}</p>
+                <p class="title">{{ project.research_project.creator_id|get_user_role }}</p>
+            </div>
+            <div class="card-actions">
+                {# TODO: Make a card list for potential projects for a currently logged in user #}
+                <a href="{% url 'engage_app:research_project_info' research_project_id=project.research_project.id %}">
+                    <button class="action main" type="button">
+                        View Details
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</li>

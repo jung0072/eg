@@ -1,0 +1,41 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/research_project/add_project.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <ul class="content-list">
+            <li class="content-list-item">
+                <div class="content-card branching-form">
+                    <div class="card-header">
+                        <h1 class="text-centre">Create a new research project</h1>
+                    </div>
+
+                    <div class="card-content">
+                        <form action="/app/research_projects/add_project/" method="post" id="add-research-project-form">
+                            {{ research_project_form.media }}
+                            {% csrf_token %}
+                            {% for field in research_project_form %}
+                                <div class="form-group column" id="${{ field.auto_id }}-container">
+                                    <label for="${{ field.id_for_label }}">{{ field.label }}</label>
+                                    {{ field }}
+                                    <div class="form-group-errors">
+                                        {{ field.errors }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <button type="submit" id="add-research-project-form-button">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/research_project/add_project.js' %}"></script>
+{% endblock %}

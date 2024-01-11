@@ -1,0 +1,35 @@
+:root {
+    --primary-color-1: #002E6D;
+    --primary-color-2: #B2E5E4;
+    --primary-color-3: #52575C;
+    --primary-color-4: #65CBC9;
+
+    --secondary-color-1: #F5F5F5;
+    --secondary-color-2: #ECF4FF;
+    --secondary-color-3: #FFFAE8;
+
+    --tertiary-color-1: #FFFFFF;
+    --tertiary-color-2: #FAAD14;
+    --tertiary-color-3: #000000;
+    --tertiary-color-4: #52C41A;
+    --tertiary-color-5: #FF4D4F;
+}
+
+.project-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.12px;
+    color: black;
+}
+
+.divider {
+    width: 4px;
+    border-radius: 19px;
+    background-color: #D9D9D9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+

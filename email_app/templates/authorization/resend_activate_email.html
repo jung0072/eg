@@ -1,0 +1,19 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+    <div>
+        <p class="user-name">Dear {{ user.first_name }} {{ user.last_name }},</p>
+        <p>
+            Click on the button below to verify your email and activate your account.
+        </p>
+        {% if button_link %}
+        <a target="_blank" href={{ button_link }}>
+            <button class="engage-button">
+                {{ button_text }}
+            </button>
+        </a>
+        {% endif %}
+        <p>Thank you,</p>
+        <p>Engage</p>
+    </div>
+{% endblock %}

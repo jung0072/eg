@@ -1,0 +1,42 @@
+.test-row-wrapper-class {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+
+.test-column-wrapper-class {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.form-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.render-chan-form-node .ant-radio-checked .ant-radio-inner {
+    border-color: #D9D9D9;
+}
+
+.render-chan-form-node .ant-radio-checked .ant-radio-inner::after {
+    background-color: #65CBC9;
+}
+
+.render-chan-form-node .ant-radio-button-checked {
+    background-color: #002E6D;
+    border-color: #002E6D;
+}
+
+.render-chan-form-node .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #65CBC9;
+    border-color: #65CBC9;
+}
+
+.render-chan-form-node .ant-checkbox-checked .ant-checkbox-inner::after {
+    background-color: #65CBC9;
+}

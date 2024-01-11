@@ -1,0 +1,71 @@
+#project-details .member-view-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31%;
+  height: 36px;
+  box-sizing: border-box;
+  border: 1px solid var(--primary-color-1);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.1px;
+  background-color: var(--primary-color-1);
+  color: white;
+}
+
+#project-details .member-view-btn.active {
+  background-color: white;
+  color: var(--primary-color-1);
+}
+
+#project-details .fa-clipboard,
+.fa-calendar,
+.fa-user {
+  margin: 0 8px 1px 0;
+}
+
+#project-details .team-members-wrapper {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+#project-details .task-collapse {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+#project-details .task-discussion-btn {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.2px;
+  background: var(--primary-color-1);
+  color: white;
+}
+
+#project-details #create-task-btn {
+  background: var(--primary-color-1);
+  color: white;
+}
+
+#project-details .create-new-task-button {
+  background-color: #002E6D;
+  color: white;
+  text-align: center;
+  border-radius: 75px;
+  width: 210px;
+  height: 45px;
+  margin-top: 1em;
+}
+
+#project-details .add-new-team-member-button{
+    background-color: #002E6D;
+    color: white;
+    text-align: center;
+    border-radius: 75px;
+    width: 230px;
+    height: 45px;
+    margin-top: 1em;    
+}

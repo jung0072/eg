@@ -1,0 +1,204 @@
+main {
+    width: 100%;
+}
+
+.content-card.branching-form .card-header {
+    position: sticky;
+    top: 6.85em;
+    background-color: var(--bg-accent-solid);
+    padding-bottom: 1em;
+    z-index: var(--maximum-z-index);
+}
+
+.content-card.branching-form .card-header h1 {
+    margin: 0;
+}
+
+.content-card.branching-form {
+    background-color: var(--bg-accent-solid);
+    border-radius: var(--border-radius);
+}
+
+.user-profile-section {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.branching-form .form-group {
+    /*width: 40%;*/
+    margin: 1em 1em 1em 0;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+}
+
+.form-group .progress-badge {
+    /* Sizing for the progress badge */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    /*Typography for the progress badges */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.7rem;
+    text-align: center;
+
+    /* Positioning for the progress badge within the .form-group */
+    position: absolute;
+    top: calc(15px / 2);
+    right: calc(15px / 2);
+    /*border: 1px solid var(--text-primary);*/
+}
+
+.form-group .progress-badge.incomplete {
+    color: var(--cheo-secondary-pink);
+}
+
+.form-group .progress-badge.complete:after {
+    content: '\f00c';
+}
+
+.form-group .progress-badge.complete {
+    color: var(--cheo-secondary-green);
+}
+
+.form-group .progress-badge.incomplete:after {
+    content: '\f00d';
+}
+
+.form-options {
+    margin-left: 1em;
+}
+
+#custom-user-profile-form {
+    width: 100%;
+}
+
+.branching-forms-navigation-bar {
+    /* Remove the default attributes for unordered lists */
+    padding: 0;
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    height: 150px;
+
+    /* Flex settings */
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+    /*justify-content: space-between;*/
+    align-items: center;
+
+    /* to create the line in-between the circles*/
+    position: relative;
+}
+
+/*#customize-user-profile-navigation-bar.loaded:after {*/
+/*    !*position: absolute;*!*/
+/*    content: "";*/
+/*    !*width: 90%;*!*/
+/*    !*top: 17.5%;*!*/
+/*    left: 0;*/
+/*    border: 3px solid var(--brand-colour);*/
+/*    z-index: -1;*/
+/*    height: 3px;*/
+/*}*/
+
+/* Selectors for the nav circles */
+.branching-forms-navigation-bar .circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--brand-colour);
+}
+
+.branching-forms-navigation-bar .circle.active {
+    background: var(--text-primary)
+}
+
+.branching-forms-navigation-bar .circle:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.branching-forms-navigation-bar .circle:active {
+    box-shadow: 2px -2px 5px var(--text-secondary-colour) inset;
+}
+
+.user-profile-section-nav-item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.connecting-circle-line {
+    border: 3px solid var(--brand-colour);
+    background-color: var(--brand-colour);
+    width: 500%;
+    height: 3px;
+    z-index: -1;
+    /*transform: rotate(180deg);*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/*.user-profile-section-nav-item:last-child {*/
+/*    margin-left: auto;*/
+/*}*/
+
+/* Selectors for the text inside the circles */
+/*#customize-user-profile-navigation-bar:hover p, .user-profile-section-nav-item.active p {*/
+/*}*/
+
+/*Hide the section nav item text when the list is not being hovered on (when the nav item is active) and when
+ the nav item is not active*/
+.user-profile-section-nav-item p {
+    left: calc(50% - 75px);
+    top: 100%;
+    width: 150px;
+    position: absolute;
+    font-size: 0.8rem;
+}
+
+/* Selectors for the Form Inputs */
+
+/*.form-group:has( '<' .other-value-text-input) {*/
+
+/*}*/
+.select-single-input, .other-value-text-input, .date-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*.branching-form .form-group.select-multiple-input {*/
+/*    width: 100%;*/
+/*}*/
+
+.other-value-text-input {
+    margin-left: 2em;
+}
+
+.scrollable-select-multiple-input {
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+.select-large .scrollable-select-multiple-input {
+    max-height: 150px;
+    overflow-y: auto;
+    border: solid var(--text-primary);
+}
+
+/* Override the fieldsets to be invisible when they are empty but show themselves when they have children */
+.section-select-input fieldset {
+    background-color: var(--bg-accent);
+}

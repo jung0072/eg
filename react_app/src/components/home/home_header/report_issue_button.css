@@ -1,0 +1,14 @@
+#report-engage-issue-btn {
+    /* TODO: Change from orange colour to client approved colour */
+    background-color: #FF5733; /* Choose a contrasting color for the button background */
+    color: #FFFFFF; /* Use white or a light color for text to ensure readability */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Inter, serif;
+}
+
+#report-engage-issue-btn:hover {
+    background-color: #FF834C; /* Use a slightly lighter or different shade for hover effect */
+}

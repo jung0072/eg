@@ -1,0 +1,15 @@
+.projects-list .profile-picture.circle {
+    border: none;
+}
+
+.projects-list .user-profile-avatar.small .profile-picture {
+    margin: 0.2rem 0.5rem;
+}
+
+.projects-list .user-profile-avatar .title {
+    align-items: center;
+}
+
+.projects-list button.action.main {
+    width: unset;
+}

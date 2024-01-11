@@ -1,0 +1,11 @@
+{% extends 'user-directory/patient_researcher_toggle.html' %}
+{% load static %}
+
+{# TODO: This is test content for the researchers page, change variables to the actual ones, once connecting to DB. #}
+{% block card %}
+    <div class="researchers-list"></div>
+{% endblock %}
+
+{% block side_content %}
+    {% include "user-directory/filter_panel.html" %}
+{% endblock %}

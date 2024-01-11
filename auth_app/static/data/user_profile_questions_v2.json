@@ -1,0 +1,1974 @@
+{
+  "questions": [
+    {
+      "dev_code": "P-JOB",
+      "section": "Personalization",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "TEXT_BODY",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Job Title (Role & Occupation)",
+      "text_for_patient": "Job Title (Role & Occupation)",
+      "text_for_family_of_patient": "Job Title (Role & Occupation)",
+      "text_for_caretaker_of_patient": "Job Title (Role & Occupation)",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false
+    },
+    {
+      "dev_code": "P-BIO",
+      "section": "Personalization",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "TEXT_AREA",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Bio",
+      "text_for_patient": "Bio",
+      "text_for_family_of_patient": "Bio",
+      "text_for_caretaker_of_patient": "Bio",
+      "text_for_passive": "Bio",
+      "help_text": "",
+      "is_mandatory": false,
+      "is_searchable": false,
+      "is_displayed_in_profile_variables": false
+    },
+    {
+      "dev_code": "P-ROLE",
+      "section": "Personalization",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Primary Role",
+      "text_for_patient": "Primary Role",
+      "text_for_family_of_patient": "Primary Role",
+      "text_for_caretaker_of_patient": "Primary Role",
+      "text_for_passive": "Primary Role",
+      "help_text": "",
+      "is_mandatory": true,
+      "display_text": "Primary Role",
+      "options": [
+        {
+          "option": "Clinical",
+          "subQuestions": [
+            {
+              "dev_code": "P-CNR",
+              "section": "Personalization",
+              "parent_question_id": null,
+              "order_number": 4,
+              "type": "DROP_DOWN",
+              "is_required_researcher": true,
+              "is_required_patient": false,
+              "is_required_family_of_patient": false,
+              "is_required_passive": false,
+              "text_for_researcher": "Clinical Role",
+              "text_for_patient": "Clinical Role",
+              "text_for_family_of_patient": "Clinical Role",
+              "text_for_caretaker_of_patient": "Clinical Role",
+              "text_for_passive": "Clinical Role",
+              "help_text": "",
+              "is_mandatory": true,
+              "options": [
+                "Physician",
+                "Nurse",
+                "Respiratory Therapist",
+                "Physiotherapist",
+                "Occupational Therapist",
+                "Social Work",
+                "Dietitian",
+                "Pharmacist",
+                {
+                  "title": "Other (free text option to specify)",
+                  "mapping": "other<free_text>"
+                }
+              ]
+            },
+            {
+              "dev_code": "P-CNA",
+              "section": "Personalization",
+              "parent_question_id": null,
+              "order_number": 4,
+              "type": "DROP_DOWN",
+              "is_required_researcher": true,
+              "is_required_patient": false,
+              "is_required_family_of_patient": false,
+              "is_required_passive": false,
+              "text_for_researcher": "Clinical Area",
+              "text_for_patient": "Clinical Area",
+              "text_for_family_of_patient": "Clinical Area",
+              "text_for_caretaker_of_patient": "Clinical Area",
+              "text_for_passive": "Clinical Area",
+              "help_text": "",
+              "is_mandatory": true,
+              "options": [
+                "Anesthesiology",
+                "Cardiology",
+                "Critical Care",
+                "Emergency Medicine"
+              ]
+            },
+            {
+              "dev_code": "P-CNT",
+              "section": "Personalization",
+              "parent_question_id": null,
+              "order_number": 6,
+              "type": "RADIO_BUTTON_BOX",
+              "is_required_researcher": true,
+              "is_required_patient": false,
+              "is_required_family_of_patient": false,
+              "is_required_passive": false,
+              "text_for_researcher": "Current level of training",
+              "text_for_patient": "Current level of training",
+              "text_for_family_of_patient": "Current level of training",
+              "text_for_caretaker_of_patient": "Current level of training",
+              "text_for_passive": "Current level of training",
+              "help_text": "",
+              "is_mandatory": true,
+              "options": [
+                "Student",
+                "Resident",
+                "Fellow",
+                "Staff",
+                {
+                  "title": "Other (free text option to specify)",
+                  "mapping": "other<free_text>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "option": "Non-Clinical",
+          "subQuestions": [
+            {
+              "dev_code": "P-NCR",
+              "section": "Personalization",
+              "parent_question_id": null,
+              "order_number": 7,
+              "type": "DROP_DOWN",
+              "is_required_researcher": true,
+              "is_required_patient": false,
+              "is_required_family_of_patient": false,
+              "is_required_passive": false,
+              "text_for_researcher": "Non-Clinical Role",
+              "text_for_patient": "Non-Clinical Role",
+              "text_for_family_of_patient": "Non-Clinical Role",
+              "text_for_caretaker_of_patient": "Non-Clinical Role",
+              "text_for_passive": "Non-Clinical Role",
+              "help_text": "",
+              "is_mandatory": false,
+              "options": [
+                "Division chief",
+                "Program director",
+                "Scientist",
+                "MET director",
+                "Morbidity & Mortality committee ",
+                "Journal club lead",
+                "Research Coordinator",
+                {
+                  "title": "Other (free text option to specify)",
+                  "mapping": "other<free_text>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dev_code": "P-INT",
+      "section": "Personalization",
+      "parent_question_id": null,
+      "order_number": 8,
+      "type": "TREE_SELECT",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "What areas of research are you interested in?",
+      "text_for_patient": "What areas of research are you interested in?",
+      "text_for_family_of_patient": "What areas of research are you interested in?",
+      "text_for_caretaker_of_patient": "What areas of research are you interested in?",
+      "text_for_passive": "What areas of research are you interested in?",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": "research_interests"
+    },
+    {
+      "dev_code": "P-LNG",
+      "section": "Personalization",
+      "parent_question_id": null,
+      "order_number": 9,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Languages that you speak, read and/or write",
+      "text_for_patient": "Languages that you speak, read and/or write",
+      "text_for_family_of_patient": "Languages that you speak, read and/or write",
+      "text_for_caretaker_of_patient": "Languages that you speak, read and/or write",
+      "text_for_passive": "Languages that you speak, read and/or write",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": "world_languages",
+      "display_text": "Languages"
+    },
+    {
+      "dev_code": "R-EXPS",
+      "section": "Researcher/Clinician Patient and Family Engagement Experience",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "I have worked with a patient or family partner for a research study before.",
+      "help_text": "",
+      "is_mandatory": true,
+      "display_text": "Patient or Family Partner Experience with Research Study",
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "R-PFS",
+              "section": "Researcher/Clinician Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 2,
+              "type": "TEXT_BODY",
+              "is_required_researcher": true,
+              "is_required_patient": false,
+              "is_required_family_of_patient": false,
+              "is_required_passive": false,
+              "text_for_researcher": "Please specify",
+              "text_for_patient": "Please specify",
+              "text_for_family_of_patient": "Please specify",
+              "text_for_caretaker_of_patient": "Please specify",
+              "text_for_passive": "Please specify",
+              "display_text": "Patient or Family Partner Experience with Research Study Description",
+              "help_text": "",
+              "is_mandatory": true,
+              "is_searchable": false,
+              "placeholder_text": "Please describe your experience with a patient or family partner during a research study"
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "R-EXPE",
+      "section": "Researcher/Clinician Patient and Family Engagement Experience",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "I have experience with patient and family engagement",
+      "help_text": "",
+      "display_text": "Patient and Family Engagement Experience",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "R-PCE",
+              "section": "Researcher/Clinician Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 4,
+              "type": "TEXT_BODY",
+              "is_required_researcher": true,
+              "is_required_patient": false,
+              "is_required_family_of_patient": false,
+              "is_required_passive": false,
+              "text_for_researcher": "Please specify",
+              "text_for_patient": "Please specify",
+              "text_for_family_of_patient": "Please specify",
+              "text_for_caretaker_of_patient": "Please specify",
+              "display_text": "Patient and Family Engagement Experience Description",
+              "text_for_passive": "Please specify",
+              "help_text": "",
+              "is_mandatory": true,
+              "is_searchable": false,
+              "placeholder_text": "Please describe your experience with a patient and family engagement"
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "R-EXPC",
+      "section": "Researcher/Clinician Patient and Family Engagement Experience",
+      "parent_question_id": null,
+      "order_number": 5,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "I have taken courses or training sessions related to patient and family engagement",
+      "display_text": "Has taken courses or training sessions related to patient and family engagement",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "R-PCD",
+              "section": "Researcher/Clinician Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 6,
+              "type": "TEXT_BODY",
+              "is_required_researcher": true,
+              "is_required_patient": false,
+              "is_required_family_of_patient": false,
+              "is_required_passive": false,
+              "text_for_researcher": "Please specify",
+              "text_for_patient": "Please specify",
+              "text_for_family_of_patient": "Please specify",
+              "text_for_caretaker_of_patient": "Please specify",
+              "display_text": "Has taken courses or training sessions related to patient and family engagement description",
+              "text_for_passive": "Please specify",
+              "help_text": "",
+              "is_mandatory": true,
+              "is_searchable": false,
+              "placeholder_text": "Please describe your the courses or training sessions you have taken related to patient and family engagement"
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "I-RLP",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "DROP_DOWN",
+      "is_required_researcher": false,
+      "is_required_patient": false,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "",
+      "text_for_family_of_patient": "What is your relationship to the child/ youth that was admitted to the PICU?",
+      "text_for_caretaker_of_patient": "What is your relationship to the child/ youth that was admitted to the PICU?",
+      "display_text": "Relationship to Child",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        "Parent",
+        "Legal Guardian",
+        "Caregiver",
+        "Sibling",
+        "Grandparent",
+        {
+          "title": "Other family member (free text option to specify)",
+          "mapping": "other<free_text>"
+        },
+        "Friend"
+      ]
+    },
+    {
+      "dev_code": "I-DOB",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "DATE_PICKER_YEAR",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Year of birth? (YYYY)",
+      "text_for_family_of_patient": "Child's year of birth? (YYYY)",
+      "text_for_caretaker_of_patient": "Child's year of birth? (YYYY)",
+      "display_text": "Year of Birth",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true
+    },
+    {
+      "dev_code": "I-EXP",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "TEXT_BODY",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Please describe your PICU experience.",
+      "text_for_family_of_patient": "Please describe the child's PICU experience.",
+      "text_for_caretaker_of_patient": "Please describe the child's PICU experience.",
+      "display_text": "PICU Experience Description",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "is_searchable": false
+    },
+    {
+      "dev_code": "I-SRV",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 4,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": false,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "",
+      "text_for_family_of_patient": "Did the child survive their PICU admission?",
+      "text_for_caretaker_of_patient": "Did the child survive their PICU admission?",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "I-ICU",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 5,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Which PICU(s) were you admitted to?",
+      "text_for_family_of_patient": "Which PICU(s) was the child/ youth admitted to?",
+      "text_for_caretaker_of_patient": "Which PICU(s) was the child/ youth admitted to?",
+      "display_text": "PICU(s) Admitted To",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": "institutions"
+    },
+    {
+      "dev_code": "I-COT",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 6,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "How many times were you admitted to the PICU?",
+      "text_for_family_of_patient": "How many times was the child/ youth admitted to the PICU?",
+      "text_for_caretaker_of_patient": "How many times was the child/ youth admitted to the PICU?",
+      "display_text": "PICU Admission Count",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5+",
+        "I don't know"
+      ]
+    },
+    {
+      "dev_code": "I-DOA",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 7,
+      "type": "DATE_PICKER",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "When were you last admitted to the PICU? If you cannot remember the exact date, please estimate.",
+      "text_for_family_of_patient": "When was the child/ youth last admitted to the PICU? If you cannot remember the exact date, please estimate.",
+      "text_for_caretaker_of_patient": "When was the child/ youth last admitted to the PICU? If you cannot remember the exact date, please estimate.",
+      "display_text": "PICU Last Admission Date",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true
+    },
+    {
+      "dev_code": "I-HMT",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 8,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "How much time in total have you spent in the PICU?",
+      "text_for_family_of_patient": "How much time in total has the child/ youth spent in the PICU?",
+      "text_for_caretaker_of_patient": "How much time in total has the child/ youth spent in the PICU?",
+      "display_text": "Total Time Spent in PICU",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        "<7 Days",
+        "8 Days to 1 Month",
+        ">1 Month",
+        ">3 Months",
+        ">6 Months"
+      ]
+    },
+    {
+      "dev_code": "I-RFA",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 9,
+      "type": "TREE_SELECT",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Why were you admitted to the PICU?",
+      "text_for_family_of_patient": "Why was the child/ youth admitted to the PICU?",
+      "text_for_caretaker_of_patient": "Why was the child/ youth admitted to the PICU?",
+      "display_text": "PICU Admission Reason",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": "icu_admissions"
+    },
+    {
+      "dev_code": "I-PTA",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 10,
+      "type": "TREE_SELECT",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "What treatments did you receive in the PICU?",
+      "text_for_family_of_patient": "What treatments did they receive in the PICU?",
+      "text_for_caretaker_of_patient": "What treatments did they receive in the PICU?",
+      "display_text": "PICU Treatments",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": "icu_interventions"
+    },
+    {
+      "dev_code": "I-LFE",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 11,
+      "type": "DROP_DOWN",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "How concerned were you that you might die?",
+      "text_for_family_of_patient": "How concerned were you that the child/ youth might die?",
+      "text_for_caretaker_of_patient": "How concerned were you that your child/ youth might die?",
+      "display_text": "Survival Concert Rating",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "5 -Extremely concerned, one of the doctors mentioned this was a possibility",
+        "4 - Very concerned",
+        "3 - Somewhat concerned",
+        "2 - Not very concerned",
+        "1 - Not concerned"
+      ]
+    },
+    {
+      "dev_code": "I-DMD",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 12,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Did you leave the PICU with a new disability or need for an ongoing medical device or care?",
+      "text_for_family_of_patient": "Did you or the child/ youth leave the PICU with a new disability or need for an ongoing medical device or care?",
+      "text_for_caretaker_of_patient": "Did your child/ youth leave the PICU with a new disability or need for an ongoing medical device or care?",
+      "display_text": "New Disability after PICU Treatment",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "I-NDD",
+              "section": "Patient ICU Experience",
+              "parent_question_id": null,
+              "order_number": 13,
+              "type": "SELECT_MULTIPLE_BOX",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "",
+              "text_for_patient": "If yes, specify",
+              "text_for_family_of_patient": "If yes, specify",
+              "text_for_caretaker_of_patient": "If yes, specify",
+              "display_text": "Disability after PICU Treatment",
+              "text_for_passive": "",
+              "help_text": "",
+              "is_mandatory": true,
+              "options": [
+                "Trach",
+                "Non-invasive ventilation",
+                "CSF shunt",
+                "Seizure management",
+                "G-tube or NG",
+                "Dialysis",
+                "Chemo",
+                "OT/PT",
+                {
+                  "title": "Other (free text option to specify)",
+                  "mapping": "other<free_text>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "option": "No",
+          "subQuestions": [
+            {
+              "dev_code": "I-PSR",
+              "section": "Patient ICU Experience",
+              "parent_question_id": null,
+              "order_number": 14,
+              "type": "DROP_DOWN",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "",
+              "text_for_patient": "How would you have rated yourself on the following Pediatric Overall Performance Category score at PICU discharge?",
+              "text_for_family_of_patient": "How would you have rated the child/youth on the following Pediatric Overall Performance Category score at PICU discharge?",
+              "text_for_caretaker_of_patient": "How would you have rated your child/ youth on the following Pediatric Overall Performance Category score at PICU discharge?",
+              "display_text": "Pediatric Overall Performance Category Score",
+              "text_for_passive": "",
+              "help_text": "",
+              "is_mandatory": true,
+              "options": [
+                "(1) Good Overall Performance",
+                "(2) Mild Overall Disability",
+                "(3) Moderate Overall Disability",
+                "(4) Severe Overall Disability",
+                "(5) Coma or Vegetative State",
+                "(6) Brain Death"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dev_code": "I-MTS",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 15,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Did you experience any significant mistakes made by the clinical team?",
+      "text_for_family_of_patient": "Did the child/youth experience any significant mistakes made by the clinical team?",
+      "text_for_caretaker_of_patient": "Did your child/ youth experience any significant mistakes made by the clinical team?",
+      "display_text": "Experience with PICU Mistakes",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "I-MDS",
+              "section": "Patient ICU Experience",
+              "parent_question_id": null,
+              "order_number": 16,
+              "type": "SELECT_MULTIPLE_BOX",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "",
+              "text_for_patient": "If yes, specify",
+              "text_for_family_of_patient": "If yes, specify",
+              "text_for_caretaker_of_patient": "If yes, specify",
+              "display_text": "PICU Mistake Description",
+              "text_for_passive": "",
+              "help_text": "",
+              "is_mandatory": true,
+              "options": [
+                "Drug error",
+                "Wrong diagnosis made",
+                {
+                  "title": "Other (free text option to specify)",
+                  "mapping": "other<free_text>"
+                }
+              ]
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "I-RRQ",
+      "section": "Patient ICU Experience",
+      "parent_question_id": null,
+      "order_number": 17,
+      "type": "TEXT_AREA",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Are there any research questions that you have about the PICU that you think need to be answered?",
+      "text_for_patient": "Are there any research questions that you have about the PICU that you think need to be answered?",
+      "text_for_family_of_patient": "Are there any research questions that you have about the PICU that you think need to be answered?",
+      "text_for_caretaker_of_patient": "Are there any research questions that you have about the PICU that you think need to be answered?",
+      "display_text": "Questions about Research",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false
+    },
+    {
+      "dev_code": "F-SDY",
+      "section": "Patient and Family Engagement Experience",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Have you participated in a research study before.",
+      "text_for_family_of_patient": "Has the child/ youth participated in a research study before?",
+      "text_for_caretaker_of_patient": "Has the child/ youth participated in a research study before?",
+      "display_text": "Child Participation in Research Study",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "F-SPY",
+              "section": "Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 2,
+              "type": "TEXT_BODY",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "Please specify",
+              "text_for_patient": "Please specify",
+              "text_for_family_of_patient": "Please specify",
+              "text_for_caretaker_of_patient": "Please specify",
+              "text_for_passive": "Please specify",
+              "help_text": "",
+              "is_mandatory": true,
+              "display_text": "Child Participation in Research Study Description",
+              "is_searchable": false,
+              "placeholder_text": "Please describe your participation during a research study"
+            },
+            {
+              "dev_code": "F-DPA",
+              "section": "Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 3,
+              "type": "RADIO_BUTTON_CIRCLE",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "Were you enrolled in the research study during your PICU admission?",
+              "text_for_patient": "Were you enrolled in the research study during your PICU admission?",
+              "text_for_family_of_patient": "Was the child/ youth enrolled in the research study during your PICU admission?",
+              "text_for_caretaker_of_patient": "Was the child/ youth enrolled in the research study during your PICU admission?",
+              "display_text": "Child Enrollment in Research Study during PICU Admission",
+              "text_for_passive": "",
+              "help_text": "",
+              "is_mandatory": true,
+              "options": [
+                {
+                  "option": "Yes",
+                  "subQuestions": [
+                    {
+                      "dev_code": "F-DSY",
+                      "section": "Patient and Family Engagement Experience",
+                      "parent_question_id": null,
+                      "order_number": 4,
+                      "type": "TEXT_BODY",
+                      "is_required_researcher": false,
+                      "is_required_patient": true,
+                      "is_required_family_of_patient": true,
+                      "is_required_passive": false,
+                      "text_for_researcher": "Please specify",
+                      "text_for_patient": "Please specify",
+                      "text_for_family_of_patient": "Please specify",
+                      "text_for_caretaker_of_patient": "Please specify",
+                      "display_text": "Child Enrollment in Research Study during PICU Admission Description",
+                      "text_for_passive": "Please specify",
+                      "help_text": "",
+                      "is_mandatory": true,
+                      "is_searchable": false,
+                      "placeholder_text": "Please describe your enrollment experience in a research study during your PICU Admission"
+                    }
+                  ]
+                },
+                "No"
+              ]
+            },
+            {
+              "dev_code": "F-OPA",
+              "section": "Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 5,
+              "type": "RADIO_BUTTON_CIRCLE",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "",
+              "text_for_patient": "Were you enrolled in the research study outside of your PICU admission?",
+              "text_for_family_of_patient": "Was the child/ youth enrolled in the research study outside of the PICU admission?",
+              "text_for_caretaker_of_patient": "Was the child/ youth enrolled in the research study outside of the PICU admission?",
+              "text_for_passive": "",
+              "display_text": "Child Enrollment in Research Study outside of PICU Admission",
+              "help_text": "",
+              "is_mandatory": true,
+              "placeholder_text": "Please describe your enrollment experience in a research study outside of your PICU Admission",
+              "options": [
+                {
+                  "option": "Yes",
+                  "subQuestions": [
+                    {
+                      "dev_code": "F-OSY",
+                      "section": "Patient and Family Engagement Experience",
+                      "parent_question_id": null,
+                      "order_number": 6,
+                      "type": "TEXT_BODY",
+                      "is_required_researcher": false,
+                      "is_required_patient": true,
+                      "is_required_family_of_patient": true,
+                      "is_required_passive": false,
+                      "text_for_researcher": "Please specify",
+                      "text_for_patient": "Please specify",
+                      "text_for_family_of_patient": "Please specify",
+                      "text_for_caretaker_of_patient": "Please specify",
+                      "text_for_passive": "Please specify",
+                      "display_text": "Child Enrollment in Research Study outside of PICU Admission Description",
+                      "help_text": "",
+                      "is_mandatory": true,
+                      "is_searchable": false
+                    }
+                  ]
+                },
+                "No"
+              ]
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "F-EPF",
+      "section": "Patient and Family Engagement Experience",
+      "parent_question_id": null,
+      "order_number": 7,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Do you have experience with patient and family engagement",
+      "text_for_family_of_patient": "Did the child/ youth have experience with patient and family engagement",
+      "text_for_caretaker_of_patient": "Did the child/ youth have experience with patient and family engagement",
+      "display_text": "Experience with Patient and Family Engagement",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "F-ESY",
+              "section": "Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 8,
+              "type": "TEXT_BODY",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "Please specify",
+              "text_for_patient": "Please specify",
+              "text_for_family_of_patient": "Please specify",
+              "text_for_caretaker_of_patient": "Please specify",
+              "text_for_passive": "Please specify",
+              "display_text": "Experience with Patient and Family Engagement Description",
+              "help_text": "",
+              "is_mandatory": true,
+              "is_searchable": false
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "F-ECT",
+      "section": "Patient and Family Engagement Experience",
+      "parent_question_id": null,
+      "order_number": 7,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Have you taken courses or training sessions related to patient and family engagement?",
+      "text_for_family_of_patient": "Have you taken courses or training sessions related to patient and family engagement?",
+      "text_for_caretaker_of_patient": "Have you taken courses or training sessions related to patient and family engagement?",
+      "text_for_passive": "",
+      "display_text": "Courses or Training Session related to Patient and Family Engagement",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "F-TSY",
+              "section": "Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 8,
+              "type": "TEXT_BODY",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "Please specify",
+              "text_for_patient": "Please specify",
+              "text_for_family_of_patient": "Please specify",
+              "text_for_caretaker_of_patient": "Please specify",
+              "display_text": "Courses or Training Session related to Patient and Family Engagement Description",
+              "text_for_passive": "",
+              "help_text": "",
+              "is_mandatory": true,
+              "is_searchable": false
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "F-PFC",
+      "section": "Patient and Family Engagement Experience",
+      "parent_question_id": null,
+      "order_number": 9,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Are you currently or have you previously been a member of a patient and family partnership committee?",
+      "text_for_family_of_patient": "Are you currently or have you previously been a member of a patient and family partnership committee?",
+      "text_for_caretaker_of_patient": "Are you currently or have you previously been a member of a patient and family partnership committee?",
+      "display_text": "Member of a Patient and Family Partnership Committee",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "F-CSY",
+              "section": "Patient and Family Engagement Experience",
+              "parent_question_id": null,
+              "order_number": 10,
+              "type": "TEXT_BODY",
+              "is_required_researcher": false,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": false,
+              "text_for_researcher": "Please specify",
+              "display_text": "Patient and Family Partnership Committee Membership Description",
+              "text_for_patient": "Please specify",
+              "text_for_family_of_patient": "Please specify",
+              "text_for_caretaker_of_patient": "Please specify",
+              "text_for_passive": "Please specify",
+              "help_text": "",
+              "is_mandatory": true,
+              "is_searchable": false
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "A-TRP",
+      "section": "Additional Info",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "SELECT_MULTIPLE_BOX",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Were you transported from another hospital?",
+      "text_for_family_of_patient": "Was the child/ youth transported from another hospital?",
+      "text_for_caretaker_of_patient": "Was the child/ youth transported from another hospital?",
+      "display_text": "Transportation from another Hospital",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes, by air",
+        "Yes, by land",
+        {
+          "title": "No",
+          "mapping": "NA"
+        }
+      ]
+    },
+    {
+      "dev_code": "A-SPT",
+      "section": "Additional Info",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "SELECT_MULTIPLE_BOX",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Did you ever require any supportive technologies?",
+      "text_for_family_of_patient": "Did the child/ youth ever require any supportive technologies?",
+      "text_for_caretaker_of_patient": "Did the child/ youth ever require any supportive technologies?",
+      "display_text": "Supportive Technologies Required",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Tracheostomy Tube",
+        "Non-Invasive Ventilation",
+        "Mechanical Ventilation",
+        "ECMO",
+        "Dialysis",
+        "Cerebral Spinal Fluid Shunt",
+        "Feeding Tube",
+        "No/None"
+      ]
+    },
+    {
+      "dev_code": "A-COM",
+      "section": "Additional Info",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "TREE_SELECT",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Do you have (or have you had) any chronic (long-term) conditions, also called 'comorbidities'?",
+      "text_for_family_of_patient": "Did the child/ youth have any chronic (long-term) conditions, also called 'comorbidities'?",
+      "text_for_caretaker_of_patient": "Did the child/ youth have any chronic (long-term) conditions, also called 'comorbidities'?",
+      "display_text": "Comorbidities",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": "comorbidities"
+    },
+    {
+      "dev_code": "A-ODA",
+      "section": "Additional Info",
+      "parent_question_id": null,
+      "order_number": 4,
+      "type": "TREE_SELECT",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "",
+      "text_for_patient": "Did any of these occurrences happen during your PICU admission?",
+      "text_for_family_of_patient": "Did any of these occurrences happen during the child/ youth's PICU admission?",
+      "text_for_caretaker_of_patient": "Did any of these occurrences happen during the child/ youth's PICU admission?",
+      "display_text": "PICU Admission Occurences",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": "icu_occurrences"
+    },
+    {
+      "dev_code": "D-IMG",
+      "section": "Demographic Information",
+      "parent_question_id": null,
+      "order_number": 5,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Did you immigrate to Canada?",
+      "text_for_patient": "Did you immigrate to Canada?",
+      "text_for_family_of_patient": "Did you immigrate to Canada?",
+      "text_for_caretaker_of_patient": "Did you immigrate to Canada?",
+      "text_for_passive": "Did you immigrate to Canada?",
+      "display_text": "Immigrate to Canada",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No",
+        "I prefer not to say"
+      ]
+    },
+    {
+      "dev_code": "D-HHS",
+      "section": "Demographic Information",
+      "parent_question_id": null,
+      "order_number": 7,
+      "type": "DROP_DOWN",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Household salary (annual income)",
+      "text_for_patient": "Household salary (annual income)",
+      "text_for_family_of_patient": "Household salary (annual income)",
+      "text_for_caretaker_of_patient": "Household salary (annual income)",
+      "text_for_passive": "Household salary (annual income)",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "I prefer not to answer",
+        "Under $5,000",
+        "$5,000 to $9,999",
+        "$10,000 to $14,999",
+        "$15,000 to $19,999",
+        "$20,000 to $24,999",
+        "$25,000 to $29,999",
+        "$30,000 to $34,999",
+        "$35,000 to $39,999",
+        "$40,000 to $44,999",
+        "$45,000 to $49,999",
+        "$50,000 to $59,999",
+        "$60,000 to $69,999",
+        "$70,000 to $79,999",
+        "$80,000 to $89,999",
+        "$90,000 to $99,999",
+        "$100,000 and over"
+      ]
+    },
+    {
+      "dev_code": "D-EDU",
+      "section": "Demographic Information",
+      "parent_question_id": null,
+      "order_number": 8,
+      "type": "DROP_DOWN",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_patient": "If you are over 17, what is your level of education?",
+      "text_for_family_of_patient": "If you are over 17, what is your level of education?",
+      "text_for_caretaker_of_patient": "If you are over 17, what is your level of education?",
+      "display_text": "Level of Education",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Completed grade 8 or less",
+        "Completed grade 9, 10 or 11",
+        "Completed high school",
+        "Junior college/community college",
+        "College/university undergraduate degree",
+        "Graduate school/professional school",
+        "I prefer not to answer",
+        {
+          "title": "N/A",
+          "mapping": "NA"
+        }
+      ]
+    },
+    {
+      "dev_code": "D-IDP",
+      "section": "Demographic Information",
+      "parent_question_id": null,
+      "order_number": 9,
+      "type": "DROP_DOWN",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_patient": "If you are above 17, could you live independently?",
+      "text_for_family_of_patient": "If you are above 17, could you live independently?",
+      "text_for_caretaker_of_patient": "If you are above 17, could you live independently?",
+      "display_text": "Can Live Independently",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No",
+        {
+          "title": "N/A",
+          "mapping": "NA"
+        }
+      ]
+    },
+    {
+      "dev_code": "C-CIM",
+      "section": "Demographic Information (Child)",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "DROP_DOWN",
+      "is_required_researcher": false,
+      "is_required_patient": false,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_family_of_patient": "Did the child/ youth immigrate to Canada?",
+      "text_for_caretaker_of_patient": "Did the child/ youth immigrate to Canada?",
+      "display_text": "Did Child Immigrate to Canada",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No",
+        "I prefer not to say"
+      ]
+    },
+    {
+      "dev_code": "C-IDP",
+      "section": "Demographic Information (Child)",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "DROP_DOWN",
+      "is_required_researcher": false,
+      "is_required_patient": false,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_family_of_patient": "If the child/ youth is over 17, are they living/could they live independently?",
+      "text_for_caretaker_of_patient": "If the child/ youth is over 17, are they living/could they live independently?",
+      "display_text": "Can Child Live Independently",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No",
+        "I prefer not to say"
+      ]
+    },
+    {
+      "dev_code": "S-HAS",
+      "section": "Social Media Information",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Do you have any social media links you would like to share with us?",
+      "text_for_patient": "Do you have any social media links you would like to share with us?",
+      "text_for_family_of_patient": "Do you have any social media links you would like to share with us?",
+      "text_for_caretaker_of_patient": "Do you have any social media links you would like to share with us?",
+      "text_for_passive": "Do you have any social media links you would like to share with us?",
+      "display_text": "Has Social Media Links",
+      "help_text": "",
+      "is_mandatory": false,
+      "is_searchable": false,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "S-TWT",
+              "section": "Social Media Information",
+              "parent_question_id": null,
+              "order_number": 2,
+              "type": "TEXT_BODY",
+              "is_required_researcher": true,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": true,
+              "text_for_researcher": "Twitter",
+              "text_for_patient": "Twitter",
+              "text_for_family_of_patient": "Twitter",
+              "text_for_caretaker_of_patient": "Twitter",
+              "text_for_passive": "Twitter",
+              "help_text": "",
+              "is_mandatory": false,
+              "is_searchable": false,
+              "placeholder_text": "https://www.twitter.com/username/"
+            },
+            {
+              "dev_code": "S-RSG",
+              "section": "Social Media Information",
+              "parent_question_id": null,
+              "order_number": 3,
+              "type": "URL",
+              "is_required_researcher": true,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": true,
+              "text_for_researcher": "ResearchGate",
+              "text_for_patient": "ResearchGate",
+              "text_for_family_of_patient": "ResearchGate",
+              "text_for_caretaker_of_patient": "ResearchGate",
+              "text_for_passive": "ResearchGate",
+              "help_text": "",
+              "is_mandatory": false,
+              "is_searchable": false,
+              "placeholder_text": "https://www.researchgate.net/profile/name/"
+            },
+            {
+              "dev_code": "S-LKI",
+              "section": "Social Media Information",
+              "parent_question_id": null,
+              "order_number": 4,
+              "type": "URL",
+              "is_required_researcher": true,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": true,
+              "text_for_researcher": "Linkedin",
+              "text_for_patient": "Linkedin",
+              "text_for_family_of_patient": "Linkedin",
+              "text_for_caretaker_of_patient": "Linkedin",
+              "text_for_passive": "Linkedin",
+              "help_text": "",
+              "is_mandatory": false,
+              "is_searchable": false
+            },
+            {
+              "dev_code": "S-FCE",
+              "section": "Social Media Information",
+              "parent_question_id": null,
+              "order_number": 5,
+              "type": "URL",
+              "is_required_researcher": true,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": true,
+              "text_for_researcher": "Facebook",
+              "text_for_patient": "Facebook",
+              "text_for_family_of_patient": "Facebook",
+              "text_for_caretaker_of_patient": "Facebook",
+              "text_for_passive": "Facebook",
+              "help_text": "",
+              "is_mandatory": false,
+              "is_searchable": false,
+              "placeholder_text": "https://www.facebook.com/account/"
+            },
+            {
+              "dev_code": "S-INS",
+              "section": "Social Media Information",
+              "parent_question_id": null,
+              "order_number": 5,
+              "type": "URL",
+              "is_required_researcher": true,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": true,
+              "text_for_researcher": "Instagram",
+              "text_for_patient": "Instagram",
+              "text_for_family_of_patient": "Instagram",
+              "text_for_caretaker_of_patient": "Instagram",
+              "text_for_passive": "Instagram",
+              "help_text": "",
+              "is_mandatory": false,
+              "is_searchable": false,
+              "placeholder_text": "https://www.instagram.com/account/"
+            }
+          ]
+        },
+        "No"
+      ]
+    },
+    {
+      "dev_code": "E-DOB",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "DATE_PICKER_YEAR",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "1. What is your year of birth?",
+      "text_for_patient": "1. What is your year of birth?",
+      "text_for_family_of_patient": "1. What is your year of birth?",
+      "text_for_caretaker_of_patient": "1. What is your year of birth?",
+      "text_for_passive": "",
+      "help_text": "Field entered as year (i.e. 1977).",
+      "display_text": "Year of Birth",
+      "is_mandatory": false
+    },
+    {
+      "dev_code": "E-GND",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "SELECT_MULTIPLE_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "2a. Which term(s) best describe your current gender identity? [Select the option(s) that apply to you.]",
+      "text_for_patient": "2a. Which term(s) best describe your current gender identity? [Select the option(s) that apply to you.]",
+      "text_for_family_of_patient": "2a. Which term(s) best describe your current gender identity? [Select the option(s) that apply to you.]",
+      "text_for_caretaker_of_patient": "2a. Which term(s) best describe your current gender identity? [Select the option(s) that apply to you.]",
+      "text_for_passive": "",
+      "help_text": "<p>\"Gender identity\" refers to a person's internal sense of being a woman, man, both, neither or somewhere along the gender spectrum. It is recognized that some of the response options may overlap. This question allows you to choose multiple options. Choose responses that best represent you.</p><br><p>The response options for this question are defined as follows:</p><br><ul><li><strong>Agender </strong>refers to a person who does not relate to any gender identity, who does not experience gender or who places themselves beyond the gender spectrum.</li><br>      <li><strong>Bigender / Multigender </strong>Bigender refers to a person who identifies as having two genders. Multigender refers to a person who identifies as having more than one gender.</li><br>      <li><strong>Gender-fluid </strong>refers to a person whose gender identity or expression changes or shifts along the gender spectrum.</li><br>      <li><strong>Gender-Queer </strong>refers to a person who challenges social norms regarding gender with their identity, their gender expression and their sexual practices.</li><br>      <li><strong>Man </strong>refers to a person who internally identities and/or publicly expresses as a man. This may include cisgender and transgender individuals. Cisgender means that one\\'s gender identity matches one\\'s sex assigned at birth.</li><br>      <li><strong>Nonbinary </strong>refers to a person whose gender identity does not align with a binary understanding of gender such as man or woman.</li><br>      <li><strong>Questioning </strong>refers to a person who is uncertain about their sexual orientation and/or gender identity; this can be a transitory or a lasting identity.</li><br>      <li><strong>Transgender </strong>refers to a person whose gender identity do not correspond with the sex they were assigned at birth. Transgender is an adjective that some individuals use to define their gender.</li><br>      <li><strong>Two-Spirit </strong>is a term used by some North American Indigenous people to indicate a person who embodies both female and male spirits or whose gender identity, sexual orientation or spiritual identity is not limited by the male/female dichotomy.</li><br>      <li><strong>Women </strong>refers to a person who internally identifies and/or publicly expresses as a woman. This may include cisgender and transgender individuals. Cisgender means that one\\'s gender identity matches one\\'s sex assigned at birth.</li><br>      <li><strong>Open-ended </strong>If you do not use any of the terms listed as responses, please use your own words to describe your gender identity.</li><br></ul>",
+      "display_text": "Gender Identity",
+      "is_mandatory": true,
+      "options": [
+        {
+          "title": "Agender",
+          "mapping": "AGND"
+        },
+        {
+          "title": "Bigender / Multigender",
+          "mapping": "BGND"
+        },
+        {
+          "title": "Gender-Fluid",
+          "mapping": "GNDF"
+        },
+        {
+          "title": "Gender-Queer",
+          "mapping": "GNDQ"
+        },
+        {
+          "title": "Man",
+          "mapping": "MAN"
+        },
+        {
+          "title": "Nonbinary",
+          "mapping": "NON"
+        },
+        {
+          "title": "Questioning",
+          "mapping": "QUES"
+        },
+        {
+          "title": "Transgender",
+          "mapping": "TRANS"
+        },
+        {
+          "title": "Two-Spirit",
+          "mapping": "TWO_SPIRIT"
+        },
+        {
+          "title": "Woman",
+          "mapping": "WOMEN"
+        },
+        {
+          "title": "A gender not specified above. Specify:",
+          "mapping": "other<free_text>"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ]
+    },
+    {
+      "dev_code": "E-SEX",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "2b. Which sex was assigned to you at birth?",
+      "text_for_patient": "2b. Which sex was assigned to you at birth?",
+      "text_for_family_of_patient": "2b. Which sex was assigned to you at birth?",
+      "text_for_caretaker_of_patient": "2b. Which sex was assigned to you at birth?",
+      "text_for_passive": "2b. Which sex was assigned to you at birth?",
+      "display_text": "Sex Assignment at Birth",
+      "is_mandatory": true,
+      "options": [
+        {
+          "title": "Male",
+          "mapping": "MAN"
+        },
+        {
+          "title": "Female",
+          "mapping": "WOMEN"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ],
+      "help_text": "Sex assigned at birth refers to the sex recorded on a person's original birth certificate. Sex at birth is typically assigned based on a person's reproductive system and other physical characteristics. Select one response option: Female, Male, or I prefer not to answer."
+    },
+    {
+      "dev_code": "E-SEOR",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 4,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "3. Select the sexual orientation that best describes how you currently think of yourself?",
+      "text_for_patient": "3. Select the sexual orientation that best describes how you currently think of yourself?",
+      "text_for_family_of_patient": "3. Select the sexual orientation that best describes how you currently think of yourself?",
+      "text_for_caretaker_of_patient": "3. Select the sexual orientation that best describes how you currently think of yourself?",
+      "text_for_passive": "3. Select the sexual orientation that best describes how you currently think of yourself?",
+      "display_text": "Sexual Orientation",
+      "is_mandatory": true,
+      "options": [
+        {
+          "title": "Asexual",
+          "mapping": "ACE"
+        },
+        {
+          "title": "Bisexual",
+          "mapping": "BI"
+        },
+        {
+          "title": "Gay",
+          "mapping": "GAY"
+        },
+        {
+          "title": "Heterosexual",
+          "mapping": "HETRO"
+        },
+        {
+          "title": "Lesbian",
+          "mapping": "LES"
+        },
+        {
+          "title": "Pansexual",
+          "mapping": "PAN"
+        },
+        {
+          "title": "Queer",
+          "mapping": "QUEER"
+        },
+        {
+          "title": "Two-Spirit",
+          "mapping": "TWO_SPIRIT"
+        },
+        {
+          "title": "I don't identify with any option provided. I identify as: (option to specify)",
+          "mapping": "other<free_text>"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ],
+      "help_text": "The response options for this question are defined as follows:<br>Asexual refers to a person who identifies as feeling very little or no sexual desire.<br>Bisexual refers to a person who identifies as being sexually attracted to people of their sex and/or gender and people of a different sex and/or gender.<br>Gay refers to a person who identifies as being sexually attracted to people of their sex and/or gender.<br>Heterosexual refers to a person who identifies as sexually attracted to people of a different sex and/or gender.<br>Lesbian refers to a person who identifies as a woman and as being sexually attracted to women.<br>Pansexual refers to a person who identifies as being sexually attracted to another person regardless of their sex or gender.<br>Queer refers to a person whose sexual orientation differs from the normative binary vision of sexuality.<br>Two-Spirit is a term used by some North American Indigenous people to indicate a person who identifies as embodying both female and male spirits or whose gender identity, sexual orientation or spiritual identity is not limited by the male/female dichotomy.<br>"
+    },
+    {
+      "dev_code": "E-INA",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 5,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "4a. Do you identify as Indigenous; that is First Nation (North American Indian), Metis, or Inuk (Inuit)?",
+      "text_for_patient": "4a. Do you identify as Indigenous; that is First Nation (North American Indian), Metis, or Inuk (Inuit)?",
+      "text_for_family_of_patient": "4a. Do you identify as Indigenous; that is First Nation (North American Indian), Metis, or Inuk (Inuit)?",
+      "text_for_caretaker_of_patient": "4a. Do you identify as Indigenous; that is First Nation (North American Indian), Metis, or Inuk (Inuit)?",
+      "text_for_passive": "4a. Do you identify as Indigenous; that is First Nation (North American Indian), Metis, or Inuk (Inuit)?",
+      "display_text": "Identifies as Indigenous",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "E-NAT",
+              "section": "Equity, Diversity, Inclusion (EDI) Information",
+              "parent_question_id": null,
+              "order_number": 6,
+              "type": "RADIO_BUTTON_BOX",
+              "is_required_researcher": true,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": true,
+              "text_for_researcher": "4b. If \"Yes\", select the group(s) that you identify with:",
+              "text_for_patient": "4b. If \"Yes\", select the group(s) that you identify with:",
+              "text_for_family_of_patient": "4b. If \"Yes\", select the group(s) that you identify with:",
+              "text_for_caretaker_of_patient": "4b. If \"Yes\", select the group(s) that you identify with:",
+              "text_for_passive": "4b. If \"Yes\", select the group(s) that you identify with:",
+              "is_mandatory": true,
+              "display_text": "Indigenous Group(s)",
+              "options": [
+                {
+                  "title": "First Nations",
+                  "mapping": ""
+                },
+                {
+                  "title": "Inuit",
+                  "mapping": ""
+                },
+                {
+                  "title": "Metis",
+                  "mapping": ""
+                },
+                {
+                  "title": "I prefer not to answer",
+                  "mapping": "NA"
+                }
+              ],
+              "help_text": "In Canada, an Indigenous person is someone who identifies as First Nation, Metis, or Inuk (Inuit).<br>This question is about personal identity, not legal status or registration.<br>"
+            }
+          ]
+        },
+        {
+          "title": "No",
+          "mapping": "NO"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ],
+      "help_text": "<p>In Canada, an Indigenous person is someone who identifies as First Nation, Metis, or Inuk (Inuit).</p><br><p>This question is about personal identity, not legal status or registration.</p>"
+    },
+    {
+      "dev_code": "E-MIN",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 7,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "5. The Employment Equity Act defines visible minorities as \"persons, other than Aboriginal peoples, who are non-Caucasian in race or non-white in colour.\"Do you identify as a member of a visible minority in Canada?",
+      "text_for_patient": "5. The Employment Equity Act defines visible minorities as \"persons, other than Aboriginal peoples, who are non-Caucasian in race or non-white in colour.\"Do you identify as a member of a visible minority in Canada?",
+      "text_for_family_of_patient": "5. The Employment Equity Act defines visible minorities as \"persons, other than Aboriginal peoples, who are non-Caucasian in race or non-white in colour.\"Do you identify as a member of a visible minority in Canada?",
+      "text_for_caretaker_of_patient": "5. The Employment Equity Act defines visible minorities as \"persons, other than Aboriginal peoples, who are non-Caucasian in race or non-white in colour.\"Do you identify as a member of a visible minority in Canada?",
+      "text_for_passive": "5. The Employment Equity Act defines visible minorities as \"persons, other than Aboriginal peoples, who are non-Caucasian in race or non-white in colour.\"Do you identify as a member of a visible minority in Canada?",
+      "display_text": "Is Visible Minority",
+      "is_mandatory": true,
+      "options": [
+        {
+          "title": "Yes",
+          "mapping": "YES"
+        },
+        {
+          "title": "No",
+          "mapping": "NO"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ],
+      "help_text": "The visible minority identity question asks you to indicate if you identify as a member of a visible minority, as defined by the Employment Equity Act. The Act defines visible minorities as \"persons, other than Aboriginal peoples, who are non-Caucasian in race or non-white in colour.\""
+    },
+    {
+      "dev_code": "E-POP",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 8,
+      "type": "SELECT_MULTIPLE_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "6. Select the population groups you identify with. Note: if you previously indicated that you are an Indigenous person, select \"Population group not listed above\" for this question. You can also select from the list any other population group that applies to you.",
+      "text_for_patient": "6. Select the population groups you identify with. Note: if you previously indicated that you are an Indigenous person, select \"Population group not listed above\" for this question. You can also select from the list any other population group that applies to you.",
+      "text_for_family_of_patient": "6. Select the population groups you identify with. Note: if you previously indicated that you are an Indigenous person, select \"Population group not listed above\" for this question. You can also select from the list any other population group that applies to you.",
+      "text_for_caretaker_of_patient": "6. Select the population groups you identify with. Note: if you previously indicated that you are an Indigenous person, select \"Population group not listed above\" for this question. You can also select from the list any other population group that applies to you.",
+      "text_for_passive": "6. Select the population groups you identify with. Note: if you previously indicated that you are an Indigenous person, select \"Population group not listed above\" for this question. You can also select from the list any other population group that applies to you.",
+      "display_text": "Population Groups",
+      "is_mandatory": true,
+      "options": [
+        {
+          "mapping": "ARAB",
+          "title": "Arab"
+        },
+        {
+          "mapping": "BLACK",
+          "title": "Black"
+        },
+        {
+          "mapping": "CHINESE",
+          "title": "Chinese"
+        },
+        {
+          "mapping": "FILIPINO",
+          "title": "Filipino"
+        },
+        {
+          "mapping": "JAPANESE",
+          "title": "Japanese"
+        },
+        {
+          "mapping": "KOREAN",
+          "title": "Korean"
+        },
+        {
+          "mapping": "LATIN_AMERICAN",
+          "title": "Latin American"
+        },
+        {
+          "mapping": "SOUTH_ASIAN",
+          "title": "South Asian(e.g., East Indian, Pakistani, Sri Lankan, etc.)"
+        },
+        {
+          "mapping": "SOUTH_EAST_ASIAN",
+          "title": "Southeast Asian (e.g., Vietnamese, Cambodian, Laotian, Thai, etc.)"
+        },
+        {
+          "mapping": "WEST_ASIAN",
+          "title": "West Asian (e.g., Iranian, Afghan, etc.)"
+        },
+        {
+          "mapping": "WHITE",
+          "title": "White"
+        },
+        {
+          "mapping": "other<free_text>",
+          "title": "Population group not listed above. I identify as: option to specify"
+        },
+        {
+          "mapping": "NA",
+          "title": "I prefer not to answer"
+        }
+      ],
+      "help_text": "The population group options listed are those used by Statistics Canada in the national census. Population group should not be confused with citizenship or nationality.<br>If you have already identified as an Indigenous person and do not identify with any other population group, you are asked to select \"population group not listed above\" and specify Indigenous.<br>"
+    },
+    {
+      "dev_code": "E-IDS",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 9,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "7a. The Accessible Canada Act defines disability as \"any impairment, including a physical, mental, intellectual, cognitive, learning, communication or sensory impairment - or a functional limitation - whether permanent, temporary or episodic in nature, or evident or not, that, in interaction with a barrier, hinders a person's full and equal participation in society.\"Do you identify as a person with a disability as described in the Act?",
+      "text_for_patient": "7a. The Accessible Canada Act defines disability as \"any impairment, including a physical, mental, intellectual, cognitive, learning, communication or sensory impairment - or a functional limitation - whether permanent, temporary or episodic in nature, or evident or not, that, in interaction with a barrier, hinders a person's full and equal participation in society.\"Do you identify as a person with a disability as described in the Act?",
+      "text_for_family_of_patient": "7a. The Accessible Canada Act defines disability as \"any impairment, including a physical, mental, intellectual, cognitive, learning, communication or sensory impairment - or a functional limitation - whether permanent, temporary or episodic in nature, or evident or not, that, in interaction with a barrier, hinders a person's full and equal participation in society.\"Do you identify as a person with a disability as described in the Act?",
+      "text_for_caretaker_of_patient": "7a. The Accessible Canada Act defines disability as \"any impairment, including a physical, mental, intellectual, cognitive, learning, communication or sensory impairment - or a functional limitation - whether permanent, temporary or episodic in nature, or evident or not, that, in interaction with a barrier, hinders a person's full and equal participation in society.\"Do you identify as a person with a disability as described in the Act?",
+      "text_for_passive": "7a. The Accessible Canada Act defines disability as \"any impairment, including a physical, mental, intellectual, cognitive, learning, communication or sensory impairment - or a functional limitation - whether permanent, temporary or episodic in nature, or evident or not, that, in interaction with a barrier, hinders a person's full and equal participation in society.\"Do you identify as a person with a disability as described in the Act?",
+      "display_text": "Has Disability",
+      "is_mandatory": true,
+      "options": [
+        {
+          "option": "Yes",
+          "subQuestions": [
+            {
+              "dev_code": "E-DSB",
+              "section": "Equity, Diversity, Inclusion (EDI) Information",
+              "parent_question_id": null,
+              "order_number": 10,
+              "type": "SELECT_MULTIPLE_BOX",
+              "is_required_researcher": true,
+              "is_required_patient": true,
+              "is_required_family_of_patient": true,
+              "is_required_passive": true,
+              "text_for_researcher": "7b. If \"Yes,\" select the type(s) of disability that applies to you.",
+              "text_for_patient": "7b. If \"Yes,\" select the type(s) of disability that applies to you.",
+              "text_for_family_of_patient": "7b. If \"Yes,\" select the type(s) of disability that applies to you.",
+              "text_for_caretaker_of_patient": "7b. If \"Yes,\" select the type(s) of disability that applies to you.",
+              "text_for_passive": "7b. If \"Yes,\" select the type(s) of disability that applies to you.",
+              "display_text": "Disabilities",
+              "is_mandatory": true,
+              "options": [
+                "Communications",
+                "Developmental",
+                "Dexterity",
+                "Flexibility",
+                "Hearing",
+                "Learning",
+                "Mental health-related",
+                "Memory",
+                "Mobility",
+                "Pain-related",
+                "Seeing",
+                {
+                  "title": "Disability not listed above: (option to specify)",
+                  "mapping": "other<free_text>"
+                },
+                {
+                  "title": "I prefer not to answer",
+                  "mapping": "NA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "No",
+          "mapping": "NO"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ],
+      "help_text": "The disability question asks you to indicate whether you personally identify as having a disability, according to the definition provided by the Accessible Canada Act.<br>The question does not ask whether you have ever qualified for a disability benefit under the Canada Pension Plan or other program. It also does not take into consideration whether you have received accommodations.<br>"
+    },
+    {
+      "dev_code": "E-FLG",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 11,
+      "type": "SELECT_MULTIPLE_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "8a. What language(s) did you first learn at home in childhood and still understand?",
+      "text_for_patient": "8a. What language(s) did you first learn at home in childhood and still understand?",
+      "text_for_family_of_patient": "8a. What language(s) did you first learn at home in childhood and still understand?",
+      "text_for_caretaker_of_patient": "8a. What language(s) did you first learn at home in childhood and still understand?",
+      "text_for_passive": "8a. What language(s) did you first learn at home in childhood and still understand?",
+      "display_text": "First Language",
+      "is_mandatory": true,
+      "options": [
+        {
+          "title": "English",
+          "mapping": "ENGLISH"
+        },
+        {
+          "title": "French",
+          "mapping": "FRENCH"
+        },
+        {
+          "title": "Another language",
+          "mapping": "ANOTHER"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ],
+      "help_text": "The language question asks you to identify which language you first learned and which language you use most often at home."
+    },
+    {
+      "dev_code": "E-MLG",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 12,
+      "type": "SELECT_MULTIPLE_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "8b. What language(s) do you speak most often at home?",
+      "text_for_patient": "8b. What language(s) do you speak most often at home?",
+      "text_for_family_of_patient": "8b. What language(s) do you speak most often at home?",
+      "text_for_caretaker_of_patient": "8b. What language(s) do you speak most often at home?",
+      "text_for_passive": "8b. What language(s) do you speak most often at home?",
+      "display_text": "Most Spoken Language(s)",
+      "is_mandatory": true,
+      "options": [
+        {
+          "title": "English",
+          "mapping": "ENGLISH"
+        },
+        {
+          "title": "French",
+          "mapping": "FRENCH"
+        },
+        {
+          "title": "Another language",
+          "mapping": "ANOTHER"
+        },
+        {
+          "title": "I prefer not to answer",
+          "mapping": "NA"
+        }
+      ],
+      "help_text": "The language question asks you to identify which language you first learned and which language you use most often at home."
+    },
+    {
+      "dev_code": "E-SETTING",
+      "section": "Equity, Diversity, Inclusion (EDI) Information",
+      "parent_question_id": null,
+      "order_number": 13,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "EDI Privacy Settings",
+      "text_for_patient": "EDI Privacy Settings",
+      "text_for_family_of_patient": "EDI Privacy Settings",
+      "text_for_caretaker_of_patient": "EDI Privacy Settings",
+      "text_for_passive": "EDI Privacy Settings",
+      "is_mandatory": true,
+      "is_searchable": false,
+      "options": [
+        {
+          "title": "Everyone can see this",
+          "mapping": true
+        },
+        {
+          "title": "No one can see this",
+          "mapping": false
+        }
+      ],
+      "help_text": "If you choose \"no one can see this,\" the system will still use your information to match you to specific projects. No one will see which demographics you match except you, unless you specify otherwise."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Engage | Edit System Message</title>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="content-list-item">
+            <div class="content-card">
+                <h1>Edit System Message</h1>
+                <form method="post">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="form-group column" id="${{ field.auto_id }}-container">
+                            <label for="${{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field }}
+                            <div class="form-group-errors">
+                                {{ field.errors }}
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

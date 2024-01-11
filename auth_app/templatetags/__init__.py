@@ -1,0 +1,1 @@
+from auth_app.templatetags.auth_filters import get_user_role

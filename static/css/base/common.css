@@ -1,0 +1,166 @@
+/*Globally used styles and helper classes */
+.hidden {
+    display: none !important;
+}
+
+.align-centre-column, .align-centre-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-centre-column {
+    flex-flow: column nowrap;
+}
+
+.align-centre-row {
+    flex-flow: row nowrap;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-small {
+    font-size: 0.5rem;
+}
+
+.text-medium {
+    font-size: 0.9rem;
+}
+
+.header {
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.inline-header {
+    margin: 0;
+    padding: 0;
+}
+
+.content-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-box {
+    border-radius: 10px;
+    border: 2px solid lightgrey;
+    padding: 6px;
+    width: 100px;
+    display: -webkit-box;
+}
+
+.content-list-item {
+    background-color: var(--bg-accent);
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+}
+
+/* Media Queries for the Header Items */
+@media only screen and (max-width: 666px) {
+    /* card content can take up 80% of the screen on the large size */
+    .content-list-item, .page-content {
+        width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 666px) {
+    /* card content can take up 50% of the screen on the large size */
+    main, .content-list-item, .page-content {
+        flex-grow: 1;
+    }
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#content-grid {
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+}
+
+#content-grid tr.fill-height {
+    height: 100%;
+}
+
+#content-grid td.fill-width {
+    width: 100%;
+}
+
+#content-grid > tbody > tr > td, #content-grid > tbody > tr > th {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+tr#content-header {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+tr#content-header th {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-primary);
+}
+
+/* Rules and Selectors for the Engage Loading Spinner*/
+.loader-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    /*Border settings for the loader */
+    border: 16px solid var(--text-primary);
+    border-top: 16px solid var(--brand-colour);
+    border-bottom: 16px solid var(--brand-colour);
+    border-radius: 50%;
+
+    /* Sizing of the displayed spinner */
+    width: 120px;
+    height: 120px;
+
+    animation: fa-spin 2s linear infinite;
+}
+
+.loader-text {
+    position: absolute;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.medium {
+    transform: scale(0.5);
+}
+
+.small {
+    transform: scale(0.5);
+}
+
+.engage-logo {
+    width: 150px;
+    height: 86px;
+    align-self: center;
+    padding-top: 0.9em;
+}

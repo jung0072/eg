@@ -1,0 +1,55 @@
+upstream channels-backend {
+	server localhost:8080;
+}
+
+server {
+	listen 80;
+	listen 443;
+	server_name "engage.thirst2know.com";
+
+	return 301 https://$host$request_uri;
+
+	location = /favicon.ico { access_log off; log_not_found off; }
+	location /static/ {
+		autoindex on;
+		alias /home/ubuntu/engage/staticfiles/;
+	}
+	location /media/ {
+		root /home/ubuntu/engage;
+	}
+
+	location / {
+		include proxy_params;
+		proxy_pass http://unix:/home/ubuntu/engage/engage.sock;
+
+		# error pages
+		error_page 500 502 503 504 /nginx_500.html;
+       	location = /nginx_500.html {
+			root /home/ubuntu/engage/staticfiles/errors/;
+			internal;
+	   	}
+	}
+
+	location /ws/ {
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "upgrade";
+		proxy_redirect off;
+		proxy_pass http://unix:/home/ubuntu/engage/engage-daphne.sock;
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Host $server_name;
+	}
+	location /wss/ {
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_redirect off;
+                proxy_pass https://unix:/home/ubuntu/engage/engage-daphne.sock;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Host $server_name;
+        }
+}

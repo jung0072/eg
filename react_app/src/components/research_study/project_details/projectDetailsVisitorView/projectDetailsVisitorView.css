@@ -1,0 +1,125 @@
+#project-details .project-title-header,
+.project-title {
+  font-size: 24px;
+}
+
+#project-details .project-title-header {
+  color: var(--primary-color-3);
+  font-weight: 400;
+}
+
+#project-details .project-title {
+  color: var(--primary-color-1);
+  font-weight: 600;
+}
+
+#project-details .attribute-block {
+  width: 85%;
+}
+
+#project-details .attribute {
+  line-height: 19px;
+  letter-spacing: 0.2px;
+}
+
+#project-details .attribute .title {
+  font-size: 16px;
+  color: var(--primary-color-3);
+}
+
+#project-details .attribute .content,
+.compact-attribute-block .content {
+  font-size: 16px;
+  font-weight: 700 !important;
+  color: var(--primary-color-1);
+  margin: 0 !important;
+}
+
+#project-details .subject-title {
+  font-size: 16px;
+  color: var(--primary-color-3);
+}
+
+#project-details .subject {
+  font-size: 16px;
+  color: var(--primary-color-1);
+  font-weight: 600;
+}
+
+#project-details .compact-attribute-block {
+  display: flex;
+}
+
+#project-details .compact-attribute-block .content {
+  padding: 0 5px;
+}
+
+#project-details .compact-attribute-block .content:first-of-type {
+  padding-left: 0;
+}
+
+#project-details .compact-attribute-block .content:nth-child(-n + 2) {
+  border-right: solid 2px var(--primary-color-1);
+}
+
+#project-details .attribute-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+  color: var(--primary-color-1);
+}
+
+#project-details .attribute-text {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.2px;
+  color: var(--primary-color-3);
+}
+
+#project-details .tag {
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 2px 20px;
+  margin: 4px 10px 0 0;
+}
+
+#project-details .mb-25 {
+  margin-bottom: 25px;
+}
+
+#project-details .mb-20 {
+  margin-bottom: 20px;
+}
+
+#project-details .mt-20 {
+  margin-top: 20px;
+}
+
+#project-details .mb-10 {
+  margin-bottom: 10px;
+}
+
+#project-details .multi-center {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: var(--primary-color-1);
+}
+
+#project-details .email {
+  margin-bottom: 4px;
+}
+
+#project-details .collapsible {
+  transition-property: max-height;
+  transition: 300ms ease-out;
+}
+
+#project-details #req-to-join-btn {
+  color: white;
+  background: #1ab759;
+}

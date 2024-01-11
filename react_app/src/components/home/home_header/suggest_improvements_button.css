@@ -1,0 +1,17 @@
+#suggest-engage-improvement-btn {
+    background-color: #2E6D58;
+    /*background-color: #6D2E92;*/
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    font-family: Inter, serif;
+}
+
+/* Add hover effect for the button */
+#suggest-engage-improvement-btn:hover {
+    background-color: #2E6D6D;
+    /*background-color: #583E6D;*/
+}

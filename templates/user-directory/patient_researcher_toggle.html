@@ -1,0 +1,21 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/researchers.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% if current_user_profile.is_active_researcher %}
+        <div class="researcher-patient-buttons">
+            <a href="{% url 'engage_app:researcher_directory_list' %}" class="researcher-select">RESEARCHER </a>
+            <a href="{% url 'engage_app:patient_directory_list' %}" class="patient-select">PATIENT PARTNER</a>
+        </div>
+    {% endif %}
+    {% block card %}{% endblock %}
+{% endblock %}
+
+{% block scripts %}
+    {# Partner Directory script #}
+    <script src={% static "js/user_directory/partner_directory.js" %}></script>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base/navigation.html' %}
+{% load human_time %}
+
+{% block title %}
+    <title>Engage | Confirm Delete</title>
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="content-list-item">
+            <div class="content-card">
+                <div class="card-header">
+                    <h1 class="header">Confirm deletion</h1>
+                    <b>Are you sure you want to delete this system message? This action is irreversible.</b>
+
+                    <h2></h2>
+                    <span>
+                        <b>{{ system_message.title }}</b> posted by {{ system_message.author.get_full_name }} in {{ system_message.type_pretty_name }}s
+                         - {{ system_message.created_at|human_time }}
+                    </span>
+
+                    <br><br>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Confirm">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

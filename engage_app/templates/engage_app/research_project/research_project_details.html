@@ -1,0 +1,212 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+{% load auth_filters %}
+{% load get_item %}
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+{% endblock %}
+
+{% block content %}
+    {# The section div containing the research project info #}
+    <div class="section">
+        <ul class="content-list">
+            <li class="content-list-item">
+                <div class="content-card">
+                    <div class="card-header">
+                        <p class="card-notification active">Created At: {{ research_project.created_at }} | Current User
+                            Permissions: {{ permission_role }}</p>
+                        <p class="card-subtitle">Research Project #{{ research_project.id }}</p>
+                        <p class="card-title">{{ research_project.title }}</p>
+                    </div>
+                    <div class="card-content">
+                        {# TODO: Update to use a table to control the layout of these items #}
+                        <strong>Description:</strong> {{ research_project.description }}
+                        <br>
+                        <strong>ICU:</strong> {{ research_project.get_icu_location }}
+                        <br>
+                        <strong>Expected Time Commitment:</strong> {{ research_project.partner_commitment_description }}
+                        <br>
+                        <strong>
+                            Roles
+                            Needed:
+                        </strong> {{ research_project.roles_needed|display_list_as_text:', '|title|replace_char_with_spaces:'_' }}
+                        <br>
+                        <strong>Partners Involved: </strong>{{ research_project.get_team_size }}
+                        <br>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-actions">
+                            {# TODO: modify so lead investigators can also access the settings panel#}
+                            {% if research_project.creator_id == user.id %}
+                                <a href="{% url 'engage_app:modify_research_project_settings' research_project_id=research_project.id %}">
+                                    <button class="action main research-project-settings">
+                                        Edit Project Demographics
+                                    </button>
+                                </a>
+                            {% endif %}
+                            {% if research_project.creator_id == user.id or permissions.is_principal_investigator %}
+                                {% include 'base/form_modal.html' with form_name="project-details-form" form=edit_project_form verbose_form_name="Edit Your Research Project" form_action=edit_project_form_action %}
+                                <button type="submit" data-trigger="customize-project-details-form-modal"
+                                        class="modal-trigger-button main action"
+                                        id="edit-project-details-modal-button">
+                                    Edit Project Details
+                                </button>
+
+                                {% include 'base/form_modal.html' with form_name="research-task-form" form=task_form verbose_form_name="Create a Research Project Task" form_action=task_form_action %}
+                                <button type="button" data-trigger="customize-research-task-form-modal"
+                                        class="modal-trigger-button main button action"
+                                        id="add-research-task-modal-button"
+                                >
+                                    Add Research Project Task
+                                </button>
+
+                                {% include 'base/form_modal.html' with form_name="add-new-team-member-form" form=new_team_member_form verbose_form_name="Add a New Team Member" form_action=new_team_member_form_action %}
+                                <button type="button" data-trigger="customize-add-new-team-member-form-modal"
+                                        class="modal-trigger-button main button action"
+                                        id="add-new-team-member-modal-button"
+                                >
+                                    Add Team Member
+                                </button>
+                            {% endif %}
+                            {# The section div containing the join project button #}
+                            {% if current_user_profile.is_approved_researcher or current_user_profile.is_patient_partner %}
+                                {% if not permissions %}
+                                    <a href="mailto:{% if research_project.contact_email %}{{ research_project.contact_email }}{% else %}{{ research_project.creator.email }}{% endif %}">
+                                        <button type="button" class="button secondary-green action">
+                                            Contact
+                                        </button>
+                                    </a>
+                                    <button type="button" id="request-to-join-project-button"
+                                            data-project-id="{{ research_project.id }}"
+                                            class="button main action primary-blue">
+                                        Request to Join Project
+                                    </button>
+                                {% elif permissions and not permissions.is_active and permissions.is_approved %}
+                                    <button type="button" class="button main action primary-purple full-button"
+                                            id="accept-project-invitation-button"
+                                            data-project-id="{{ research_project.id }}"
+                                    >
+                                        Join Project
+                                    </button>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    {# The section div containing the team member list #}
+    <div class="section">
+        <p class="header">Team Members</p>
+        <ul class="content-list">
+
+            {# The table for current team members #}
+            <li class="content-list-item">
+                <div class="content-card">
+                    <div class="card-header">
+                        <p class="card-title">Current Team Members</p>
+                    </div>
+                    <div class="card-content">
+                        <br>
+                        {% include 'engage_app/research_project/members_permissions_table.html' with current_user_permissions=permissions team_members=current_team_members %}
+                    </div>
+                </div>
+            </li>
+            {# The table for users that have requested to join the team, only show if PI or creator is looking #}
+            {% if research_project.creator_id == user.id or permissions.is_principal_investigator %}
+                <li class="content-list-item">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <p class="card-title">Users that Requested to Join</p>
+                        </div>
+                        <div class="card-content">
+                            <table class="full-table">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Active</th>
+                                    <th>Actions</th>
+                                </tr>
+                                {% for member in requesting_team_members %}
+                                    <tr>
+                                        <td>{{ member.user.get_full_name }}</td>
+                                        <td>{{ member.get_current_role }}</td>
+                                        <td>{{ member.is_active }}</td>
+                                        <td>
+                                            <button type="button" class="button action primary-green"
+                                                    name="activate-team-member-button"
+                                                    data-project-id="{{ research_project.id }}"
+                                                    data-user-id="{{ member.user.id }}"
+                                            >
+                                                Activate
+                                            </button>
+                                        </td>
+                                    </tr>
+                                {% empty %}
+                                    <tr>
+                                        <td colspan="4" style="text-align: center">
+                                            No requests to join the team at this time
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% if permissions and permissions.is_active %}
+        {# The section div containing the research tasks #}
+        <div class="section">
+            <p class="header">Research Tasks</p>
+            <ul class="content-list">
+                {% for task in research_project_tasks %}
+                    <li class="content-list-item">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <p class="card-notification active">Updated at: {{ task.updated_at }}</p>
+                                <p class="card-subtitle">Created At: {{ task.created_at }}</p>
+                                <p class="card-title">{{ task.title }}</p>
+                            </div>
+                            <div class="card-content">
+                                {{ task.description }}
+                            </div>
+                            <div class="card-footer">
+                                <div class="user-profile-avatar small">
+                                    <div class="profile-picture-container">
+                                        <img class="profile-picture" alt="profile avatar"
+                                             src="{% url 'engage_app:get_public_profile_picture' username=task.task_creator.username %}"
+                                        >
+                                    </div>
+                                    <p class="username">{{ task.task_creator.first_name }} {{ task.task_creator.last_name }}</p>
+                                    <p class="title">{{ task.task_creator.id|get_user_role }}</p>
+                                </div>
+                                <div class="card-actions">
+                                    {% if permissions.is_active %}
+                                        <a href="{% url 'engage_app:research_task_details' research_task_id=task.id %}">
+                                            <button class="action main" type="button">
+                                                View Details
+                                            </button>
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {% empty %}
+                    <p>There are currently no tasks for this project </p>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static '/js/research_project/research_project_details.js' %}"></script>
+    <script src="{% static '/js/research_project/add_project.js' %}"></script>
+{% endblock %}

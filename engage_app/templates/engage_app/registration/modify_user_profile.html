@@ -1,0 +1,51 @@
+{% extends 'base/navigation.html' %}
+{% load get_profile_picture %}
+{% load static %}
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/branching_forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registration/modify_user_profile.css' %}">
+    {# Needed for Basic Settings Form #}
+    <link rel="stylesheet" href="{% static 'css/registration/settings.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <ul class="content-list">
+            <li class="content-list-item">
+                <div class="content-card branching-form">
+                    <div class="card-header">
+                        <h1 class="text-centre">Modify User Profile</h1>
+                        <ul id="customize-user-profile-navigation-bar" class="branching-forms-navigation-bar"></ul>
+                        {% if role == "RESEARCHER" %}
+                            <div class="progress-container hidden" id="researcher-progress-bar">
+                                <div class="progress-bar" role="progressbar" style="width: 0;"
+                                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"
+                                >
+                                    <p class="progress-bar-label">0</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="card-content">
+                        <form action="multipart/form-data" method="post" id="customize-user-profile-form">
+                            {% csrf_token %}
+                        </form>
+                        {% include 'engage_app/registration/settings.html' with template_form_id="basic-profile-settings-form" %}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/branching_forms.js' %}"></script>
+    <script src="{% static 'js/registration/modify_user_profile.js' %}"></script>
+
+    {# Needed for Basic Settings Form #}
+    <script src="{% static 'js/registration/settings.js' %}"></script>
+    {{ profile_form.media }}
+{% endblock %}

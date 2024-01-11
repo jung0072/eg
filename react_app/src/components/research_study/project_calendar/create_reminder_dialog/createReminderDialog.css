@@ -1,0 +1,48 @@
+.create-reminder-wrapper {
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 1.5%;
+  font-family: 'Inter', sans-serif;
+}
+
+.create-reminder-wrapper .create-reminder-title {
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 42px;
+  letter-spacing: 0.1px;
+  color: #002e6d;
+}
+
+.create-reminder-wrapper .create-reminder-btn,
+.create-reminder-wrapper .cancel-btn {
+  border-radius: 40px;
+}
+
+.create-reminder-wrapper .create-reminder-btn {
+  border-color: #002e6d;
+  background: #002e6d;
+  padding: 0 1.5rem;
+}
+
+.create-reminder-wrapper .reminder-type {
+  color: #ffffff;
+  border-radius: 55.0097px !important;
+  min-width: max-content;
+}
+
+.create-reminder-wrapper .reminder-type.ant-radio-button-wrapper-checked {
+  box-shadow: #1890ff 0 0 0px 5px;
+}
+
+.create-reminder-wrapper .ant-form-item-no-colon {
+  font-size: 16px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.w-50 {
+  width: 50%;
+}

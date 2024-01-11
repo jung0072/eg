@@ -1,0 +1,102 @@
+/* Toast Animations: */
+@keyframes fade-toast-in {
+    from {
+        opacity: 0
+    }
+}
+
+@keyframes fade-toast-out {
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes slide-toast-in {
+    from {
+        transform: translateY(10px)
+    }
+}
+
+/* Toast Selectors and Styles */
+.toast-notification-container{
+    position: absolute;
+    top: 1em;
+    right: 0;
+    height: 100vh;
+    /* Stop the container from blocking clicks in the webpage */
+    pointer-events: none;
+}
+.toast-notification-group {
+    position: sticky;
+    top: 1em;
+    width: 400px;
+    margin: 1em;
+    padding: 1em;
+    z-index: var(--maximum-z-index);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.toast-notification {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid var(--text-primary);
+    border-radius: 5px;
+    background-color: var(--text-accent);
+    margin-bottom: 1em;
+    overflow: hidden;
+
+    /* Toast Notification Animations */
+    will-change: transform, opacity;
+    animation: fade-toast-in .3s ease, slide-toast-in .3s ease,
+    fade-toast-out .3s ease var(--toast-notification-animation-duration);
+}
+
+.toast-header {
+    font-weight: 700;
+    padding: 0.5em;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.toast-content {
+    padding: 1em;
+    background-color: var(--toast-notification-content-bg);
+    border: 1px solid var(--bg-accent);
+    color: var(--text-accent);
+}
+
+.toast-notification .toast-icon {
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--text-accent);
+    border-radius: 2px;
+}
+
+.toast-notification.success .toast-icon {
+    background-color: var(--cheo-secondary-green);
+}
+
+.toast-notification.info .toast-icon {
+    background-color: var(--cheo-primary-blue);
+}
+
+.toast-notification.error .toast-icon {
+    background-color: var(--cheo-secondary-yellow);
+}
+
+.toast-notification.error .toast-icon {
+    background-color: var(--cheo-secondary-pink);
+}
+
+.toast-header .toast-title {
+    margin-left: 1em;
+}
+
+.toast-header .toast-time {
+    margin-left: auto;
+    font-size: 0.6rem;
+}

@@ -1,0 +1,23 @@
+{# Show the page title if it is supplied otherwise show the welcome back greeting #}
+{% if page_title %}
+    <div class="page-title-container">
+        {# TODO: implement back arrow functionality when page navigations are set up #}
+        {# Check if this page is the root view, if not we can show a back arrow #}
+        {% if not is_root_page %}
+            <i class="fas fa-arrow-left"></i>
+        {% endif %}
+        <p id="page-header-title" class="page-title">{{ page_title }}</p>
+    </div>
+{% elif request.user.is_authenticated %}
+    <div class="profile-header-container">
+        <div id="user-greeting" class="user-profile-avatar">
+            <a class="profile-picture-container" href="{% url 'engage_app:display_user_profile' user_id=request.user.id %}">
+                <img class="profile-picture circle" src="{% url 'engage_app:get_public_profile_picture' username=request.user.username %}" alt="Profile Picture">
+            </a>
+            <div class="greeting">
+                <div id="welcome-back" class="user-message">Welcome back!</div>
+                <div class="username">{{ request.user.first_name }} {{ request.user.last_name }}</div>
+            </div>
+        </div>
+    </div>
+{% endif %}

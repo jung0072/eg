@@ -1,0 +1,41 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+
+    <div>
+        <p class="user-name">Dear {{ user.email }},</p>
+        <p>
+            We are excited to extend an invitation for you to participate in Project: {{ project.title }} on the Engage
+            research platform.
+        </p>
+        <br />
+        <p>
+            Engage is a cutting-edge research platform designed to facilitate collaboration between patients and
+            researchers in driving patient engagement-focused research initiatives. With its user-friendly interface and
+            robust tools, Engage enables seamless team formation, knowledge exchange, and impactful research outcomes.
+        </p>
+        <br />
+        <p>
+            Project: {{ project.title }} presents a unique opportunity for you to join a team of dedicated researchers
+            and
+            patients who share a common interest in advancing patient engagement-driven research. By participating in
+            this project, you will have the chance to contribute your insights and expertise while collaborating with
+            like-minded individuals.
+        </p>
+        <br />
+        <p>
+            To get started, simply click on the following link below to accept the invitation to the Engage Platform and
+            finish creating your account and then join the project. Should you have any questions or require assistance
+            along the way, please do not hesitate to reach out to us at engage@insightscope.ca.
+        </p>
+        <br />
+        <p><strong>Username:</strong>{{ user.email }}</p>
+        <br />
+        <p><strong>Password:</strong>{{ temp_password }}</p>
+        <br />
+        <a target="_blank" href="{{ link }}">Activate Account</a>
+        <p>Thank you,</p>
+        <p>Engage</p>
+    </div>
+
+{% endblock %}

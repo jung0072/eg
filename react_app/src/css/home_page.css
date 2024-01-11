@@ -1,0 +1,10 @@
+.home-page-screen .header-welcome {
+    font-weight: bold;
+    font-size: small;
+}
+
+.home-page-screen .header-name {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: var(--primary-color-1);
+}

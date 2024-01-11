@@ -1,0 +1,184 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="back-button">
+        <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;<b>All Projects</b>
+    </div>
+
+    <div id="project-container">
+        <div class="project-header">
+            <div id="actions-div">
+                <h4 class="card-notification active">Current Project</h4>
+                <select class="dropdown-box" style="text-align: right">
+                    <option selected>Action</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <h2>Scientific Project title that is really long and complicated 0</h2>
+            <p style="color: cornflowerblue">Simplified project title 0</p>
+        </div>
+        <hr>
+        <div class="project-content">
+            <i class="fas fa-map-marker-alt" style="width: 20px"></i>
+            Ottawa General Hospital
+            <br>
+            <br>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+            of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also
+            the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+            with the release of
+            Letraset sheets containing Lore Ipsum passages, and more recently with desktop publishing
+            software like
+            Aldus PageMaker including versions of Lorem Ipsum
+            <br>
+            <br>
+            <br>
+            <br>
+            <button class="action main" type="button"><i class="fas fa-arrow-alt-circle-down"
+                                                         style="width: 20px"></i> Download Full Research
+                Description
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;<button class="action main" type="button"><i
+                class="fas fa-comment-alt" style="width: 20px"></i> Send Message
+        </button>
+            <br>
+            <br>
+            &nbsp;<b>Partnership details</b>
+            <br>
+            <br>
+            Expected Partner Weekly Commitment: 1 hour<br><br>
+            Roles Needed: Family /Patient Partners<br><br>
+            Partners Involved: 5<br><br><br><br>
+            <b>Research Team Contacts</b><br><br>
+            <div class="team-div">
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+            </div>
+            <div class="edit-team-member">
+                <i class="fas fa-user-plus"></i> <b>Edit Team member</b>
+            </div>
+
+
+            <b>Patient Partners</b><br><br>
+
+            <div class="patients-div">
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+
+                <div class="user-profile-avatar small" id="view-less">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">and 4 more...</p>
+                    <p class="title" id="view-full-list"><a href="" id="view-more-link">View full list</a></p>
+                </div>
+
+                <div class="view-more user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+            </div>
+
+            <div class="view-more patients-div">
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+
+                <div class="user-profile-avatar small">
+                    <div class="profile-picture-container">
+                        <img class="profile-picture" alt="profile avatar"
+                             src="https://source.unsplash.com/400x400/?portrait"
+                        >
+                    </div>
+                    <p class="username">Test Name B.</p>
+                    <p class="title">Information</p>
+                </div>
+            </div>
+
+            <div class="edit-team-member">
+                <i class="fas fa-user-plus"></i> <b>Edit Team member</b>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    <script src={% static "js/project.js" %}></script>
+{% endblock %}

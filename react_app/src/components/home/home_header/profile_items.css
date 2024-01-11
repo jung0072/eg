@@ -1,0 +1,35 @@
+.profile-dropdown-section {
+    width: 45px;
+    height: 47px;
+    background-color: #E7E7E7;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.profile-dropdown-icon {
+    /* background-color: black; */
+    font-size: 30px;
+    margin: calc((47px - 30px) / 2) calc((45px - 30px) / 2);
+
+}
+
+.profile-dropdown-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+.dropdown-content {
+    background: #fff;
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+}
+
+.dropdown-content .ant-dropdown-menu {
+    box-shadow: none;
+}
+
+.ant-dropdown {
+    width: 300px;
+}

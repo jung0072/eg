@@ -1,0 +1,103 @@
+{
+  "sections": [
+    {
+      "name": "Equity, Diversity, Inclusion (EDI) Information",
+      "description": "Why we are collecting this information: Equity, diversity and inclusion (EDI) strengthen research communities and improve the quality of research. These EDI questions are taken from the Canadian Institutes of Health Research Equity, Diversity and Inclusion Self-identification Questionnaire. We are collecting EDI information to measure how diverse Engage platform users are, so we can improve it and make sure it is inclusive for everyone. We also want to find out if there are any groups that aren't being represented here so we can invite them to use the platform. The Engage system will also use your information to show you projects looking for partners who match your demographics (no one will see which demographics you match except you, unless you specify otherwise). Any personal EDI information you share will be confidential, and only the platform administrators will have access to it unless you specify otherwise. You can change the personal information you share at any time. If you do not want to answer a certain question, you can choose the option \"I prefer not to answer\". Please answer these questions for yourself and not on behalf of anyone else. If you want to know more about how your information will be stored and used, please see our Terms of Use and Privacy Policy.",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 0
+    },
+    {
+      "name": "Personalization",
+      "description": "Personalization of your user profile",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 1
+    },
+    {
+      "name": "Researcher/Clinician Patient and Family Engagement Experience",
+      "description": "In order to match your interests and experience with the appropriate projects, please tell us more about yourself.",
+      "is_valid_researcher": true,
+      "is_valid_patient": false,
+      "is_valid_family_of_patient": false,
+      "is_valid_caretaker_of_patient": false,
+      "is_valid_passive": false,
+      "is_published": true,
+      "order_number": 2
+    },
+    {
+      "name": "Patient ICU Experience",
+      "description": "In order to match your interests and experience with the appropriate projects, please tell us more about yourself.",
+      "is_valid_researcher": false,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": false,
+      "is_published": true,
+      "order_number": 2
+    },
+    {
+      "name": "Patient and Family Engagement Experience",
+      "description": "Patient and Family Engagement Experience",
+      "is_valid_researcher": false,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": false,
+      "is_published": true,
+      "order_number": 3
+    },
+    {
+      "name": "Additional Info",
+      "description": "Completion of this section is optional, but would help us better understand the demographics of platform users.",
+      "is_valid_researcher": false,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": false,
+      "is_published": true,
+      "order_number": 4
+    },
+    {
+      "name": "Demographic Information",
+      "description": "Completion of this section is optional, but would help us better understand the demographics of platform users.",
+      "is_valid_researcher": false,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": false,
+      "is_valid_caretaker_of_patient": false,
+      "is_valid_passive": false,
+      "is_published": true,
+      "order_number": 5
+    },
+    {
+      "name": "Demographic Information (Child)",
+      "description": "Completion of this section is optional, but would help us better understand the demographics of platform users.",
+      "is_valid_researcher": false,
+      "is_valid_patient": false,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": false,
+      "is_published": true,
+      "order_number": 6
+    },
+    {
+      "name": "Social Media Information",
+      "description": "Add links to your various social media accounts",
+      "is_valid_researcher": true,
+      "is_valid_patient": true,
+      "is_valid_family_of_patient": true,
+      "is_valid_caretaker_of_patient": true,
+      "is_valid_passive": true,
+      "is_published": true,
+      "order_number": 7
+    }
+  ]
+}

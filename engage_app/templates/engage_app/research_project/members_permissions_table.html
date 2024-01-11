@@ -1,0 +1,72 @@
+{% load static %}
+{% load is_edit_permissions_allowed %}
+
+<table id="members-permissions-table" class="text-centre">
+    <thead>
+    <tr>
+        <th>Team member</th>
+        <th>Role</th>
+        <th>Lead Researcher</th>
+        <th>Active</th>
+        {% if current_user_permissions.is_edit_permissions_allowed %}
+            <th>Actions</th>
+        {% endif %}
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for member in team_members %}
+        {% is_edit_permissions_allowed request.user current_user_permissions member as is_edit_allowed %}
+        <tr class="member-row" data-user-id="{{ member.user.id }}" data-is-anonymous="{{ member.is_anonymous }}">
+            <td>{{ member.user.get_full_name }}</td>
+            <td>{{ member.get_current_role }}</td>
+            <td>
+                {% if not member.is_patient_partner %}
+                    <input id="is-lead-researcher-{{ member.user.id }}" type="checkbox"
+                           {% if member.is_principal_investigator %}checked{% endif %}
+                           {% if member.is_anonymous or not is_edit_allowed %}disabled{% endif %}
+                    >
+                {% endif %}
+            </td>
+            <td>
+                <input id="is-active-{{ member.user.id }}" type="checkbox"
+                       {% if member.is_active %}checked{% endif %}
+                       {% if member.is_anonymous or not is_edit_allowed %}disabled{% endif %}
+                >
+            </td>
+            {% if current_user_permissions.is_edit_permissions_allowed %}
+                <td>
+                    {% if not member.is_anonymous %}
+                        <button type="button" class="button action primary-green"
+                                name="remove-user-from-project-btn"
+                                data-user-id="{{ member.user.id }}"
+                        >
+                            Remove
+                        </button>
+                    {% endif %}
+                    <button type="button" class="button action primary-green"
+                            name="delete-user-from-project-btn"
+                            data-user-id="{{ member.user.id }}"
+                    >
+                        Delete
+                    </button>
+                </td>
+            {% endif %}
+        </tr>
+
+    {% empty %}
+        <tr>
+            <td colspan="5">No team members</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% if current_user_permissions.is_edit_permissions_allowed %}
+    <br>
+    <div class="text-right">
+        <button id="save-members-permissions-btn" class="action main text-medium" style="width:100%;">Save</button>
+    </div>
+{% endif %}
+
+<script src="{% static 'js/research_project/members_permissions_table.js' %}"></script>

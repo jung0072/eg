@@ -1,0 +1,26 @@
+.form-group {
+    display: flex;
+    width: 100%;
+    padding: 0.4em 0.4em 0.4em 0;
+}
+
+.form-group.row {
+    flex-flow: row nowrap;
+}
+
+.form-group.column {
+    flex-flow: column nowrap;
+}
+
+form button[type="submit"] {
+    margin: 1em;
+}
+
+.form-group-errors li {
+    font-size: 0.8rem;
+    color: var(--cheo-secondary-pink);
+}
+
+input:required, select:required {
+    border: 2px solid var(--brand-colour);
+}

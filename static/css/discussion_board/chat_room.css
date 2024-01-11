@@ -1,0 +1,198 @@
+.section.discussion-board {
+    background-color: var(--bg-accent-tertiary);
+    border-radius: 5px;
+}
+.chat-room {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.chat-window {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+#chat-log {
+    width: 100%;
+    max-height: 450px;
+    min-height: 450px;
+    margin: 0;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.chat-log-notification {
+    width: 100%;
+    height: 25px;
+    margin-left: 0.2em;
+}
+
+#chat-log-notification-output {
+    width: 100%;
+    margin-left: 1ch;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    animation: typing 1500ms linear infinite;
+    align-self: flex-start;
+    color: var(--brand-colour);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+#chat-log-notification-output.typing::after {
+    font-family: 'Courier New', 'Courier', 'sans-serif';
+    width: auto;
+    content: attr(data-content);
+}
+
+.message {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0.2em 1em 0.2em 1em;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--bg-accent);
+    padding: 0.5em;
+}
+
+.message:hover {
+    filter: brightness(85%);
+}
+
+.message p {
+    margin: 5px 0 0;
+    font-size: 0.8rem;
+}
+
+.message .sub-title {
+    font-size: 0.6rem;
+}
+
+.message img {
+    margin-top: 0.5em;
+    border-radius: 5px;
+}
+
+.message.left-aligned p {
+    text-align: left;
+    margin-left: 4em;
+}
+
+.message.left-aligned .sub-title {
+    text-align: left;
+    margin-left: 5.2em;
+}
+
+.message.left-aligned img {
+    margin-right: auto;
+    float: left;
+    position: absolute;
+}
+
+.message.right-aligned p {
+    text-align: right;
+    margin-right: 4em;
+}
+
+.message.right-aligned .sub-title {
+    text-align: right;
+    margin-right: 5.2em;
+}
+
+.message.right-aligned img {
+    margin-left: auto;
+    float: right;
+    position: absolute;
+    right: 5px;
+}
+
+.message p.time {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+
+.message.right-aligned p.time {
+    bottom: 8px;
+    left: 8px;
+}
+
+.message.left-aligned p.time {
+    bottom: 8px;
+    right: 8px;
+}
+
+.message p.message-body{
+    margin-bottom: 1.2em;
+}
+
+.delete-message-btn {
+    display: none;
+}
+
+.message:hover .delete-message-btn {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-primary);
+}
+
+.message-profile-pic {
+    width: 32px;
+    height: 32px;
+}
+
+.chat-message-input {
+    margin: 0 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.chat-message-input input {
+    width: 70%;
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+}
+
+.chat-room-controls {
+    text-align: left;
+    padding: 10px;
+}
+
+.chat-room-controls button {
+    font-size: calc(8px + 2vmin);
+    min-width: 30px;
+    min-height: 40px;
+    margin: 0 2px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: transparent;
+    border: none;
+    color: #afafaf;
+}
+
+.chat-room-controls > button.selected, #send-message-button {
+    color: var(--text-primary);
+}

@@ -1,0 +1,33 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/slimselect/slimselect.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/slimselect/slimselect_custom.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/projects_filters.css' %}">
+
+<div class="filters-container">
+    <div id="filters-form">
+        <div class="search-div filter-div">
+            <div class="filter-label">
+                <i class="fas fa-search"></i>
+                <label for="search">Search</label>
+            </div>
+            <div class="search-bar">
+                <input id="filter-search" type="text"  name="search" class="search-value" placeholder="Filter by text">
+            </div>
+        </div>
+        <div class="sort-by-div">
+            <div class="filter-label">
+                <i class="fas fa-filter"></i>
+                <label for="filter-type">Filter</label>
+            </div>
+            <select id="filter-type" name="type-filter">
+                <option selected="" value="">Any</option>
+                {% for type in filter_types %}
+                    <option value="{{ type.1 }}">{{ type.1 }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/slimselect/slimselect.min.js' %}"></script>

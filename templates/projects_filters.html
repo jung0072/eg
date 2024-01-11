@@ -1,0 +1,72 @@
+{% load static %}
+{% load get_item %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/slimselect/slimselect.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/slimselect/slimselect_custom.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/projects_filters.css' %}">
+
+<div class="filters-container">
+    <form id="filters-form">
+        <div class="search-div filter-div">
+            <div class="filter-label">
+                <i class="fas fa-search"></i>
+                <label for="search">Search</label>
+            </div>
+            <div class="search-bar">
+                {% with filters|get_item:'search'|first as search %}
+                    <input id="search" type="text" value="{{ search.search_query }}" name="search" class="search-value"
+                           placeholder="Search here">
+                {% endwith %}
+            </div>
+        </div>
+        <div class="sort-by-div">
+            <div class="filter-label">
+                <i class="fas fa-sort-amount-down-alt"></i>
+                <label for="sort-by">Sort by</label>
+            </div>
+            <select id="sort-by" name="sort-by">
+                {% for sort_filter in filters|get_item:'sort-by' %}
+                    <option value="{{ sort_filter.key }}" {% if sort_filter.selected %}selected{% endif %}>
+                        {{ sort_filter.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="filter-label">
+            <i class="fas fa-filter"></i>
+            <label for="apply-filters">Filters</label>
+        </div>
+
+        <div class="filter-div">
+            <div class="filter-label">
+                <label for="project-creator">Project creator</label>
+            </div>
+            <select id="project-creator" name="project-creator" multiple>
+                {% for creator in filters|get_item:'project-creator' %}
+                    <option value="{{ creator.key }}"
+                            {% if creator.selected %}selected{% endif %}>{{ creator.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filter-div">
+            <div class="filter-label">
+                <label for="user-roles">User roles</label>
+            </div>
+            <select id="user-roles" name="user-roles" multiple>
+                {% for role in filters|get_item:'user-roles' %}
+                    <option value="{{ role.key }}"
+                            {% if role.selected %}selected{% endif %}>{{ role.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div id="apply-filters-div">
+            <button class="action" id="apply-filters-btn" type="submit">Apply</button>
+        </div>
+    </form>
+</div>
+
+<script src="{% static 'js/slimselect/slimselect.min.js' %}"></script>
+<script src="{% static 'js/projects_filters.js' %}"></script>

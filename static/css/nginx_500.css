@@ -1,0 +1,72 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    height: 70px;
+    width: 100px;
+}
+
+.image-in-box {
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+}
+
+.error-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+}
+
+.gear-icon {
+    font-size: 4rem;
+    color: #002E6D;
+    margin-bottom: 0;
+}
+
+.error-page-heading {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.error-text {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+}
+
+.try-again-button {
+    background-color: transparent;
+    border: 2px solid #002E6D;
+    padding: 0.8em;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    transition: all 0.3s ease-in;
+}
+
+.try-again-button:hover {
+    background-color: #002E6D;
+    color: white;
+}
+
+.info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    padding: 2rem;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.25rem;
+}
+
+.info-container p {
+    font-size: 1.25rem;
+}

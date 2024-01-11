@@ -1,0 +1,39 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+{# TODO: This is test content for the researcher-patient details page. All the data is placeholder #}
+
+{% block content %}
+    <div class="content-card details-card">
+        <div class="card-header details-card-header">
+        <img class="card-details-picture" alt="profile avatar"
+             src="{% url 'engage_app:get_public_profile_picture' username=data.user__username %}"
+        />
+        <div class="researcher-name-role-location">
+            <p class="researcher-title"> {{ data.user__first_name }}  {{ data.user__last_name }}.</p>
+            <p class="researcher-role"> {{ data.role }}</p>
+            <span class="researcher-location">
+                <i class="fas fa-map-marker-alt"> {{ data.location }}</i>
+            </span>
+        </div>
+        <div class="details-buttons">
+            <button class="action main send-message-button"><i class="fas fa-comment-alt"> Send Message</i></button>
+            <button class="share-profile-button"><i class="fas fa-share-alt"> Share Profile</i></button>
+        </div>
+        </div>
+        <div class="card-content details-card-content">
+            <h3>About their experience</h3>
+            <p>{{ data.experience }}</p>
+        </div>
+        <div class="card-footer details-card-footer">
+            <p class="researcher-interests-title" >Research Interests: </p>
+            <div class="researcher-interests details">
+                {% for interest in data.research_interests.all %}
+                    <div class="interest-chips details">
+                        <p>{{ interest }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

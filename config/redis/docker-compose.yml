@@ -1,0 +1,11 @@
+volumes:
+  data:
+
+services:
+  redis:
+    image: redis:latest
+    volumes:
+      - data:/data
+    command: redis-server --requirepass redispw --appendonly yes
+    ports:
+      - 6379:6379

@@ -1,0 +1,36 @@
+.avatar-upload-wrapper {
+  display: inline-block;
+}
+
+.avatar-upload-wrapper,
+.avatar-upload-wrapper .upload-icon-wrapper {
+  position: relative;
+}
+
+.avatar-upload-wrapper .upload-icon-wrapper {
+  opacity: 0;
+  transition: all 0.25s ease 0s;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.avatar-upload-wrapper .upload-icon-wrapper:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease 0s;
+  color: rgb(255, 255, 255);
+  background: rgba(9, 30, 66, 0.36);
+  cursor: pointer;
+}
+
+.avatar-upload-wrapper .ant-upload.ant-upload-disabled {
+  cursor: default;
+}
+
+
+.avatar-upload-wrapper .user-avatar {
+  border: 3px solid #FFFFFF;
+}

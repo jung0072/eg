@@ -1,0 +1,14 @@
+{% load human_time %}
+
+<li class="content-list-item notification-card">
+    <a href="{{ notification.wrapper_url }}" class="no-decoration">
+        <div class="content-card-small">
+            <p class="notification-title">
+                <span class="card-title">{{ notification.type }}</span>
+                {{ notification.created_at|human_time }}
+            </p>
+            <div class="card-content"><b>{{ notification.source_name }}</b>: {{ notification.content }}
+            </div>
+        </div>
+    </a>
+</li>

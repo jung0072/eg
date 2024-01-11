@@ -1,0 +1,27 @@
+{% load human_time %}
+
+<h1>System Messages</h1>
+
+<p>
+    <a href="{% url 'engage_app:create_system_message' %}">Create a new system message</a>
+</p>
+
+<ul class="content-list">
+    {% if system_messages %}
+        {% for system_message in system_messages %}
+            <li class="content-list-item notification-card">
+                <a href="{{ system_message.url }}" class="no-decoration">
+                    <div class="content-card-small">
+                        <p class="card-title"> {{ system_message.title }} </p>
+                        <span>
+                            <b>{{ system_message.author.get_full_name }}</b>
+                            - {{ system_message.created_at|human_time }}
+                        </span>
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    {% else %}
+        <p>No system messages sent yet!</p>
+    {% endif %}
+</ul>

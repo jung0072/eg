@@ -1,0 +1,34 @@
+Mechanical Ventilation
+  Non-Invasive ventilation
+    CPAP
+    BIPAP
+    High Flow
+  Invasive ventilation
+    Conventional ventilation
+    High frequency
+    Jet ventilation
+Extracorporeal membrane oxygenation (ECMO)
+Ventricular assist device (VAD)
+Renal replacement therapy (kidney/peritoneal dialysis)
+Cardiac arrest/CPR
+Surgery this admission
+  Cardiac
+  Neurosurgery
+  Organ transplant
+  Other type of surgery
+Central venous access
+  Central venous line
+  PICC line
+Arterial line
+Chest tube
+Transfusion of blood products
+Cardiac pacing
+Intracranial pressure monitoring (ICP)
+External ventricular drain (EVD)
+Decompressive craniotomy
+Vasopresors
+CSF diversion/monitoring
+Physio/in-bed cycling
+Organ donation
+I don't know
+Other

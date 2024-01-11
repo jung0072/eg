@@ -1,0 +1,36 @@
+#project-container {
+    width: 75vw;
+    padding: 2em;
+    background-color: var(--bg-accent);
+    border-radius: var(--border-radius);
+}
+
+#actions-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-div, .patients-div {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.view-more {
+    display: none;
+}
+
+.user-profile-avatar.small {
+    width: 14em;
+}
+
+.edit-team-member {
+    text-align: center;
+    color: var(--brand-colour);
+    margin-bottom: 3em;
+}
+
+.back-button {
+    margin: 20px;
+    margin-bottom: 2em;
+}

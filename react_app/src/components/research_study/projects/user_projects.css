@@ -1,0 +1,121 @@
+.myproject-title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 42px;
+    letter-spacing: 0.12px;
+    text-align: left;
+    color: black;
+}
+
+.create-project {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 0.12px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--primary-color-1);
+    width: 13em;
+    cursor: pointer;
+}
+
+.tabs-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+/* ant d active tabs style override */
+.ant-tabs-tab {
+    color: #949494;
+}
+
+.ant-tabs-tab:hover {
+    color: #949494;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--primary-color-1) !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active {
+    border-bottom: 2px solid var(--primary-color-1) !important;
+}
+
+.ant-tabs-ink-bar {
+    height: 5px;
+    background: var(--primary-color-1) !important;
+}
+
+.project-columns {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #949494;
+    background-color: aqua;
+}
+.project-index-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.project-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+    color: white;
+}
+
+
+.task-dropdown {
+    position: absolute;
+    left: 50%;
+    color: #52575C;
+}
+
+.tabs-class {
+    display: flex;
+    flex: 1;
+}
+
+.column-name-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+.column-name-subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.2px;
+    color: #949494;
+}
+
+.column-name-status{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #949494;
+    text-align: left;
+}
+
+.column-name-due {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #52575C;
+    text-align: left;
+}

@@ -1,0 +1,41 @@
+.engage-ic4u-footer .social-icon-footer {
+    text-decoration: none;
+    color: black;
+}
+
+.engage-ic4u-footer .social-icon-footer:first-child:hover {
+    color: #1DA1F2;
+    /* twitter color */
+}
+
+.engage-ic4u-footer .social-icon-footer:nth-child(2):hover {
+    color: #4267B2;
+    /* facebook color */
+}
+
+.engage-ic4u-footer .social-icon-footer:nth-child(3):hover {
+    color: #C13584;
+}
+
+.engage-ic4u-footer .social-icon-footer:nth-child(4):hover {
+    color: #0072B1;
+}
+
+.engage-ic4u-footer .footer-quick-links {
+    /* text-decoration: none; */
+    color: black;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.engage-ic4u-footer .ant-layout {
+    background-color: white;
+}
+
+.engage-ic4u-footer.main-footer {
+    background-color: #F5F5F5;
+    padding: 10px 0;
+    height: 10vh;
+    position: sticky;
+    z-index: 999 !important;
+}

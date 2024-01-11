@@ -1,0 +1,41 @@
+{% extends "base/navigation.html" %}
+{% load static %}
+{% load auth_filters %}
+
+{% block title %}
+    <title>404! Page not found</title>
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="content-list">
+            <div class="content-list-item">
+                <div class="content-card full-page centre text-centre text-large">
+                    <div class="card-header large">
+                        <div class="card-title">404 Not Found
+                        </div>
+                        {% if exception != "Resolver404" %}
+                            {{ exception }}
+                        {% endif %}
+                        <div class="card-subtitle">Sorry, an error has occurred. Requested page not found!</div>
+                    </div>
+                    <div class="button-container centre">
+                        <a target="_blank" href="/contact_us/">
+                            <button class="button action main">
+                                <i class="fas fa-pen-alt"></i>
+                                Contact Us
+                            </button>
+                        </a>
+                        <a href="/home/">
+                            <button class="button action warning">
+                                <i class="fas fa-home"></i>
+                                Go to Homepage
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

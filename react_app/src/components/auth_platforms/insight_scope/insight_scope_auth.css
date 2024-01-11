@@ -1,0 +1,25 @@
+#insightScope-auth .signup-button {
+    box-shadow: 0px 4px 4px 0px #00000040;
+    min-width: 187px;
+    height: 48px;
+    border-radius: 75px;
+    background-color: #FFF;
+    color: #77B710;
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid #FFF;
+}
+
+#insightScope-auth .signup-button:hover {
+    background-color: #77B710;
+    color: white;
+    border: 1px solid #77B710;
+}
+
+.form-container {
+    min-width: 50%;
+}
+
+.auth-form {
+    flex: 1;
+}

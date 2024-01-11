@@ -1,0 +1,32 @@
+{% extends base_template %}
+
+{% block content %}
+    <div>
+        <p class="user-name">Dear {{ user.first_name }} {{ user.last_name }},</p>
+        {% if platform|lower == "engage" %}
+            <p>
+                You have recently created an account   
+                {% if user_from_platform %}
+                    with {{ user_from_platform }} credentials
+                {% endif %} 
+                on Engage, which is a free platform that connects Canadian intensive care physicians, staff, and researchers with patient 
+                and family partners - with the goal of informing research projects and ultimately improving the quality of medical care. 
+                To activate your account, click on the button below.
+            </p>
+        {% endif %}
+        {% if platform|lower == "educate" %}
+            <p>
+                You have recently created an account on Educate. To activate your account, click the link below.
+            </p>
+        {% endif %}
+        {% if button_link %}
+        <a target="_blank" href="{{ button_link }}">
+            <button class="{% if platform|lower == 'educate' %}educate-button{% else %}engage-button{% endif %}">
+                {{ button_text }}
+            </button>
+        </a>
+        {% endif %}
+        <p>Thank you,</p>
+        <p>{{ platform }}</p>
+    </div>
+{% endblock %}

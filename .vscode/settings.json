@@ -1,0 +1,66 @@
+{
+	"editor.tabSize": 4,
+	"editor.indentSize": 4,
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[django-html]": {
+		"editor.defaultFormatter": "monosans.djlint"
+	},
+	"files.associations": {
+		"**/*.html": "html",
+		"**/templates/**/*.html": "django-html",
+		"**/templates/**/*": "django-txt",
+		"**/requirements{/**,*}.{txt,in}": "pip-requirements"
+	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python"
+	},
+	"python.analysis.autoFormatStrings": false,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
+	"editor.formatOnSave": false,
+	"eslint.format.enable": true,
+	"html.format.wrapAttributes": "preserve-aligned",
+	"html.format.wrapLineLength": 120,
+	"djlint.maxAttributeLength": 100,
+	"djlint.preserveBlankLines": true,
+	"html.format.indentInnerHtml": false,
+	"djlint.ignoreBlocks": ["html,body,thead,tbody,tfoot"],
+	"files.eol": "\n",
+	"prettier.arrowParens": "always",
+	"prettier.bracketSameLine": false,
+	"prettier.bracketSpacing": true,
+	"prettier.configPath": "",
+	"prettier.embeddedLanguageFormatting": "auto",
+	"prettier.enableDebugLogs": false,
+	"prettier.endOfLine": "lf",
+	"prettier.htmlWhitespaceSensitivity": "css",
+	"prettier.ignorePath": ".prettierignore",
+	"prettier.insertPragma": false,
+	"prettier.jsxSingleQuote": false,
+	"prettier.prettierPath": "",
+	"prettier.printWidth": 80,
+	"prettier.proseWrap": "preserve",
+	"prettier.quoteProps": "as-needed",
+	"prettier.requireConfig": false,
+	"prettier.requirePragma": false,
+	"prettier.resolveGlobalModules": false,
+	"prettier.semi": true,
+	"prettier.singleAttributePerLine": false,
+	"prettier.singleQuote": false,
+	"prettier.tabWidth": 4,
+	"prettier.trailingComma": "es5",
+	"prettier.useEditorConfig": true,
+	"prettier.useTabs": true,
+	"prettier.vueIndentScriptAndStyle": false,
+	"prettier.withNodeModules": false,
+	"python.formatting.provider": "none",
+	"python.analysis.typeCheckingMode": "off"
+}

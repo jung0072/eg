@@ -1,0 +1,1 @@
+from communication_app.forms.discussion_board import DiscussionBoardForm

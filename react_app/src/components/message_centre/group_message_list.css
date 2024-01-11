@@ -1,0 +1,37 @@
+.message-centre-message-list .ant-card {
+    background-color: inherit;
+    padding-left: 0;
+}
+
+.message-centre-message-list .ant-list-items {
+    overflow-x: hidden;
+}
+
+.message-centre-message-list .col-antd.group-message-list .ant-list-header {
+    padding: 0;
+}
+
+.groupMessageCard:hover {
+    background-color: #CECECE;
+}
+
+.groupMessageCard.selected {
+    background-color: #CECECE !important;
+}
+
+.message-centre-message-list .ant-message-list-header .ant-list-header {
+    padding: 0 !important;
+}
+
+#select-project-group-message-list, #select-tasks-group-message-list {
+    background-color: transparent;
+}
+
+#select-project-group-message-list:hover, #select-tasks-group-message-list:hover {
+    background-color: #CECECE;
+}
+
+#select-project-group-message-list.selected, #select-tasks-group-message-list.selected {
+    border-bottom: 5px solid #002E6D;
+}
+

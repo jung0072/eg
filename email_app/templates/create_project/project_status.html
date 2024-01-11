@@ -1,0 +1,19 @@
+{% extends 'base_template_engage.html' %}
+
+{% block content %}
+
+<div>
+    <p class="user-name">Dear {{ to_users.first_name }} {{ to_users.last_name }},</p>
+    <p>Congratulation Your Project is Approved by Admin and added to project list.</p>
+    
+    <p>Now you can start assigning new members to project and assign tasks to individuals.</p> 
+    
+    <p>Click on the link below which redirect to login page:</p>
+    
+    <p><a target="_blank" href="{{ link }}">{{ project.title }}</a></p>
+    
+    <p>Thanks & Regards,</p>
+    <p>Engage</p>
+</div>
+
+{% endblock %}

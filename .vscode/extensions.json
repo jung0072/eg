@@ -1,0 +1,18 @@
+{
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"ms-python.python",
+		"steoates.autoimport",
+		"streetsidesoftware.code-spell-checker",
+		"batisteo.vscode-django",
+		"ms-azuretools.vscode-docker",
+		"dsznajder.es7-react-js-snippets",
+		"dbaeumer.vscode-eslint",
+		"xabikos.javascriptsnippets",
+		"ms-python.vscode-pylance",
+		"reactreedev.reactree",
+		"hangxingliu.vscode-systemd-support",
+		"ecmel.vscode-html-css",
+		"monosans.djlint"
+	]
+}

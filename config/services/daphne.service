@@ -1,0 +1,14 @@
+[Unit]
+Description=Daphne Daemon
+After=network.target
+
+[Service]
+User=ubuntu
+# path where the code is clone
+WorkingDirectory=/home/ubuntu/engage
+# Path where daphne is installed (usually in virtual env)
+ExecStart=/home/ubuntu/miniconda3/envs/engage/bin/daphne -b 0.0.0.0 -p 8080 config.asgi:application --application-close-timeout 300
+# ExecStartPre=export DJANGO_SETTINGS_MODULE="config.settings"
+
+[Install]
+WantedBy=multi-user.target

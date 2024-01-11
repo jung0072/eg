@@ -1,0 +1,35 @@
+{% extends 'base/navigation.html' %}
+{% load human_time %}
+
+{% block title %}
+    <title>Engage | {{ system_message.title }}</title>
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="content-list-item">
+            <div class="content-card">
+                <div class="card-header">
+                    <h1 class="header">{{ system_message.title }}</h1>
+                    <span>
+                        <b>{{ system_message.author.get_full_name }}</b> in {{ system_message.type_pretty_name }}s
+                         - {{ system_message.created_at|human_time }}
+                    </span>
+
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'engage_app:edit_system_message' system_message.slug %}">Edit message</a>
+                            &nbsp;
+                            <a href="{% url 'engage_app:delete_system_message' system_message.slug %}">Delete message</a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+                <div class="card-content">
+                    {% autoescape off %}
+                        {{ system_message.content }}
+                    {% endautoescape %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

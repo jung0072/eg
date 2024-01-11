@@ -1,0 +1,113 @@
+Diseases of the circulatory system
+  Cardiac and circulatory congenital anomalies
+  Arrest and ventricular fibrillation
+  Arrhythmia, dysrhythmia, conduction disorders
+  Hypotension
+  myocardial infarction
+  Embolism or thrombosis
+  Congestive heart failure
+  Systemic Hypertension
+  Pulmonary Hypertension
+  Diseases of arteries; arterioles; and capillaries
+  Diseases of veins and lymphatics
+  Septic Shock
+  Allergic reaction
+Congenital or chromosomal anomalies
+  Cardiac and circulatory congenital anomalies
+  Airway and lung congential anomalies
+  Digestive congenital anomalies
+  Genitourinary congenital anomalies
+  Nervous system congenital anomalies
+  Chromosomal abnormalities
+Endocrine; nutritional; and metabolic diseases and immunity disorders
+  DKA or Diabetes mellitus with another complication
+  Disorders of sodium (hyponatremia, hypernatremia)
+  Acidosis
+  Disorder of potassium (hyperkalemia, hypokalemia)
+  Malnutrition
+  Nutritional deficiency
+  Metabolic disease
+  Disorder of calcium (hypocalcemia , hyperkalemia)
+Diseases of the digestive system
+  Gi hemorrhage
+  Liver Disease and Hepatic failure
+  Appendicitis
+  GI performation or Nectrotizing Enterocolitis
+  Gastroduodenal ulcer (except hemorrhage)
+  Malabsorption
+  Intestinal infection
+  Bilary tract disease
+  Severe diarrhea or gastroenteritis (non-infectious)
+Diseases of the genitourinary system
+  Urinary tract infection
+  Renal failure
+  Chronic kidney disease
+  Hypertension
+Infectious and parasitic diseases
+  Bacterial infections
+  COVID-19 infection
+  Septicemia / Bactermia
+  Respiratory Syncytial virus
+  Infective arthritis and osteomyelitis
+  Influenza infeciton
+  Intestinal infection
+  Tuberculosis
+  Mycoses
+Injury and poisoning
+  Spinal cord injury (SCI), initial encounter
+  Trauma to chest, abdomen or pelvis
+  Crush injury
+  Burns or electrical injury
+  Poisoning
+  Traumatic brain injury (TBI) / head Injury
+  Drowning, submersion, suffocation, asphyxia
+  Foreign body in airway
+Cancers and Neoplasms
+  Hepatoblastoma
+  Cancer of brain and nervous system
+  Cancer of kidney and renal pelvis
+  Leukemia or lymphoma
+Diseases of the nervous system and sense organs
+  Central apnea
+  Obstructive apnea
+  Seizures or Epilepsy
+  Central nervous system infection
+  Hydrocephalus
+  Acute cerebrovascular disease
+  Coma, stupor or altered mental state
+  Delirium, dementia, and amnestic and other cognitive disorders
+  Developmental disorders
+  Intracranial injury
+  Nervous system congenital anomalies
+  Paralysis
+  Hereditary and degenerative nervous system conditions
+Mental Illness
+  Delirium, dementia, and amnestic and other cognitive disorders
+  Substance-related disorders
+  Suicide and intentional self-inflicted injury
+Other
+  Encounter for Palliative care
+  Complication of device; implant or graft
+Diseases of the blood and blood-forming organs
+  Anemia
+  Disorders of coagulation
+  Sickle cell anemia
+  Haemophagocytic lymphohistiocytosis
+  Disorders of platelets (thrombocytopenia)
+Diseases of the musculoskeletal system and connective tissue
+  Systemic lupus erythematosus
+  Connective tissue disorders
+Diseases of the respiratory system
+  Bronchitis or Bronchiolitis
+  Aspiration Pneumonitis
+  Complication of Tracheostomy
+  Upper airway obstruction
+  Foreign body
+  Paralysis of vocal cords and larynx, bilateral
+  Asthma
+  Pneumonia
+  Respiratory insufficiency, failure or arrest
+  Pleurisy; pneumothorax; pulmonary collapse
+  Allergic Reaction
+No/None
+Other

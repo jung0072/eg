@@ -1,0 +1,114 @@
+
+.app-switcher {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 0 -4px 0;
+    width: 7.5em;
+}
+
+.switch-app-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding-bottom: 0.5em;
+}
+
+/*overlap of fa-grid-icon and circle*/
+
+.wrap-switch-icon {
+    height: 4.0em;
+    width: 4.0em;
+    border-radius: 100%;
+    opacity: 0.2;
+    z-index: 9;
+}
+
+.switch-badge {
+    opacity: 0.8;
+    height: 27px;
+    width: 27px;
+    margin-left: 0.8em;
+ }
+
+.wrap-switch-icon, .switch-badge {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.wrap-switch-icon:hover {
+    cursor: pointer;
+    background-color: #dedede;
+}
+
+
+.switch-content {
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    position: absolute;
+    background-color: white;
+    width: 16em;
+    min-height: 40px;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    margin-left: 0;
+    margin-top: 13em;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10%;
+}
+
+.show {display: flex;}
+
+
+.switch-content a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #111111;
+    font-size: smaller;
+    font-weight: normal;
+    padding-right: 2em;
+    padding-top: 1em;
+}
+
+.shifters {
+    display: flex;
+    height: 7.9em;
+    width: 4em;
+    transition: 0.5s;
+    padding-left: 2em;
+}
+
+.shifters img {
+    height: 45px;
+    width: 45px;
+}
+
+.shifter-title {
+    width: 7em;
+}
+
+.shifters:hover {
+    background-color: #e8f4f8;
+    border-radius: 10%;
+    opacity: 1;
+}
+
+.tooltip-triangle {
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top: 0;
+    border-bottom: 20px solid white;
+    border-radius: 35%;
+    position: absolute;
+    margin-right: 8.5em;
+    margin-top: -1.3em;
+    z-index: -1;
+}

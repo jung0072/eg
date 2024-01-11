@@ -1,0 +1,131 @@
+/* Override Styles */
+/* TODO: Make override styles only applicable to items that import this css*/
+.research-form-node .ant-btn-primary {
+    background-color: #002E6D;
+    box-sizing: border-box;
+    border-radius: 40px;
+    height: 50px;
+    width: 250px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.research-form-node .help-text-popover .ant-btn-primary {
+    margin-top: 0;
+}
+
+.research-form-node .ant-btn-primary:hover {
+    background-color: #65CBC9;
+}
+
+.research-form-node .ant-form-item {
+    width: 100%;
+}
+
+#searchButton {
+    margin-top: 0;
+    margin-left: 1.5em;
+    font-size: 16px;
+    height: auto;
+    width: auto;
+}
+
+.research-form-node .ant-modal-content {
+    border: 1px solid #D6D6D6;
+}
+
+.research-form-node .ant-modal-header, .ant-modal-title {
+    color: #002E6D;
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: #F0F0F0;
+}
+
+.research-form-node .ant-form-item label, .research-form-node .ant-form-item .help-text-popover span.ant-typography {
+    color: #002E6D !important;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#form2 {
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#form2Content .ant-form-item {
+    width: 100%;
+}
+
+#form2Content .ant-form-item label {
+    color: #25282B !important;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.research-form-node .ant-checkbox-group-item {
+    width: 45%;
+}
+
+.research-form-node .ant-checkbox-wrapper-in-form-item span {
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.research-form-node .ant-checkbox .ant-checkbox-inner {
+    border-color: #D9D9D9;
+    border-radius: 4px;
+}
+
+.research-form-node .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #65CBC9;
+}
+
+.research-form-node .ant-checkbox-disabled .ant-checkbox-inner {
+    background-color: #52575C;
+}
+
+.research-form-node .ant-input, .research-form-node .ant-picker,
+.research-form-node .ant-select-selector,
+.research-form-node .ant-upload {
+    border: 1px solid #D9D9D9;
+    border-radius: 8px !important;
+}
+
+.research-form-node .engage-user-search-box .ant-input, .research-form-node .engage-user-search-box .ant-picker {
+    border: none;
+}
+
+.research-form-node .ant-layout {
+    background: #FFFFFF;
+}
+
+.research-form-node .ant-input-affix-wrapper input {
+    border: none !important;
+}
+
+.research-form-node .ant-radio-button-checked {
+    background-color: #002E6D;
+    border-color: #002E6D;
+}
+/* targeting span here as label is overwriting the color refer line:50 */
+.research-form-node .ant-radio-button-wrapper-checked > span {
+    color: white !important;
+}
+/* override the button style just for the update and delete task button */
+#action-button-container button {
+    width: 220px !important;
+}
+
+.task-member-table .ant-badge {
+    width: max-content !important;
+}
+
+.task-member-table .delete-member {
+    font-size: 17px;
+    color: #188af6;
+    cursor: pointer;
+}

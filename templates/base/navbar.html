@@ -1,0 +1,97 @@
+{% load auth_filters %}
+
+<nav class="navigation" id="main-navigation-bar">
+    <ul class="navbar">
+        {# TODO: finalize proper navigation icons with client team #}
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <li class="nav-item {% if active_view == 'admin' %}active{% endif %}">
+                    <a href="{% url 'auth_app:admin' %}" class="nav-link">
+                        <i class="fas fa-satellite"></i>
+                        <span class="collapsed-text">Admin</span>
+                    </a>
+                </li>
+            {% endif %}
+            <li class="nav-item {% if active_view == 'home' %}active{% endif %}">
+                <a href="/home/" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span class="collapsed-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item {% if active_view == 'my_projects' %}active{% endif %}">
+                <a href="{% url 'engage_app:my_projects' %}" class="nav-link">
+                    <i class="fas fa-file"></i>
+                    <span class="collapsed-text">My Projects</span>
+                </a>
+            </li>
+            <li class="nav-item {% if active_view == 'all_projects' %}active{% endif %}">
+                <a href="{% url 'engage_app:all_projects' %}" class="nav-link">
+                    <i class="fas fa-copy"></i>
+                    <span class="collapsed-text">All Projects</span>
+                </a>
+            </li>
+            {% if request.user.id|is_researcher_approved %}
+                <li class="nav-item {% if active_view == 'new_project' %}active{% endif %}">
+                    <a href="{% url 'engage_app:add_project' %}"
+                       class="nav-link">
+                        <i class="fas fa-folder-plus"></i>
+                        <span class="collapsed-text">New Project</span>
+                    </a>
+                </li>
+            {% endif %}
+            <li class="nav-item {% if active_view == 'settings' %}active{% endif %}">
+                <a href="{% url 'engage_app:display_user_profile' user_id=request.user.id %}"
+                   class="nav-link {% if active_view == 'settings' %}active{% endif %}">
+                    <i class="fas fa-user"></i>
+                    <span class="collapsed-text">My Profile</span>
+                </a>
+            </li>
+            {% if request.user.id|is_researcher_approved %}
+                <li class="nav-item {% if active_view == 'partner_directory' %}active{% endif %}">
+                    <a href="{% url 'engage_app:patient_directory_list' %}"
+                       class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span class="collapsed-text">Partner Directory</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item {% if active_view == 'partner_directory' %}active{% endif %}">
+                    <a href="{% url 'engage_app:researcher_directory_list' %}"
+                       class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span class="collapsed-text">Researcher List</span>
+                    </a>
+                </li>
+            {% endif %}
+        {% endif %}
+
+        {# TODO: Move this to e under settings once page is built #}
+        {#        <li class="nav-item" id="theme-toggle-button">#}
+        {#            <a href="#" class="nav-link">#}
+        {#                <i class="fas fa-sun"></i>#}
+        {#                <span class="collapsed-text">Solar Theme</span>#}
+        {#            </a>#}
+        {#        </li>#}
+        {# Always make sure signin and out are the last links in the navbar #}
+        <li class="nav-item">
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'auth_app:logout' %}" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="collapsed-text">Logout</span>
+                </a>
+            {% else %}
+                {% if request.path == '/signup/' %}
+                    <a href="/login/" class="nav-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span class="collapsed-text">Login</span>
+                    </a>
+                {% else %}
+                    <a href="/signup/" class="nav-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span class="collapsed-text">Signup</span>
+                    </a>
+                {% endif %}
+            {% endif %}
+        </li>
+    </ul>
+</nav>

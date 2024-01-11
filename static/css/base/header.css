@@ -1,0 +1,262 @@
+/* Styles for the home header container */
+.home-header {
+    height: var(--header-full-height);
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: var(--maximum-z-index);
+}
+
+/* Styles related to the side nav toggle button, only displays on mobile view */
+#toggle-nav-button {
+    border: none;
+    background-color: transparent;
+    color: var(--text-primary);
+    margin-left: 1em;
+}
+
+#toggle-nav-button:active {
+    text-shadow: 1px 1px 2px var(--text-primary);
+    font-weight: bold;
+}
+
+/* Styles related to the Engage Logo */
+#ic4u-logo {
+    font: bold 24px Montserrat, sans-serif;
+    letter-spacing: 0.2px;
+    color: var(--brand-colour);
+    padding: 1em;
+    width: var(--navigation-collapsed-width);
+    margin:0.5em;
+}
+
+/* Styles related to the User Greeting */
+.page-title-container {
+    display: flex;
+    align-items: center;
+    position:absolute;
+    bottom:0;
+    margin-bottom:1.5em;
+}
+
+.page-title-container a {
+    color: var(--text-primary);
+}
+
+
+.page-title-container i {
+    margin: 0.8em;
+}
+
+.page-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.profile-header-container{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.5em
+}
+
+.user-profile-avatar {
+
+}
+
+.user-profile-avatar.small {
+    grid-template-rows: 0.5fr 0.5fr;
+}
+
+.user-profile-avatar .profile-picture-container {
+    grid-area: profile-picture;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+}
+
+.user-profile-avatar .greeting {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.user-profile-avatar.small .profile-picture-container {
+    height: 100%;
+}
+
+.user-profile-avatar .profile-picture {
+    width: 65px;
+    height: 65px;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+.profile-picture.circle {
+    border-radius: 50%;
+    border: 3px solid var(--brand-colour);
+}
+
+.user-profile-avatar.small .profile-picture {
+    width: 40px;
+    height: 40px;
+    margin: 0.2rem;
+}
+
+.user-profile-avatar .username {
+    grid-area: bottom;
+    letter-spacing: 0.1px;
+    color: var(--brand-colour);
+}
+
+.user-profile-avatar.small .username {
+    grid-area: top;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: auto 0 0 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.user-profile-avatar .title {
+    grid-area: bottom;
+    color: var(--text-accent);
+    font-size: 0.8rem;
+    margin: 0;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.user-message {
+    grid-area: top;
+    /* Positioning with flexbox */
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: var(--text-primary);
+}
+
+/* Styles related to the search bar */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    margin: 1em 1em 1em auto;
+}
+
+.search-bar {
+    background-color: var(--bg-accent);
+    height: 33px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 1em 1em 0;
+    position: relative;
+    flex-grow:1;
+}
+
+#search-value {
+    border: none;
+    width: 80%;
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+#search-value:focus {
+    outline: none;
+}
+
+.search-bar i {
+    width: 20%;
+    text-align: center;
+    color: var(--brand-colour);
+}
+
+/* Styles related to the messages icon */
+.messages-link {
+    padding: 1em;
+}
+
+.messages-link a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.messages-link p {
+    justify-self: start;
+    font-size: 12px;
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.messages-link i {
+    font-size: 30px;
+    color: var(--brand-colour);
+}
+
+/* Media Queries for the Header Items */
+@media only screen and (max-width: 666px) {
+    #toggle-nav-button {
+        display: block;
+    }
+
+    .user-profile-avatar:not(.small) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "profile-picture content";
+    }
+
+    .user-profile-avatar:not(.small) .username {
+        font: 600 16px Montserrat, sans-serif;
+        /*font-weight: lighter;*/
+        line-height: 18px;
+        text-overflow: ellipsis;
+        grid-area: content;
+        align-self: center;
+    }
+
+    .user-profile-avatar:not(.small) .profile-picture {
+        width: 30px;
+        height: 30px;
+    }
+
+    .user-message {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 666px) {
+
+    #toggle-nav-button {
+        display: none;
+    }
+
+    .user-profile-avatar:not(.small) {
+    }
+
+    .user-profile-avatar .user-message {
+        display: flex;
+        text-align: left;
+    }
+
+    .user-profile-avatar .username {
+        font: 600 28px Montserrat, sans-serif;
+        line-height: 28px;
+        overflow: visible;
+        text-overflow: clip;
+        width: 100%;
+    }
+}

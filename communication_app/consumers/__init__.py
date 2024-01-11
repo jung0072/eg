@@ -1,0 +1,2 @@
+from communication_app.consumers.communication_consumer import CommunicationAppConsumer
+from communication_app.consumers.notifications_consumer import NotificationsConsumer

@@ -1,0 +1,98 @@
+.ant-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-bottom: 0;
+    padding: 0 0 0 21px;
+    justify-content: space-between;
+}
+
+.recent-items {
+    margin-top: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.cards-box {
+    display: flex;
+    overflow-x: scroll;
+    width: inherit;
+    gap: 80px;
+    margin-bottom: 10px;
+}
+
+.cards-box::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cards-box {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.recent-items-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 233px;
+    height: 198px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 2px solid #D9D9D9;
+}
+
+.more-icon {
+    color: black;
+    font-size: 24px;
+    align-self: flex-end;
+    padding-right: 20px;
+}
+
+
+.card-due-date {
+    align-self: flex-start;
+    padding-right: 20px;
+    border-top: 0;
+    background-color: white;
+}
+
+.card-heading {
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: bolder;
+    color: black;
+}
+
+.recent-items-card:nth-child(2) {
+    background-color: white;
+}
+
+.recent-items-card:nth-child(3) {
+    background-color: white;
+}
+
+.recent-items-card:hover * {
+    border-radius: 15px;
+    background-color: var(--primary-color-1) !important;
+    color: white;
+}
+
+.recent-task-title {
+    font-size: 16px;
+    line-height: 42px;
+    color: #949494;
+}
+
+.task-completed {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: right;
+    color: #002E6D;
+}

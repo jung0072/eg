@@ -1,0 +1,34 @@
+.user-profile-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* The selector for the user profile forms in the admin customize user page */
+#user_profile_forms{
+    /* Use Relative position to style the add question/ section button anywhere inside this container */
+    position: relative;
+}
+
+button[data-trigger="customize-user-profile-form-modal"] {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 64px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--cheo-secondary-green);
+}
+
+button[data-trigger="customize-user-profile-form-modal"]:before {
+    font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f067";
+    font-size: 0.6rem;
+}
+
+#customize-user-profile-questions-table{
+    margin-top: 1em;
+}

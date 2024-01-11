@@ -1,0 +1,98 @@
+.calendar-wrapper,
+.reminders-list-wrapper {
+	box-sizing: border-box;
+	border: 1px solid #d9d9d9;
+	border-radius: 8px;
+	padding: 1.5%;
+	font-family: 'Inter', sans-serif;
+}
+
+.calendar-wrapper .ant-picker-calendar-header {
+	padding: 20px 0;
+}
+
+.calendar-wrapper .ant-select-selector {
+	height: 43px !important;
+	border-radius: 10px !important;
+	align-items: center;
+}
+
+.calendar-wrapper .ant-radio-button-wrapper:first-child {
+	border-radius: 10px 0px 0px 10px;
+}
+
+.calendar-wrapper .ant-radio-button-wrapper:last-child {
+	border-radius: 0 10px 10px 0;
+}
+
+.calendar-wrapper .ant-picker-content thead {
+	text-align: center;
+}
+
+.calendar-wrapper .ant-picker-content th {
+	padding-bottom: 9px !important;
+}
+
+.calendar-wrapper .ant-picker-calendar,
+.calendar-wrapper .ant-select,
+.calendar-wrapper .ant-radio-button-wrapper {
+	font-size: 18px;
+}
+
+.calendar-wrapper .ant-select,
+.calendar-wrapper .ant-radio-button-wrapper {
+	width: 141px;
+}
+
+.calendar-wrapper .ant-radio-button-wrapper {
+	height: 43px;
+	line-height: 42px;
+	text-align: center;
+}
+
+.calendar-wrapper .reminders-list {
+	list-style: none;
+	margin: 5px;
+	padding: 0;
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.calendar-wrapper .ant-badge-status-text {
+	color: unset;
+}
+
+.calendar-wrapper .ant-picker-calendar-date-value {
+	margin-bottom: 5px;
+}
+
+#set-reminder-btn {
+	display: flex;
+	font-size: 18px;
+	border-radius: 10px;
+}
+
+#set-reminder-btn .fa-clock {
+	padding: 5px;
+}
+
+#reminders-list-wrapper {
+	display: flex;
+	column-gap: 22px;
+	flex-wrap: wrap;
+	row-gap: 22px;
+}
+
+.reminder-details .in-details-reminder-type {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	gap: 1rem;
+	border-radius: 55px;
+	color: white;
+	min-width: 2rem;
+	width: max-content;
+	align-items: center;
+	font-weight: 600;
+}

@@ -1,0 +1,105 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+{% load auth_filters %}
+{% load communication_filters %}
+
+{% block title %}
+    <title>Engage | Discussion Boards</title>
+{% endblock %}
+
+{% block imports %}
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <ul class="content-list">
+            <li class="content-list-item">
+                <div class="content-card">
+                    <div class="card-header">
+                        <p class="card-notification active">Created At: {{ research_task.created_at }}</p>
+                        <p class="card-subtitle">Research Task #{{ research_task.id }}</p>
+                        <p class="card-title">{{ research_task.title }}</p>
+                    </div>
+                    <div class="card-content">
+                        {{ research_task.description }}
+                    </div>
+                    <div class="card-footer">
+                        <div class="user-profile-avatar small">
+                            <div class="profile-picture-container">
+                                <img class="profile-picture" alt="profile avatar"
+                                     src="{% url 'engage_app:get_public_profile_picture' username=research_task.task_creator.username %}"
+                                >
+                            </div>
+                            <p class="username">{{ research_task.task_creator.first_name }} {{ research_task.task_creator.last_name }}</p>
+                            <p class="title">{{ research_task.task_creator.id|get_user_role }} - Task Reporter</p>
+                        </div>
+                        <div class="card-actions">
+                            {% if permissions.is_active %}
+                                {% include 'base/form_modal.html' with form_name="discussion-board-form" form=discussion_board_form verbose_form_name="Create a Discussion Board" form_action=discussion_board_form_action %}
+                                <button type="submit" data-trigger="customize-discussion-board-form-modal"
+                                        class="modal-trigger-button main action"
+                                        id="add-discussion-board-modal-button">
+                                    + Create Discussion Board
+                                </button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <ul class="content-list">
+            <h3>Chat Rooms:</h3>
+            {% if messsage_boards.count <= 0 %}
+                <h5>No chat rooms are available</h5>
+            {% else %}
+                {% for board in message_boards %}
+                    <li class="content-list-item">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <p class="card-notification active">Created At: {{ board.created_at }}</p>
+                                <p class="card-subtitle">Discussion Board #{{ board.id }}</p>
+                                <p class="card-title">{{ board.title }}</p>
+                            </div>
+                            <div class="card-content">
+                                {{ board.description }}
+                            </div>
+                            <div class="card-footer">
+                                <div class="user-profile-avatar small">
+                                    <div class="profile-picture-container">
+                                        <img class="profile-picture" alt="profile avatar"
+                                             src="{% url 'engage_app:get_public_profile_picture' username=board.board_creator.username %}"
+                                        >
+                                    </div>
+                                    <p class="username">{{ board.board_creator.first_name }} {{ board.board_creator.last_name }}</p>
+                                    <p class="title">{{ board.board_creator.id|get_user_role }}</p>
+                                </div>
+                                <div class="card-actions">
+                                    <a href="{% url 'communication_app:research_project_chat_room' room_name=board.chat_room_code %}">
+                                        <button class="action main">
+                                            View
+                                        </button>
+                                    </a>
+                                    {% if board|can_edit_discussion_board:request.user.id %}
+                                        <button class="action main error" data-board-id="{{ board.id }}"
+                                                name="delete-discussion-board-button">
+                                            Delete
+                                        </button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {% empty %}
+                    <p>There are currently no discussion boards available </p>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/discussion_board/discussion_board.js' %}"></script>
+{% endblock %}

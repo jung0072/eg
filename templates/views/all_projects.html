@@ -1,0 +1,14 @@
+{% extends 'base/navigation.html' %}
+{% load get_item %}
+
+{% block title %}
+    <title>Engage | All Projects</title>
+{% endblock %}
+
+{% block content %}
+    {% include 'projects_list.html' with projects=projects %}
+{% endblock %}
+
+{% block side_content %}
+    {% include 'projects_filters.html' with filters=filters %}
+{% endblock %}

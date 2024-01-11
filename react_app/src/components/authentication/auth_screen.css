@@ -1,0 +1,15 @@
+/* giving a height to main content because our footer is 10vh */
+.authorize-user-screen .auth-main {
+    height: 90vh; 
+}
+
+#signup-platforms .ant-tooltip-disabled-compatible-wrapper {
+    width: max-content !important;
+}
+
+.insightScope-button .ant-btn-primary[disabled] {
+    display: flex;
+    background-color: #1b1a1a !important;
+    border-color: #1b1a1a !important;
+    color: #FFF !important;
+}

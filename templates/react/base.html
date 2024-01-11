@@ -1,0 +1,68 @@
+{% load static %}
+{% load auth_filters %}
+{% load get_item %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="engage, patient, engagement, research, based" />
+        <meta name="description"
+              content="Engage is a space where researchers can perform patient driven studies with engagement from patients of families of patients that are currently or have been in Intensive Care Units or PICU's" />
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- content security policy, should be updated with any api's and frameworks that we connect to -->
+        <meta http-equiv="Content-Security-Policy"
+              content="
+              default-src 'self' https://*.fontawesome.com/ https://source.unsplash.com ;
+              style-src 'self' 'unsafe-inline' https://*.fontawesome.com/ code.jquery.com cdnjs.cloudflare.com;
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://kit.fontawesome.com/dadda85c0c.js code.jquery.com ajax.googleapis.com cdnjs.cloudflare.com;
+              font-src 'self' data: https://ka-f.fontawesome.com ;
+              media-src 'self' https://insightscope.ca/ ; connect-src 'self' https://ka-f.fontawesome.com/ * ;
+              img-src 'self' https://source.unsplash.com https://insightscope.ca/ https://images.unsplash.com code.jquery.com data: blob: ;"
+        />
+        {% block title %}
+            <title>Engage</title>
+        {% endblock title %}
+        {# Script Imports for specific libraries #}
+        {% block imports %}
+        {% endblock imports %}
+        {# Imports for our Web Icons #}
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/icons/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static '/img/icons/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static '/img/icons/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static '/img/icons/site.webmanifest' %}">
+        <link rel="mask-icon" href="{% static '/img/icons/safari-pinned-tab.svg' %}" color="#5bbad5">
+        <link rel="icon" sizes="192x192" href="{% static '/img/icons/favicon.ico' %}" />
+        <meta name="msapplication-TileColor" content="#DA532C">
+        <meta name="theme-color" content="#002E6D">
+    </head>
+    <body>
+        <main>
+            <div id="root" data-django-context="{{ copied_context }}"></div>
+            {% block content %}
+            {% endblock content %}
+        </main>
+        <link href="{% static 'css/react/fonts.css' %}" rel="stylesheet">
+        <link href="{% static 'css/react/base.css' %}" rel="stylesheet">
+        {# Scripts for the React App base.html #}
+        <script>
+            const globalValues = {
+                userIdentifier: parseInt('{{ request.user.id }}'),
+                projectIdentifier: {{ research_project.id|default:0 }},
+                CSRF_TOKEN: '{{ csrf_token }}',
+                currentUserRole: '{{ request.user.id|get_user_role }}',
+                userNotificationCount: parseInt('{{ request.user.id|get_unread_notifications_count }}'),
+                engageIC4UURL: '{{ request.engage_ic4u_url }}',
+                insightScopeURL: '{{ request.insight_scope_url }}',
+            };
+        </script>
+        {# Main React Application #}
+        {% render_bundle 'main' %}
+        {# Page specific scripts #}
+        {% block scripts %}
+        {% endblock scripts %}
+    </body>
+</html>

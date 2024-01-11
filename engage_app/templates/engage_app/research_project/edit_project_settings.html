@@ -1,0 +1,44 @@
+{% extends 'base/navigation.html' %}
+{% load static %}
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/branching_forms.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <ul class="content-list">
+            <li class="content-list-item">
+                <div class="content-card branching-form">
+                    <div class="card-header">
+                        <h1 class="text-centre">Edit Research Project Demographics - {{ research_project.title }}</h1>
+                        <ul id="customize-research-project-settings-navigation-bar"
+                            class="branching-forms-navigation-bar">
+                        </ul>
+
+                        {# The progress bar for the research project demographics form #}
+                        <div class="progress-container hidden" id="research-project-progress-bar">
+                            <div class="progress-bar" role="progressbar" style="width: 0;"
+                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"
+                            >
+                                <p class="progress-bar-label">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        {# The research project demographics form that will be initilized by js#}
+                        <form action="multipart/form-data" method="post" id="customize-research-project-settings-form">
+                            {% csrf_token %}
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/branching_forms.js' %}"></script>
+    <script src="{% static 'js/research_project/edit_project_settings.js' %}"></script>
+{% endblock %}

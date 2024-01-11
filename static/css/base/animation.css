@@ -1,0 +1,31 @@
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* This is an example of a smaller animation we can do, this can be replaced or removed in the final version */
+/* Based on the code from the css tricks article: https://css-tricks.com/almanac/properties/a/animation/ */
+@keyframes rainbow-rotation {
+/* Using hue rotate, we can cycle through the colours */
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes reverse-text {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(-1, -1);
+    }
+}

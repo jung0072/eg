@@ -1,0 +1,660 @@
+{
+  "questions": [
+    {
+      "dev_code": "RP-DOB",
+      "section": "EDI (Equity, Diversity, Inclusivity)",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "DATE_PICKER_YEAR",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Select the year of birth of the oldest patients you want to consider.",
+      "help_text": "Field entered as year (i.e. 1977).",
+      "is_mandatory": false
+    },
+    {
+      "dev_code": "RP-GND",
+      "section": "EDI (Equity, Diversity, Inclusivity)",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Select the options that best describes your gender identity requirements",
+      "help_text": "<p>\"Gender identity\" refers to a person's internal sense of being a woman, man, both, neither or somewhere along the gender spectrum. It is recognized that some of the response options may overlap. This question allows you to choose multiple options. Choose responses that best represent you.</p><br><p>The response options for this question are defined as follows:</p><br><ul><li><strong>Agender </strong>refers to a person who does not relate to any gender identity, who does not experience gender or who places themselves beyond the gender spectrum.</li><br>      <li><strong>Bigender / Multigender </strong>Bigender refers to a person who identifies as having two genders. Multigender refers to a person who identifies as having more than one gender.</li><br>      <li><strong>Gender-fluid </strong>refers to a person whose gender identity or expression changes or shifts along the gender spectrum.</li><br>      <li><strong>Gender Queer </strong>refers to a person who challenges social norms regarding gender with their identity, their gender expression and their sexual practices.</li><br>      <li><strong>Man </strong>refers to a person who internally identities and/or publicly expresses as a man. This may include cisgender and transgender individuals. Cisgender means that one's gender identity matches one's sex assigned at birth.</li><br>      <li><strong>Nonbinary </strong>refers to a person whose gender identity does not align with a binary understanding of gender such as man or woman.</li><br>      <li><strong>Questioning </strong>refers to a person who is uncertain about their sexual orientation and/or gender identity; this can be a transitory or a lasting identity.</li><br>      <li><strong>Transgender </strong>refers to a person whose gender identity do not correspond with the sex they were assigned at birth. Transgender is an adjective that some individuals use to define their gender.</li><br>      <li><strong>Two-Spirit </strong>is a term used by some North American Indigenous people to indicate a person who embodies both female and male spirits or whose gender identity, sexual orientation or spiritual identity is not limited by the male/female dichotomy.</li><br>      <li><strong>Women </strong>refers to a person who internally identifies and/or publicly expresses as a woman. This may include cisgender and transgender individuals. Cisgender means that one's gender identity matches one's sex assigned at birth.</li><br>      <li><strong>Open-ended </strong>If you do not use any of the terms listed as responses, please use your own words to describe your gender identity.</li><br></ul>",
+      "is_mandatory": false,
+      "options": [
+        {
+          "title": "Agender",
+          "mapping": "AGND"
+        },
+        {
+          "title": "Bigender / Multigender",
+          "mapping": "BGND"
+        },
+        {
+          "title": "Gender-Fluid",
+          "mapping": "GNDF"
+        },
+        {
+          "title": "Gender Queer",
+          "mapping": "GNDQ"
+        },
+        {
+          "title": "Man",
+          "mapping": "MAN"
+        },
+        {
+          "title": "Nonbinary",
+          "mapping": "NON"
+        },
+        {
+          "title": "Questioning",
+          "mapping": "QUES"
+        },
+        {
+          "title": "Transgender",
+          "mapping": "TRANS"
+        },
+        {
+          "title": "Two-Spirit",
+          "mapping": "TWO_SPIRIT"
+        },
+        {
+          "title": "Woman",
+          "mapping": "WOMEN"
+        },
+        {
+          "title": "A gender not specified above. Specify:",
+          "mapping": "NO_OPTION"
+        }
+      ]
+    },
+    {
+      "dev_code": "RP-SEOR",
+      "section": "EDI (Equity, Diversity, Inclusivity)",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Select the options that best describes your sexual orientation requirements?",
+      "is_mandatory": false,
+      "options": [
+        {
+          "title": "Asexual",
+          "mapping": "ACE"
+        },
+        {
+          "title": "Bisexual",
+          "mapping": "BI"
+        },
+        {
+          "title": "Gay",
+          "mapping": "GAY"
+        },
+        {
+          "title": "Heterosexual",
+          "mapping": "HETRO"
+        },
+        {
+          "title": "Lesbian",
+          "mapping": "LES"
+        },
+        {
+          "title": "Pansexual",
+          "mapping": "PAN"
+        },
+        {
+          "title": "Queer",
+          "mapping": "QUEER"
+        },
+        {
+          "title": "Two-Spirit",
+          "mapping": "TWO_SPIRIT"
+        },
+        {
+          "title": "I don't identify with any option provided. I identify as: (option to specify)",
+          "mapping": "NO_OPTION"
+        }
+      ],
+      "help_text": "The response options for this question are defined as follows:<br>Asexual refers to a person who identifies as feeling very little or no sexual desire.<br>Bisexual refers to a person who identifies as being sexually attracted to people of their sex and/or gender and people of a different sex and/or gender.<br>Gay refers to a person who identifies as being sexually attracted to people of their sex and/or gender.<br>Heterosexual refers to a person who identifies as sexually attracted to people of a different sex and/or gender.<br>Lesbian refers to a person who identifies as a woman and as being sexually attracted to women.<br>Pansexual refers to a person who identifies as being sexually attracted to another person regardless of their sex or gender.<br>Queer refers to a person whose sexual orientation differs from the normative binary vision of sexuality.<br>Two-Spirit is a term used by some North American Indigenous people to indicate a person who identifies as embodying both female and male spirits or whose gender identity, sexual orientation or spiritual identity is not limited by the male/female dichotomy.<br>"
+    },
+    {
+      "dev_code": "RP-INA",
+      "section": "EDI (Equity, Diversity, Inclusivity)",
+      "parent_question_id": null,
+      "order_number": 4,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Are you looking for someone who identifies as Indigenous (First Nations, Metis, or Inuk (Inuit)?",
+      "is_mandatory": false,
+      "options": [
+        {
+          "title": "Yes",
+          "mapping": "YES"
+        },
+        {
+          "title": "No",
+          "mapping": "NO"
+        }
+      ],
+      "help_text": "<p>In Canada, an Indigenous person is someone who identifies as First Nation, Metis, or Inuk (Inuit).</p><br><p>This question is about personal identity, not legal status or registration.</p>"
+    },
+    {
+      "dev_code": "RP-MIN",
+      "section": "EDI (Equity, Diversity, Inclusivity)",
+      "parent_question_id": null,
+      "order_number": 5,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Are you looking for a member of a visible minority in Canada?",
+      "is_mandatory": false,
+      "options": [
+        {
+          "title": "Yes",
+          "mapping": "YES"
+        },
+        {
+          "title": "No",
+          "mapping": "NO"
+        }
+      ],
+      "help_text": "The visible minority identity question asks you to indicate if you identify as a member of a visible minority, as defined by the Employment Equity Act. The Act defines visible minorities as \"persons, other than Aboriginal peoples, who are non-Caucasian in race or non-white in colour.\""
+    },
+    {
+      "dev_code": "RP-POP",
+      "section": "EDI (Equity, Diversity, Inclusivity)",
+      "parent_question_id": null,
+      "order_number": 6,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Select the population groups you are looking for?",
+      "is_mandatory": false,
+      "options": [
+        {
+          "mapping": "ARAB",
+          "title": "Arab"
+        },
+        {
+          "mapping": "BLACK",
+          "title": "Black"
+        },
+        {
+          "mapping": "CHINESE",
+          "title": "Chinese"
+        },
+        {
+          "mapping": "FILIPINO",
+          "title": "Filipino"
+        },
+        {
+          "mapping": "JAPANESE",
+          "title": "Japanese"
+        },
+        {
+          "mapping": "KOREAN",
+          "title": "Korean"
+        },
+        {
+          "mapping": "LATIN_AMERICAN",
+          "title": "Latin American"
+        },
+        {
+          "mapping": "SOUTH_ASIAN",
+          "title": "South Asian(e.g., East Indian, Pakistani, Sri Lankan, etc.)"
+        },
+        {
+          "mapping": "SOUTH_EAST_ASIAN",
+          "title": "Southeast Asian (e.g., Vietnamese, Cambodian, Laotian, Thai, etc.)"
+        },
+        {
+          "mapping": "WEST_ASIAN",
+          "title": "West Asian (e.g., Iranian, Afghan, etc.)"
+        },
+        {
+          "mapping": "WHITE",
+          "title": "White"
+        },
+        {
+          "mapping": "NO_OPTION",
+          "title": "Population group not listed above. I identify as: (option to specify)s"
+        }
+      ],
+      "help_text": "The population group options listed are those used by Statistics Canada in the national census. Population group should not be confused with citizenship or nationality.<br>If you have already identified as an Indigenous person and do not identify with any other population group, you are asked to select \"population group not listed above\" and specify Indigenous.<br>"
+    },
+    {
+      "dev_code": "RP-IDS",
+      "section": "EDI (Equity, Diversity, Inclusivity)",
+      "parent_question_id": null,
+      "order_number": 7,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": true,
+      "text_for_researcher": "Are you looking for someone who identify as a person with a disability as described in the Act?",
+      "is_mandatory": false,
+      "options": [
+        {
+          "title": "Yes",
+          "mapping": "YES"
+        },
+        {
+          "title": "No",
+          "mapping": "NO"
+        }
+      ],
+      "help_text": "The Accessible Canada Act defines disability as “any impairment, including a physical, mental, intellectual, cognitive, learning, communication or sensory impairment - or a functional limitation - whether permanent, temporary or episodic in nature, or evident or not, that, in interaction with a barrier, hinders a person's full and equal participation in society.”"
+    },
+    {
+      "dev_code": "RP-EXPP",
+      "section": "Research Experience",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Has worked with a family partner for a research study before?",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "RP-EXPS",
+      "section": "Research Experience",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Has participated in a research study before?",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "RP-EXPE",
+      "section": "Research Experience",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Has had experience with patient and family engagement?",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "RP-EXPC",
+      "section": "Research Experience",
+      "parent_question_id": null,
+      "order_number": 4,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Looking for a candidate who has taken courses or training sessions related to patient and family engagement?",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "RP-CNR",
+      "section": "Researcher/Clinician Demographics",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Clinical Role",
+      "text_for_patient": "Clinical Role",
+      "text_for_family_of_patient": "Clinical Role",
+      "text_for_caretaker_of_patient": "Clinical Role",
+      "text_for_passive": "Clinical Role",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Physician",
+        "Nurse",
+        "Respiratory Therapist",
+        "Physiotherapist",
+        "Occupational Therapist",
+        "Social Work",
+        "Dietitian",
+        {
+          "title": "Other (free text option to specify)",
+          "mapping": "other<free_text>"
+        }
+      ]
+    },
+    {
+      "dev_code": "RP-CNA",
+      "section": "Researcher/Clinician Demographics",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Clinical Area",
+      "text_for_patient": "Clinical Area",
+      "text_for_family_of_patient": "Clinical Area",
+      "text_for_caretaker_of_patient": "Clinical Area",
+      "text_for_passive": "Clinical Area",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Anesthesiology",
+        "Cardiology",
+        "Critical Care",
+        "Emergency Medicine"
+      ]
+    },
+    {
+      "dev_code": "RP-CNT",
+      "section": "Researcher/Clinician Demographics",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Current level of training",
+      "text_for_patient": "Current level of training",
+      "text_for_family_of_patient": "Current level of training",
+      "text_for_caretaker_of_patient": "Current level of training",
+      "text_for_passive": "Current level of training",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Student",
+        "Resident",
+        "Fellow",
+        "Staff"
+      ]
+    },
+    {
+      "dev_code": "RP-NCR",
+      "section": "Researcher/Clinician Demographics",
+      "parent_question_id": null,
+      "order_number": 4,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Non-Clinical Role",
+      "text_for_patient": "Non-Clinical Role",
+      "text_for_family_of_patient": "Non-Clinical Role",
+      "text_for_caretaker_of_patient": "Non-Clinical Role",
+      "text_for_passive": "Non-Clinical Role",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Division chief",
+        "Program director",
+        "Scientist",
+        "MET director",
+        "Morbidity & Mortality committee ",
+        "Journal club lead",
+        {
+          "title": "Other (free text option to specify)",
+          "mapping": "other<free_text>"
+        }
+      ]
+    },
+    {
+      "dev_code": "RP-IMG",
+      "section": "Patient/Family Non-Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Are you looking for a patient or a family partner who immigrated to Canada?",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "RP-IMGF",
+      "section": "Patient/Family Non-Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "RADIO_BUTTON_CIRCLE",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": false,
+      "is_required_passive": false,
+      "text_for_researcher": "Are you looking for patients or family partners that have family members that were immigrants to Canada?",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "RP-RLP",
+      "section": "Patient/Family Non-Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": false,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Select the type of patient family members you are looking for:",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Parent",
+        "Legal Guardian",
+        "Caregiver",
+        "Sibling",
+        "Grandparent",
+        "Friend",
+        "Other"
+      ]
+    },
+    {
+      "dev_code": "RP-ICU",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 1,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Which PICU(s) was the patient admitted to?",
+      "text_for_patient": "",
+      "text_for_family_of_patient": "",
+      "text_for_caretaker_of_patient": "",
+      "display_text": "PICU(s) Admitted To",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": true,
+      "options": "institutions"
+    },
+    {
+      "dev_code": "RP-COT",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 2,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Number of PICU admissions",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5+",
+        "I don't know"
+      ]
+    },
+    {
+      "dev_code": "RP-HMT",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 3,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Length of time spent in PICU",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "<7 Days",
+        "8 Days to 1 Month",
+        ">1 Month",
+        ">3 Months",
+        ">6 Months"
+      ]
+    },
+    {
+      "dev_code": "RP-TRP",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 4,
+      "type": "SELECT_MULTIPLE",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Patient who was transported to PICU using:",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Yes, by air",
+        "Yes, by land",
+        "No"
+      ]
+    },
+    {
+      "dev_code": "RP-RFA",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 5,
+      "type": "TREE_SELECT",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Select the reasons for PICU admission you are looking for.",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": "icu_admissions"
+    },
+    {
+      "dev_code": "RP-SPT",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 6,
+      "type": "RADIO_BUTTON_BOX",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Required Supportive Technologies:",
+      "text_for_patient": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": [
+        "Tracheostomy Tube",
+        "Non-Invasive Ventilation",
+        "Dialysis",
+        "Cerebral Spinal Fluid Shunt",
+        "Feeding Tube"
+      ]
+    },
+    {
+      "dev_code": "RP-COM",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 7,
+      "type": "TREE_SELECT",
+      "is_required_researcher": true,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Select the comorbidity of the patients you are looking for.",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": "comorbidities"
+    },
+    {
+      "dev_code": "RP-PTA",
+      "section": "Patient/Family Medical Demographics",
+      "parent_question_id": null,
+      "order_number": 9,
+      "type": "TREE_SELECT",
+      "is_required_researcher": false,
+      "is_required_patient": true,
+      "is_required_family_of_patient": true,
+      "is_required_passive": false,
+      "text_for_researcher": "Select the PICU interventions that you are looking for.",
+      "text_for_patient": "",
+      "text_for_family_of_patient": "",
+      "text_for_caretaker_of_patient": "",
+      "display_text": "PICU Treatments",
+      "text_for_passive": "",
+      "help_text": "",
+      "is_mandatory": false,
+      "options": "icu_interventions"
+    }
+  ]
+}
